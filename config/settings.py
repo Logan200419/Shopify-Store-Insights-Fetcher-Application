@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     port: int = 8000
     
     # Database Configuration
-    database_url: str = "mysql+pymysql://user:password@localhost/shopify_insights"
+    database_url: str = "mysql+pymysql://root:@localhost/shopify_fetcher_db"
     database_pool_size: int = 10
     database_max_overflow: int = 20
     

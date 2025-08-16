@@ -15,6 +15,7 @@ from modules.extractors import (
     PolicyExtractor, FAQExtractor, ImportantLinksExtractor, BrandExtractor
 )
 from config.settings import settings
+from database.models import db_manager
 
 logger = logging.getLogger(__name__)
 
@@ -130,6 +131,16 @@ class ShopifyInsightsService:
             
             # Set timestamp
             insights.scraped_at = datetime.now()
+            
+            # Save insights to database
+            try:
+                logger.info("Saving insights to database")
+                insights_dict = insights.model_dump()
+                store_id = db_manager.save_store_insights(insights_dict)
+                logger.info(f"Successfully saved insights to database with store ID: {store_id}")
+            except Exception as e:
+                logger.error(f"Failed to save insights to database: {e}")
+                # Continue without failing the request
             
             logger.info(f"Successfully extracted insights for {normalized_url}")
             return insights

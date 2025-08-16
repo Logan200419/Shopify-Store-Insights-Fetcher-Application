@@ -10,6 +10,7 @@ import traceback
 
 from core.models import BrandInsights, ErrorResponse, SuccessResponse
 from modules.shopify_service import ShopifyInsightsService
+from database.models import db_manager
 from config.settings import settings
 
 # Configure logging
@@ -128,6 +129,126 @@ async def fetch_insights(request: InsightsRequest):
                 "message": message,
                 "timestamp": datetime.now().isoformat()
             }
+        )
+
+@app.get("/stored-insights/{website_url:path}")
+async def get_stored_insights(website_url: str):
+    """
+    Retrieve stored insights for a specific website from the database.
+    
+    **Parameters:**
+    - **website_url**: The URL of the Shopify store to retrieve insights for
+    
+    **Returns:**
+    - Stored insights data from the database
+    
+    **Error Codes:**
+    - **404**: No insights found for the specified website
+    - **500**: Internal server error during retrieval
+    """
+    try:
+        logger.info(f"Retrieving stored insights for: {website_url}")
+        insights = db_manager.get_store_insights(website_url)
+        
+        if not insights:
+            raise HTTPException(
+                status_code=404, 
+                detail=f"No insights found for {website_url}"
+            )
+        
+        return JSONResponse(
+            status_code=200,
+            content={
+                "success": True,
+                "data": insights,
+                "message": f"Successfully retrieved insights for {website_url}",
+                "timestamp": datetime.now().isoformat()
+            }
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error retrieving insights for {website_url}: {str(e)}")
+        logger.error(f"Traceback: {traceback.format_exc()}")
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Internal server error: {str(e)}"
+        )
+
+@app.get("/stores")
+async def list_all_stores():
+    """
+    List all stores in the database with basic information.
+    
+    **Returns:**
+    - List of all stores with their metadata
+    
+    **Error Codes:**
+    - **500**: Internal server error during retrieval
+    """
+    try:
+        logger.info("Retrieving all stores from database")
+        stores = db_manager.list_all_stores()
+        
+        return JSONResponse(
+            status_code=200,
+            content={
+                "success": True,
+                "data": stores,
+                "count": len(stores),
+                "message": f"Successfully retrieved {len(stores)} stores",
+                "timestamp": datetime.now().isoformat()
+            }
+        )
+    except Exception as e:
+        logger.error(f"Error listing stores: {str(e)}")
+        logger.error(f"Traceback: {traceback.format_exc()}")
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Internal server error: {str(e)}"
+        )
+
+@app.delete("/stored-insights/{website_url:path}")
+async def delete_stored_insights(website_url: str):
+    """
+    Delete stored insights for a specific website from the database.
+    
+    **Parameters:**
+    - **website_url**: The URL of the Shopify store to delete insights for
+    
+    **Returns:**
+    - Success confirmation
+    
+    **Error Codes:**
+    - **404**: No insights found for the specified website
+    - **500**: Internal server error during deletion
+    """
+    try:
+        logger.info(f"Deleting stored insights for: {website_url}")
+        success = db_manager.delete_store_insights(website_url)
+        
+        if not success:
+            raise HTTPException(
+                status_code=404, 
+                detail=f"No insights found for {website_url}"
+            )
+        
+        return JSONResponse(
+            status_code=200,
+            content={
+                "success": True,
+                "message": f"Successfully deleted insights for {website_url}",
+                "timestamp": datetime.now().isoformat()
+            }
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error deleting insights for {website_url}: {str(e)}")
+        logger.error(f"Traceback: {traceback.format_exc()}")
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Internal server error: {str(e)}"
         )
 
 @app.get("/insights/{website_url:path}", response_model=SuccessResponse)
