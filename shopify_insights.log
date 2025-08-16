@@ -899,3 +899,89 @@ Exception: Failed to fetch website content
 2025-08-16 17:09:37,095 - modules.shopify_service - INFO - Found 30 products in JSON API
 2025-08-16 17:09:37,095 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
 2025-08-16 17:09:37,095 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 17:15:09,022 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 17:15:09,240 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 17:15:11,480 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 17:15:11,481 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 17:15:12,727 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 17:15:12,728 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 17:15:12,728 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 17:15:12,729 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 17:15:12,745 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 17:15:12,811 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 17:15:12,812 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 17:15:12,843 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 17:15:12,846 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 17:15:12,846 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 17:15:13,966 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 17:15:13,966 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 17:15:13,967 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 17:26:18,272 - main - INFO - Received insights request for: https://allbirds.com
+2025-08-16 17:26:18,487 - modules.shopify_service - INFO - Fetching main page: https://allbirds.com
+2025-08-16 17:26:21,199 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 17:26:21,199 - modules.hero_product_extractor - INFO - Fetching products from https://allbirds.com/products.json
+2025-08-16 17:26:22,424 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 17:26:22,425 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 17:26:22,765 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 17:26:22,765 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 17:26:22,767 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 17:26:22,802 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 17:26:22,929 - modules.privacy_policy_extractor - INFO - Extracted 7 policy documents
+2025-08-16 17:26:22,930 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 17:26:22,988 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 17:26:22,993 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 17:26:22,993 - modules.shopify_service - INFO - Fetching products from JSON API: https://allbirds.com/products.json
+2025-08-16 17:26:24,136 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 17:26:24,136 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 17:26:24,136 - modules.shopify_service - INFO - Successfully extracted insights for https://allbirds.com
+2025-08-16 17:27:37,820 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 17:27:38,050 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 17:27:39,886 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 17:27:39,886 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 17:27:41,085 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 17:27:41,086 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 17:27:41,086 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 17:27:41,087 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 17:27:41,104 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 17:27:41,178 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 17:27:41,178 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 17:27:41,213 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 17:27:41,216 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 17:27:41,216 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 17:27:42,345 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 17:27:42,346 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 17:27:42,346 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 17:28:05,457 - main - INFO - Received insights request for: https://www.gymshark.com
+2025-08-16 17:28:05,683 - modules.shopify_service - INFO - Fetching main page: https://www.gymshark.com
+2025-08-16 17:28:09,208 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 17:28:09,208 - modules.hero_product_extractor - INFO - Fetching products from https://www.gymshark.com/products.json
+2025-08-16 17:28:09,216 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 1
+2025-08-16 17:28:10,273 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 2
+2025-08-16 17:28:12,321 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 3
+2025-08-16 17:28:16,368 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 4
+2025-08-16 17:28:16,368 - core.utils - INFO - Async fetch failed for https://www.gymshark.com/products.json, trying synchronous fallback
+2025-08-16 17:28:16,573 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 17:28:16,624 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 17:28:16,624 - modules.hero_product_extractor - INFO - Loaded 0 products from JSON API
+2025-08-16 17:28:16,624 - modules.hero_product_extractor - INFO - JSON API failed, falling back to HTML scraping for hero products
+2025-08-16 17:28:16,696 - modules.product_extractor - INFO - Extracted 0 unique products
+2025-08-16 17:28:16,696 - modules.hero_product_extractor - INFO - Loaded 0 products from HTML scraping
+2025-08-16 17:28:16,696 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 17:28:17,001 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 17:28:17,001 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 17:28:17,003 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 17:28:17,031 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 17:28:17,115 - modules.privacy_policy_extractor - INFO - Extracted 8 policy documents
+2025-08-16 17:28:17,115 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 17:28:17,169 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 17:28:17,173 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 17:28:17,173 - modules.shopify_service - INFO - Fetching products from JSON API: https://www.gymshark.com/products.json
+2025-08-16 17:28:17,186 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 1
+2025-08-16 17:28:18,209 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 2
+2025-08-16 17:28:20,411 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 3
+2025-08-16 17:28:24,455 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 4
+2025-08-16 17:28:24,455 - core.utils - INFO - Async fetch failed for https://www.gymshark.com/products.json, trying synchronous fallback
+2025-08-16 17:28:24,748 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 17:28:24,827 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 17:28:24,827 - modules.shopify_service - INFO - Successfully fetched 0 products from JSON API
+2025-08-16 17:28:24,827 - modules.shopify_service - INFO - Successfully extracted insights for https://www.gymshark.com
