@@ -261,7 +261,7 @@ async def general_exception_handler(request, exc):
             "error": "Internal server error",
             "status_code": 500,
             "message": "An unexpected error occurred while processing your request",
-            "timestamp": datetime.now()
+            "timestamp": datetime.now().isoformat()
         }
     )
 

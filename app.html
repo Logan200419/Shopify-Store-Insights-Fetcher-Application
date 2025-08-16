@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Insights Fetcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        input[type="url"] {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="url"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        button {
+            flex: 1;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #333;
+            border: 2px solid #e1e5e9;
+        }
+        
+        .btn-secondary:hover {
+            background: #e9ecef;
+            border-color: #d6dbdf;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .results {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            display: none;
+        }
+        
+        .results h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .results pre {
+            background: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e1e5e9;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #333;
+        }
+        
+        .error {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+            color: #721c24;
+        }
+        
+        .success {
+            background: #d4edda;
+            border-left-color: #28a745;
+            color: #155724;
+        }
+        
+        .examples {
+            margin-top: 20px;
+            padding: 20px;
+            background: #e3f2fd;
+            border-radius: 8px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .examples h4 {
+            color: #1565c0;
+            margin-bottom: 10px;
+        }
+        
+        .examples ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .examples li {
+            padding: 5px 0;
+            color: #1976d2;
+            cursor: pointer;
+        }
+        
+        .examples li:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛍️ Shopify Insights Fetcher</h1>
+            <p>Extract comprehensive insights from any Shopify store</p>
+        </div>
+        
+        <form id="insightsForm">
+            <div class="form-group">
+                <label for="websiteUrl">Shopify Store URL:</label>
+                <input 
+                    type="url" 
+                    id="websiteUrl" 
+                    name="websiteUrl" 
+                    placeholder="https://example.myshopify.com" 
+                    required
+                >
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" class="btn-primary">
+                    📊 Fetch Insights
+                </button>
+                <button type="button" class="btn-secondary" onclick="clearResults()">
+                    🗑️ Clear Results
+                </button>
+            </div>
+        </form>
+        
+        <div class="examples">
+            <h4>Example Shopify Stores to Test:</h4>
+            <ul>
+                <li onclick="setUrl('https://www.allbirds.com')">Allbirds</li>
+                <li onclick="setUrl('https://shop.tesla.com')">Tesla Shop</li>
+                <li onclick="setUrl('https://www.gymshark.com')">Gymshark</li>
+                <li onclick="setUrl('https://www.bombas.com')">Bombas</li>
+            </ul>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Fetching insights from the Shopify store...</p>
+            <p><small>This may take 10-30 seconds depending on the store size.</small></p>
+        </div>
+        
+        <div class="results" id="results">
+            <h3 id="resultsTitle">Results</h3>
+            <pre id="resultsContent"></pre>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:8000';
+        
+        document.getElementById('insightsForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const websiteUrl = document.getElementById('websiteUrl').value;
+            const loading = document.getElementById('loading');
+            const results = document.getElementById('results');
+            const resultsTitle = document.getElementById('resultsTitle');
+            const resultsContent = document.getElementById('resultsContent');
+            
+            // Show loading
+            loading.style.display = 'block';
+            results.style.display = 'none';
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/insights`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        website_url: websiteUrl
+                    })
+                });
+                
+                const data = await response.json();
+                
+                // Hide loading
+                loading.style.display = 'none';
+                
+                if (response.ok) {
+                    resultsTitle.textContent = '✅ Insights Successfully Fetched';
+                    results.className = 'results success';
+                    resultsContent.textContent = JSON.stringify(data, null, 2);
+                } else {
+                    resultsTitle.textContent = '❌ Error Fetching Insights';
+                    results.className = 'results error';
+                    resultsContent.textContent = JSON.stringify(data, null, 2);
+                }
+                
+                results.style.display = 'block';
+                
+            } catch (error) {
+                loading.style.display = 'none';
+                resultsTitle.textContent = '❌ Network Error';
+                results.className = 'results error';
+                resultsContent.textContent = `Error: ${error.message}\n\nPlease ensure the API server is running on ${API_BASE_URL}`;
+                results.style.display = 'block';
+            }
+        });
+        
+        function setUrl(url) {
+            document.getElementById('websiteUrl').value = url;
+        }
+        
+        function clearResults() {
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('websiteUrl').value = '';
+        }
+        
+        // Test API connection on page load
+        window.addEventListener('load', async function() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/test`);
+                if (response.ok) {
+                    console.log('✅ API connection successful');
+                } else {
+                    console.warn('⚠️ API responded with an error');
+                }
+            } catch (error) {
+                console.error('❌ Cannot connect to API:', error.message);
+            }
+        });
+    </script>
+</body>
+</html>

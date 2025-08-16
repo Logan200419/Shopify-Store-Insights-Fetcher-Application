@@ -7,8 +7,11 @@ import validators
 
 from core.models import BrandInsights, ErrorResponse, ProductModel
 from core.utils import WebScraper, ShopifyDetector, URLUtils
+from modules.product_extractor import ProductExtractor, ProductCatalogExtractor
+from modules.hero_product_extractor import HeroProductExtractor
+from modules.privacy_policy_extractor import PrivacyPolicyExtractor
 from modules.extractors import (
-    ProductExtractor, SocialMediaExtractor, ContactExtractor,
+    SocialMediaExtractor, ContactExtractor,
     PolicyExtractor, FAQExtractor, ImportantLinksExtractor, BrandExtractor
 )
 from config.settings import settings
@@ -77,10 +80,10 @@ class ShopifyInsightsService:
             insights.currencies_supported = brand_info['currencies']
             insights.payment_methods = brand_info['payment_methods']
             
-            # Extract hero products (from homepage)
-            logger.info("Extracting hero products from homepage")
-            product_extractor = ProductExtractor(soup, normalized_url)
-            insights.hero_products = product_extractor.extract()
+            # Extract hero products (by loading all products and filtering by tags)
+            logger.info("Extracting hero products by loading all products and filtering by homepage tags")
+            hero_extractor = HeroProductExtractor(soup, normalized_url, scraper)
+            insights.hero_products = await hero_extractor.extract_async()
             
             # Extract social media handles
             logger.info("Extracting social media handles")
@@ -92,15 +95,22 @@ class ShopifyInsightsService:
             contact_extractor = ContactExtractor(soup, normalized_url)
             insights.contact_details = contact_extractor.extract()
             
-            # Extract policies
+            # Extract policies using the new privacy policy extractor
             logger.info("Extracting policies")
-            policy_extractor = PolicyExtractor(soup, normalized_url)
-            policies = policy_extractor.extract()
+            privacy_extractor = PrivacyPolicyExtractor(soup, normalized_url)
+            all_policies = privacy_extractor.extract()
             
-            insights.privacy_policy = policies['privacy_policy']
-            insights.return_policy = policies['return_policy']
-            insights.refund_policy = policies['refund_policy']
-            insights.terms_of_service = policies['terms_of_service']
+            # Organize policies by type
+            for policy in all_policies:
+                policy_title_lower = policy.title.lower()
+                if 'privacy' in policy_title_lower:
+                    insights.privacy_policy = policy
+                elif 'return' in policy_title_lower:
+                    insights.return_policy = policy
+                elif 'refund' in policy_title_lower:
+                    insights.refund_policy = policy
+                elif 'terms' in policy_title_lower or 'conditions' in policy_title_lower:
+                    insights.terms_of_service = policy
             
             # Extract FAQs
             logger.info("Extracting FAQs")
@@ -126,15 +136,133 @@ class ShopifyInsightsService:
     
     async def _fetch_product_catalog(self, scraper: WebScraper, base_url: str, main_soup: BeautifulSoup) -> List[ProductModel]:
         """
-        Fetch complete product catalog by discovering and scraping product pages
+        Fetch complete product catalog using Shopify's products.json API endpoint
         """
         all_products = []
         
-        # Common Shopify product page patterns
+        # Try to fetch products using Shopify's JSON API
+        products_json_url = f"{base_url}/products.json"
+        logger.info(f"Fetching products from JSON API: {products_json_url}")
+        
+        try:
+            json_content = await scraper.fetch_page(products_json_url)
+            if json_content:
+                import json
+                products_data = json.loads(json_content)
+                
+                if 'products' in products_data:
+                    logger.info(f"Found {len(products_data['products'])} products in JSON API")
+                    
+                    for product_data in products_data['products']:
+                        product = self._parse_shopify_product_json(product_data, base_url)
+                        if product:
+                            all_products.append(product)
+                
+                # Handle pagination - Shopify limits to 250 products per page
+                page = 1
+                while len(products_data.get('products', [])) == 250:  # Max products per page
+                    page += 1
+                    paginated_url = f"{base_url}/products.json?page={page}"
+                    logger.info(f"Fetching page {page} of products")
+                    
+                    try:
+                        paginated_content = await scraper.fetch_page(paginated_url)
+                        if paginated_content:
+                            paginated_data = json.loads(paginated_content)
+                            if 'products' in paginated_data and paginated_data['products']:
+                                for product_data in paginated_data['products']:
+                                    product = self._parse_shopify_product_json(product_data, base_url)
+                                    if product:
+                                        all_products.append(product)
+                                products_data = paginated_data
+                            else:
+                                break
+                        else:
+                            break
+                    except Exception as e:
+                        logger.warning(f"Error fetching page {page}: {str(e)}")
+                        break
+                        
+        except Exception as e:
+            logger.warning(f"Error fetching products from JSON API: {str(e)}")
+            # Fallback to HTML scraping if JSON API fails
+            logger.info("Falling back to HTML scraping method")
+            return await self._fetch_product_catalog_fallback(scraper, base_url, main_soup)
+        
+        logger.info(f"Successfully fetched {len(all_products)} products from JSON API")
+        return all_products
+    
+    def _parse_shopify_product_json(self, product_data: dict, base_url: str) -> Optional[ProductModel]:
+        """Parse a single product from Shopify's JSON API response"""
+        try:
+            # Extract basic product info
+            name = product_data.get('title', '')
+            if not name:
+                return None
+            
+            description = product_data.get('body_html', '')
+            handle = product_data.get('handle', '')
+            product_url = f"{base_url}/products/{handle}" if handle else None
+            
+            # Extract images
+            images = product_data.get('images', [])
+            image_url = images[0].get('src') if images else None
+            
+            # Extract variants for pricing
+            variants = product_data.get('variants', [])
+            price = None
+            original_price = None
+            availability = "In Stock"
+            
+            if variants:
+                first_variant = variants[0]
+                price_value = first_variant.get('price')
+                compare_price = first_variant.get('compare_at_price')
+                available = first_variant.get('available', True)
+                
+                if price_value:
+                    price = f"${price_value}"
+                if compare_price and float(compare_price) > float(price_value or 0):
+                    original_price = f"${compare_price}"
+                
+                availability = "In Stock" if available else "Out of Stock"
+            
+            # Extract tags
+            tags = product_data.get('tags', [])
+            if isinstance(tags, str):
+                tags = [tag.strip() for tag in tags.split(',')]
+            
+            return ProductModel(
+                name=name,
+                price=price,
+                original_price=original_price,
+                image_url=image_url,
+                product_url=product_url,
+                availability=availability,
+                description=description[:500] if description else None,  # Limit description length
+                tags=tags[:10] if tags else None  # Limit number of tags
+            )
+            
+        except Exception as e:
+            logger.error(f"Error parsing product JSON: {str(e)}")
+            return None
+    
+    async def _fetch_product_catalog_fallback(self, scraper: WebScraper, base_url: str, main_soup: BeautifulSoup) -> List[ProductModel]:
+        """
+        Fallback method using HTML scraping when JSON API fails
+        """
+        all_products = []
+        
+        # Extract products from main page first using the catalog extractor
+        catalog_extractor = ProductCatalogExtractor(main_soup, base_url, max_products=50)
+        main_page_products = catalog_extractor.extract()
+        all_products.extend(main_page_products)
+        
+        # Try to discover more product URLs
         product_urls = await self._discover_product_urls(scraper, base_url, main_soup)
         
         # Limit concurrent requests to avoid overwhelming the server
-        semaphore = asyncio.Semaphore(5)
+        semaphore = asyncio.Semaphore(3)  # Reduced concurrency for fallback
         
         async def fetch_product_page(url):
             async with semaphore:
@@ -142,16 +270,16 @@ class ShopifyInsightsService:
                     html_content = await scraper.fetch_page(url)
                     if html_content:
                         soup = BeautifulSoup(html_content, 'html.parser')
-                        extractor = ProductExtractor(soup, url)
+                        extractor = ProductCatalogExtractor(soup, url, max_products=10)
                         return extractor.extract()
                 except Exception as e:
                     logger.error(f"Error fetching product page {url}: {str(e)}")
                 return []
         
-        # Fetch product pages concurrently
+        # Fetch product pages concurrently (limited number for fallback)
         if product_urls:
-            logger.info(f"Fetching {len(product_urls)} product pages")
-            tasks = [fetch_product_page(url) for url in product_urls[:50]]  # Limit to 50 pages
+            logger.info(f"Fallback: Fetching {min(len(product_urls), 20)} product pages")
+            tasks = [fetch_product_page(url) for url in product_urls[:20]]  # Limit to 20 pages for fallback
             results = await asyncio.gather(*tasks, return_exceptions=True)
             
             for result in results:
@@ -161,6 +289,7 @@ class ShopifyInsightsService:
         # Remove duplicates
         unique_products = self._deduplicate_products(all_products)
         
+        logger.info(f"Fallback method fetched {len(unique_products)} products")
         return unique_products
     
     async def _discover_product_urls(self, scraper: WebScraper, base_url: str, main_soup: BeautifulSoup) -> List[str]:
@@ -184,17 +313,11 @@ class ShopifyInsightsService:
                     
                     # Find product links
                     product_links = soup.find_all('a', href=True)
-                    for link in product_links[:10]:  # Limit to first 10 product pages
+                    for link in product_links:
                         href_attr = safe_get_attr(link, 'href')
-                        if href_attr:
+                        if href_attr and '/products/' in href_attr:
                             product_url = URLUtils.normalize_url(href_attr, base_url)
-                            logger.info(f"Fetching product page: {product_url}")
-                            product_content = await scraper.fetch_page(product_url)
-                            if product_content:
-                                product_soup = BeautifulSoup(product_content, 'html.parser')
-                                product_extractor = ProductExtractor(product_soup, product_url)
-                                page_products = product_extractor.extract()
-                                product_urls.update(page_products)
+                            product_urls.add(product_url)
                     
                     # If we found products, we can break
                     if product_urls:

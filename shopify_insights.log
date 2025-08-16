@@ -738,3 +738,164 @@ Exception: Failed to fetch website content
 2025-08-16 16:29:23,242 - core.utils - INFO - Async fetch failed for https://allbirds.com/, trying synchronous fallback
 2025-08-16 16:29:23,810 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/pages/stores
 2025-08-16 16:29:23,847 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/stores, attempt 1
+2025-08-16 16:34:34,205 - main - INFO - Received insights request for: https://www.fashionnova.com
+2025-08-16 16:34:34,430 - modules.shopify_service - INFO - Fetching main page: https://www.fashionnova.com
+2025-08-16 16:34:38,205 - modules.shopify_service - INFO - Extracting hero products from homepage
+2025-08-16 16:34:38,260 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 16:34:38,261 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 16:34:38,287 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 16:34:38,289 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 16:34:38,338 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 16:34:38,340 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 16:34:38,366 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/collections/all, attempt 1
+2025-08-16 16:34:39,491 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/collections/all, attempt 2
+2025-08-16 16:34:43,118 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/collections/all, attempt 3
+2025-08-16 16:34:47,547 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/collections/all, attempt 4
+2025-08-16 16:34:47,547 - core.utils - INFO - Async fetch failed for https://www.fashionnova.com/collections/all, trying synchronous fallback
+2025-08-16 16:34:48,981 - core.utils - ERROR - Request error for https://www.fashionnova.com/collections/all: 403 Client Error: Forbidden for url: https://www.fashionnova.com/collections/all
+2025-08-16 16:34:49,458 - core.utils - ERROR - Request error for https://www.fashionnova.com/collections/all: 403 Client Error: Forbidden for url: https://www.fashionnova.com/collections/all
+2025-08-16 16:34:49,572 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/collections, attempt 1
+2025-08-16 16:34:50,634 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/collections, attempt 2
+2025-08-16 16:34:52,870 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/collections, attempt 3
+2025-08-16 16:34:57,634 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/collections, attempt 4
+2025-08-16 16:34:57,635 - core.utils - INFO - Async fetch failed for https://www.fashionnova.com/collections, trying synchronous fallback
+2025-08-16 16:34:59,311 - core.utils - ERROR - Request error for https://www.fashionnova.com/collections: 403 Client Error: Forbidden for url: https://www.fashionnova.com/collections
+2025-08-16 16:34:59,805 - core.utils - ERROR - Request error for https://www.fashionnova.com/collections: 403 Client Error: Forbidden for url: https://www.fashionnova.com/collections
+2025-08-16 16:34:59,872 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/products, attempt 1
+2025-08-16 16:35:00,943 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/products, attempt 2
+2025-08-16 16:35:03,021 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/products, attempt 3
+2025-08-16 16:35:07,127 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/products, attempt 4
+2025-08-16 16:35:07,128 - core.utils - INFO - Async fetch failed for https://www.fashionnova.com/products, trying synchronous fallback
+2025-08-16 16:35:07,172 - core.utils - ERROR - Request error for https://www.fashionnova.com/products: 403 Client Error: Forbidden for url: https://www.fashionnova.com/products
+2025-08-16 16:35:07,247 - core.utils - ERROR - Request error for https://www.fashionnova.com/products: 403 Client Error: Forbidden for url: https://www.fashionnova.com/products
+2025-08-16 16:35:08,834 - modules.shopify_service - INFO - Fetching 1 product pages
+2025-08-16 16:35:08,857 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/products/gift-cards, attempt 1
+2025-08-16 16:35:09,989 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/products/gift-cards, attempt 2
+2025-08-16 16:35:12,189 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/products/gift-cards, attempt 3
+2025-08-16 16:35:16,359 - core.utils - WARNING - Access denied or rate limited for https://www.fashionnova.com/products/gift-cards, attempt 4
+2025-08-16 16:35:16,359 - core.utils - INFO - Async fetch failed for https://www.fashionnova.com/products/gift-cards, trying synchronous fallback
+2025-08-16 16:35:16,435 - core.utils - ERROR - Request error for https://www.fashionnova.com/products/gift-cards: 403 Client Error: Forbidden for url: https://www.fashionnova.com/products/gift-cards
+2025-08-16 16:35:16,513 - core.utils - ERROR - Request error for https://www.fashionnova.com/products/gift-cards: 403 Client Error: Forbidden for url: https://www.fashionnova.com/products/gift-cards
+2025-08-16 16:35:16,514 - modules.shopify_service - INFO - Successfully extracted insights for https://www.fashionnova.com
+2025-08-16 16:36:57,864 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 16:36:58,083 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 16:37:02,110 - modules.shopify_service - INFO - Extracting hero products from homepage
+2025-08-16 16:37:02,138 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 16:37:02,139 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 16:37:02,155 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 16:37:02,156 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 16:37:02,189 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 16:37:02,191 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 16:37:04,374 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com#main-content
+2025-08-16 16:37:05,685 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/collections/street-fighter
+2025-08-16 16:37:07,373 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/collections/subscribe
+2025-08-16 16:37:09,963 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/
+2025-08-16 16:37:11,320 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com#megamenu--main-menu
+2025-08-16 16:37:12,899 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com#megamenu--main-menu
+2025-08-16 16:37:14,143 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/pages/rewards
+2025-08-16 16:37:15,756 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/pages/store-locator
+2025-08-16 16:37:17,422 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/account
+2025-08-16 16:37:18,397 - core.utils - WARNING - Access denied or rate limited for https://gfuel.com/account, attempt 1
+2025-08-16 16:37:20,405 - core.utils - WARNING - Access denied or rate limited for https://gfuel.com/account, attempt 2
+2025-08-16 16:37:23,410 - core.utils - WARNING - Access denied or rate limited for https://gfuel.com/account, attempt 3
+2025-08-16 16:37:28,424 - core.utils - WARNING - Access denied or rate limited for https://gfuel.com/account, attempt 4
+2025-08-16 16:37:28,424 - core.utils - INFO - Async fetch failed for https://gfuel.com/account, trying synchronous fallback
+2025-08-16 16:37:29,622 - core.utils - ERROR - Request error for https://gfuel.com/account: 403 Client Error: Forbidden for url: https://account.gfuel.com/authentication/oauth/authorize?client_id=ef69ce5e-6d3c-4a78-a613-40028db1d00e&locale=en&nonce=ae69fcf8-056b-4edb-8116-595880167461&redirect_uri=https%3A%2F%2Faccount.gfuel.com%2Fcallback%3Fsource%3Dcore&response_type=code&scope=openid+email+customer-account-api%3Afull&state=01K2S8ZNS2T5AT3DTVY55733ER
+2025-08-16 16:37:31,044 - core.utils - ERROR - Request error for https://gfuel.com/account: 403 Client Error: Forbidden for url: https://account.gfuel.com/authentication/oauth/authorize?client_id=ef69ce5e-6d3c-4a78-a613-40028db1d00e&locale=en&nonce=234c6805-1345-41c0-bea8-d42ed1fea796&redirect_uri=https%3A%2F%2Faccount.gfuel.com%2Fcallback%3Fsource%3Dcore&response_type=code&scope=openid+email+customer-account-api%3Afull&state=01K2S8ZQ5J1269G3JSS5V2HFW5
+2025-08-16 16:37:31,045 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/#modal--cart-drawer
+2025-08-16 16:37:34,008 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com#main-content
+2025-08-16 16:37:35,220 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/collections/street-fighter
+2025-08-16 16:37:36,400 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/collections/subscribe
+2025-08-16 16:37:37,684 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/
+2025-08-16 16:37:38,892 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com#megamenu--main-menu
+2025-08-16 16:37:40,135 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com#megamenu--main-menu
+2025-08-16 16:37:41,350 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/pages/rewards
+2025-08-16 16:37:42,531 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/pages/store-locator
+2025-08-16 16:37:43,720 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/account
+2025-08-16 16:37:44,653 - core.utils - WARNING - Access denied or rate limited for https://gfuel.com/account, attempt 1
+2025-08-16 16:37:46,656 - core.utils - WARNING - Access denied or rate limited for https://gfuel.com/account, attempt 2
+2025-08-16 16:37:49,665 - core.utils - WARNING - Access denied or rate limited for https://gfuel.com/account, attempt 3
+2025-08-16 16:37:54,802 - core.utils - WARNING - Access denied or rate limited for https://gfuel.com/account, attempt 4
+2025-08-16 16:37:54,802 - core.utils - INFO - Async fetch failed for https://gfuel.com/account, trying synchronous fallback
+2025-08-16 16:37:56,023 - core.utils - ERROR - Request error for https://gfuel.com/account: 403 Client Error: Forbidden for url: https://account.gfuel.com/authentication/oauth/authorize?client_id=ef69ce5e-6d3c-4a78-a613-40028db1d00e&locale=en&nonce=185e8ad9-dc04-45f0-a470-dc6a0c086271&redirect_uri=https%3A%2F%2Faccount.gfuel.com%2Fcallback%3Fsource%3Dcore&response_type=code&scope=openid+email+customer-account-api%3Afull&state=01K2S90FJ0PNQWE8RQBNPAJ40Q
+2025-08-16 16:37:57,480 - core.utils - ERROR - Request error for https://gfuel.com/account: 403 Client Error: Forbidden for url: https://account.gfuel.com/authentication/oauth/authorize?client_id=ef69ce5e-6d3c-4a78-a613-40028db1d00e&locale=en&nonce=74b384a2-38b7-4e49-a364-bc15fef188c4&redirect_uri=https%3A%2F%2Faccount.gfuel.com%2Fcallback%3Fsource%3Dcore&response_type=code&scope=openid+email+customer-account-api%3Afull&state=01K2S90GYR4NVXRBYD9S7V59FK
+2025-08-16 16:37:57,481 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/#modal--cart-drawer
+2025-08-16 16:38:00,520 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com#main-content
+2025-08-16 16:38:01,751 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/collections/street-fighter
+2025-08-16 16:38:02,985 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/collections/subscribe
+2025-08-16 16:38:04,377 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/
+2025-08-16 16:38:05,762 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com#megamenu--main-menu
+2025-08-16 16:38:07,271 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com#megamenu--main-menu
+2025-08-16 16:38:08,551 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/pages/rewards
+2025-08-16 16:38:09,764 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/pages/store-locator
+2025-08-16 16:38:11,006 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/account
+2025-08-16 16:38:12,235 - core.utils - WARNING - Access denied or rate limited for https://gfuel.com/account, attempt 1
+2025-08-16 16:38:14,273 - core.utils - WARNING - Access denied or rate limited for https://gfuel.com/account, attempt 2
+2025-08-16 16:38:17,448 - core.utils - WARNING - Access denied or rate limited for https://gfuel.com/account, attempt 3
+2025-08-16 16:38:22,481 - core.utils - WARNING - Access denied or rate limited for https://gfuel.com/account, attempt 4
+2025-08-16 16:38:22,482 - core.utils - INFO - Async fetch failed for https://gfuel.com/account, trying synchronous fallback
+2025-08-16 16:38:23,530 - core.utils - ERROR - Request error for https://gfuel.com/account: 403 Client Error: Forbidden for url: https://account.gfuel.com/authentication/oauth/authorize?client_id=ef69ce5e-6d3c-4a78-a613-40028db1d00e&locale=en&nonce=57415cf9-0cf2-4bcf-a4ea-ec98a7bb3e10&redirect_uri=https%3A%2F%2Faccount.gfuel.com%2Fcallback%3Fsource%3Dcore&response_type=code&scope=openid+email+customer-account-api%3Afull&state=01K2S91ADQDY7YSF7Q6Z0JXBAN
+2025-08-16 16:38:25,021 - core.utils - ERROR - Request error for https://gfuel.com/account: 403 Client Error: Forbidden for url: https://account.gfuel.com/authentication/oauth/authorize?client_id=ef69ce5e-6d3c-4a78-a613-40028db1d00e&locale=en&nonce=35ee83e8-8aa0-4eb4-8395-216b077d6970&redirect_uri=https%3A%2F%2Faccount.gfuel.com%2Fcallback%3Fsource%3Dcore&response_type=code&scope=openid+email+customer-account-api%3Afull&state=01K2S91BW2H4GTDVXY8Z091F3R
+2025-08-16 16:38:25,022 - modules.shopify_service - INFO - Fetching product page: https://gfuel.com/#modal--cart-drawer
+2025-08-16 16:38:27,424 - modules.shopify_service - INFO - Fetching 7 product pages
+2025-08-16 16:38:31,265 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 16:50:08,002 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 16:50:08,231 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 16:50:11,643 - modules.shopify_service - INFO - Extracting hero products from homepage
+2025-08-16 16:50:11,671 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 16:50:11,673 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 16:50:11,689 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 16:50:11,690 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 16:50:11,722 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 16:50:11,724 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 16:50:11,724 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 16:50:12,908 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 16:50:12,908 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 16:50:12,908 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 17:01:56,607 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 17:01:56,842 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 17:02:00,831 - modules.shopify_service - INFO - Extracting hero products from homepage
+2025-08-16 17:02:00,991 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 17:02:00,991 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 17:02:00,993 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 17:02:01,008 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 17:02:01,074 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 17:02:01,075 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 17:02:01,106 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 17:02:01,108 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 17:02:01,108 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 17:02:02,302 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 17:02:02,302 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 17:02:02,303 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 17:08:40,873 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 17:08:41,092 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 17:08:43,022 - modules.shopify_service - INFO - Extracting hero products from homepage
+2025-08-16 17:08:43,205 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 17:08:43,205 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 17:08:43,206 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 17:08:43,221 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 17:08:43,286 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 17:08:43,286 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 17:08:43,317 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 17:08:43,319 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 17:08:43,319 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 17:08:44,548 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 17:08:44,548 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 17:08:44,548 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 17:09:31,181 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 17:09:31,416 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 17:09:34,703 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 17:09:34,703 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 17:09:35,851 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 17:09:35,851 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 17:09:35,851 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 17:09:35,853 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 17:09:35,869 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 17:09:35,936 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 17:09:35,936 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 17:09:35,967 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 17:09:35,970 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 17:09:35,970 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 17:09:37,095 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 17:09:37,095 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 17:09:37,095 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com

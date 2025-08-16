@@ -31,7 +31,7 @@ POST {{baseUrl}}/insights
 Content-Type: {{contentType}}
 
 {
-    "website_url": "https://colourpop.com/"
+    "website_url": "https://gfuel.com/"
 }
 
 ###
