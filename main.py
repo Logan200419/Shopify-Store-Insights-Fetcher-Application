@@ -3,13 +3,16 @@ import asyncio
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel, HttpUrl
 from typing import Optional
 from datetime import datetime
 import traceback
+import json
 
-from core.models import BrandInsights, ErrorResponse, SuccessResponse
+from core.models import BrandInsights, ErrorResponse, SuccessResponse, CompetitorAnalysisResponse
 from modules.shopify_service import ShopifyInsightsService
+from modules.competitor_analyzer import CompetitorAnalyzer
 from database.models import db_manager
 from config.settings import settings
 
@@ -43,16 +46,30 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize service
+# Initialize services
 insights_service = ShopifyInsightsService()
+competitor_analyzer = CompetitorAnalyzer()
+
+# Custom JSON response function for datetime serialization
+def custom_json_response(content: dict, status_code: int = 200):
+    def json_serializer(obj):
+        if isinstance(obj, datetime):
+            return obj.isoformat()
+        raise TypeError(f"Object of type {type(obj)} is not JSON serializable")
+    
+    # Use FastAPI's jsonable_encoder which handles datetime objects
+    json_compatible_content = jsonable_encoder(content)
+    return JSONResponse(content=json_compatible_content, status_code=status_code)
 
 class InsightsRequest(BaseModel):
     website_url: str
+    include_competitor_analysis: bool = True
     
     class Config:
         json_schema_extra = {
             "example": {
-                "website_url": "https://example.myshopify.com"
+                "website_url": "https://example.myshopify.com",
+                "include_competitor_analysis": True
             }
         }
 
@@ -78,13 +95,15 @@ async def health_check():
 @app.post("/insights", response_model=SuccessResponse)
 async def fetch_insights(request: InsightsRequest):
     """
-    Fetch comprehensive insights from a Shopify store
+    Fetch comprehensive insights from a Shopify store with competitor analysis
     
     **Parameters:**
     - **website_url**: The URL of the Shopify store to analyze
+    - **include_competitor_analysis**: Whether to include competitor analysis in the response (default: true)
     
     **Returns:**
     - Complete brand insights including products, policies, social handles, etc.
+    - Includes competitor analysis data by default (can be disabled by setting include_competitor_analysis: false)
     
     **Error Codes:**
     - **400**: Invalid URL format or not a valid website
@@ -97,10 +116,51 @@ async def fetch_insights(request: InsightsRequest):
         # Fetch insights using the service
         insights = await insights_service.fetch_insights(request.website_url)
         
-        return SuccessResponse(
-            data=insights,
-            message=f"Successfully extracted insights for {request.website_url}"
-        )
+        # Convert insights to dict for potential modification
+        insights_dict = insights.model_dump()
+        
+        # Optionally include competitor analysis
+        if request.include_competitor_analysis:
+            logger.info("Including competitor analysis in response")
+            try:
+                # First check if we have stored competitor analysis
+                stored_analysis = db_manager.get_competitor_analysis(request.website_url)
+                
+                if stored_analysis:
+                    logger.info("Found stored competitor analysis")
+                    insights_dict['competitor_analysis'] = stored_analysis
+                else:
+                    logger.info("No stored competitor analysis found, running new analysis")
+                    # Run competitor analysis
+                    analysis_result = await competitor_analyzer.analyze_competitors(
+                        brand_name=insights_dict.get('brand_name', 'Unknown Brand'),
+                        website_url=request.website_url,
+                        insights_service=insights_service
+                    )
+                    
+                    # Save to database
+                    try:
+                        analysis_id = db_manager.save_competitor_analysis(analysis_result)
+                        analysis_result['analysis_id'] = analysis_id
+                        logger.info(f"Saved new competitor analysis with ID: {analysis_id}")
+                    except Exception as e:
+                        logger.error(f"Failed to save competitor analysis: {e}")
+                    
+                    insights_dict['competitor_analysis'] = analysis_result
+                    
+            except Exception as e:
+                logger.error(f"Error during competitor analysis: {e}")
+                insights_dict['competitor_analysis'] = {
+                    "error": "Failed to analyze competitors",
+                    "message": str(e)
+                }
+        
+        return custom_json_response({
+            "success": True,
+            "data": insights_dict,
+            "message": f"Successfully extracted insights for {request.website_url}",
+            "timestamp": datetime.now().isoformat()
+        })
         
     except Exception as e:
         error_message = str(e)
@@ -385,6 +445,183 @@ async def general_exception_handler(request, exc):
             "timestamp": datetime.now().isoformat()
         }
     )
+
+@app.post("/competitor-analysis")
+async def analyze_competitors(request: InsightsRequest):
+    """
+    Analyze competitors for a given brand and extract insights from their Shopify stores.
+    
+    **Parameters:**
+    - **website_url**: The URL of the brand to analyze competitors for
+    
+    **Returns:**
+    - Competitor analysis with insights from competitor Shopify stores
+    
+    **Error Codes:**
+    - **400**: Invalid URL format or not a valid website
+    - **404**: Website not found or not accessible
+    - **500**: Internal server error during processing
+    """
+    try:
+        logger.info(f"Starting competitor analysis for: {request.website_url}")
+        
+        # First get insights for the original brand
+        original_insights = await insights_service.fetch_insights(request.website_url)
+        brand_name = original_insights.brand_name or "Unknown Brand"
+        
+        # Analyze competitors
+        analysis_result = await competitor_analyzer.analyze_competitors(
+            brand_name, 
+            request.website_url, 
+            insights_service
+        )
+        
+        # Save competitor analysis to database
+        try:
+            logger.info("Saving competitor analysis to database")
+            analysis_id = db_manager.save_competitor_analysis(analysis_result)
+            logger.info(f"Successfully saved competitor analysis with ID: {analysis_id}")
+            analysis_result['analysis_id'] = analysis_id
+        except Exception as e:
+            logger.error(f"Failed to save competitor analysis to database: {e}")
+            # Continue without failing the request
+        
+        return JSONResponse(
+            status_code=200,
+            content={
+                "success": True,
+                "data": analysis_result,
+                "message": f"Successfully analyzed competitors for {brand_name}",
+                "timestamp": datetime.now().isoformat()
+            }
+        )
+        
+    except Exception as e:
+        error_message = str(e)
+        logger.error(f"Error during competitor analysis for {request.website_url}: {error_message}")
+        logger.error(f"Traceback: {traceback.format_exc()}")
+        
+        # Determine appropriate status code based on error
+        if "not found" in error_message.lower() or "404" in error_message:
+            status_code = 404
+            message = "Website not found or not accessible"
+        elif "invalid url" in error_message.lower():
+            status_code = 400
+            message = "Invalid URL format"
+        elif "failed to fetch" in error_message.lower():
+            status_code = 404
+            message = "Unable to fetch website content"
+        else:
+            status_code = 500
+            message = "Internal server error occurred during competitor analysis"
+        
+        raise HTTPException(
+            status_code=status_code,
+            detail={
+                "error": error_message,
+                "status_code": status_code,
+                "message": message,
+                "timestamp": datetime.now().isoformat()
+            }
+        )
+
+@app.get("/competitor-analysis/{website_url:path}")
+async def analyze_competitors_get(website_url: str):
+    """
+    Alternative GET endpoint for competitor analysis (for easy testing)
+    
+    **Parameters:**
+    - **website_url**: The URL of the brand to analyze competitors for (URL encoded)
+    
+    **Returns:**
+    - Competitor analysis with insights from competitor Shopify stores
+    """
+    request = InsightsRequest(website_url=website_url)
+    return await analyze_competitors(request)
+
+@app.get("/stored-competitor-analysis/{website_url:path}")
+async def get_stored_competitor_analysis(website_url: str):
+    """
+    Retrieve stored competitor analysis for a specific website from the database.
+    
+    **Parameters:**
+    - **website_url**: The URL of the original brand to retrieve competitor analysis for
+    
+    **Returns:**
+    - Stored competitor analysis data from the database
+    
+    **Error Codes:**
+    - **404**: No competitor analysis found for the specified website
+    - **500**: Internal server error during retrieval
+    """
+    try:
+        logger.info(f"Retrieving stored competitor analysis for: {website_url}")
+        analysis = db_manager.get_competitor_analysis(website_url)
+        
+        if not analysis:
+            raise HTTPException(
+                status_code=404, 
+                detail=f"No competitor analysis found for {website_url}"
+            )
+        
+        return JSONResponse(
+            status_code=200,
+            content={
+                "success": True,
+                "data": analysis,
+                "message": f"Successfully retrieved competitor analysis for {website_url}",
+                "timestamp": datetime.now().isoformat()
+            }
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error retrieving competitor analysis for {website_url}: {str(e)}")
+        logger.error(f"Traceback: {traceback.format_exc()}")
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Internal server error: {str(e)}"
+        )
+
+@app.post("/comprehensive-analysis")
+async def comprehensive_analysis(request: InsightsRequest):
+    """
+    Get comprehensive analysis including both insights and competitor analysis.
+    
+    **Parameters:**
+    - **website_url**: The URL of the Shopify store to analyze
+    
+    **Returns:**
+    - Complete brand insights AND competitor analysis in one response
+    
+    **Error Codes:**
+    - **400**: Invalid URL format or not a valid website
+    - **404**: Website not found or not accessible
+    - **500**: Internal server error during processing
+    """
+    try:
+        logger.info(f"Starting comprehensive analysis for: {request.website_url}")
+        
+        # Force include competitor analysis
+        request.include_competitor_analysis = True
+        
+        # Use the existing insights endpoint with competitor analysis
+        return await fetch_insights(request)
+        
+    except Exception as e:
+        error_message = str(e)
+        logger.error(f"Error during comprehensive analysis for {request.website_url}: {error_message}")
+        logger.error(f"Traceback: {traceback.format_exc()}")
+        
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "error": error_message,
+                "status_code": 500,
+                "message": "Internal server error during comprehensive analysis",
+                "timestamp": datetime.now().isoformat()
+            }
+        )
 
 if __name__ == "__main__":
     import uvicorn

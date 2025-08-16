@@ -1445,3 +1445,1386 @@ WHERE stores.website_url = %(website_url_1)s
 [parameters: {'website_url_1': 'https://gfuel.com', 'param_1': 1}]
 (Background on this error at: https://sqlalche.me/e/20/f405)
 2025-08-16 18:48:44,245 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 18:50:05,919 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 18:50:06,160 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 18:50:09,863 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 18:50:09,864 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 18:50:11,043 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 18:50:11,043 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 18:50:11,044 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 18:50:11,044 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 18:50:11,044 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 18:50:11,045 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 18:50:11,063 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 18:50:11,134 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 18:50:11,134 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 18:50:11,169 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 18:50:11,172 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 18:50:11,172 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 18:50:12,288 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 18:50:12,288 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 18:50:12,288 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 18:50:12,298 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 18:50:12,298 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 18:50:12,298 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 18:58:19,858 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 18:58:20,096 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 18:58:24,097 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 18:58:24,097 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 18:58:25,283 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 18:58:25,283 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 18:58:25,283 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 18:58:25,284 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 18:58:25,284 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 18:58:25,285 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 18:58:25,303 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 18:58:25,372 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 18:58:25,373 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 18:58:25,406 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 18:58:25,406 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 18:58:25,409 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 18:58:25,409 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 18:58:26,571 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 18:58:26,571 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 18:58:26,571 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 18:58:26,579 - database.models - INFO - Successfully saved insights for store ID: 2
+2025-08-16 18:58:26,579 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 2
+2025-08-16 18:58:26,579 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 18:58:44,735 - main - INFO - Received insights request for: https://www.allbirds.com
+2025-08-16 18:58:44,962 - modules.shopify_service - INFO - Fetching main page: https://www.allbirds.com
+2025-08-16 18:58:46,246 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 18:58:46,246 - modules.hero_product_extractor - INFO - Fetching products from https://www.allbirds.com/products.json
+2025-08-16 18:58:47,489 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 18:58:47,490 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 18:58:47,490 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 18:58:47,848 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 18:58:47,848 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 18:58:47,851 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 18:58:47,888 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 18:58:48,021 - modules.privacy_policy_extractor - INFO - Extracted 7 policy documents
+2025-08-16 18:58:48,021 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 18:58:48,087 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 18:58:48,087 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 18:58:48,092 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 18:58:48,092 - modules.shopify_service - INFO - Fetching products from JSON API: https://www.allbirds.com/products.json
+2025-08-16 18:58:49,212 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 18:58:49,212 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 18:58:49,212 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 18:58:49,221 - database.models - INFO - Successfully saved insights for store ID: 3
+2025-08-16 18:58:49,221 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 3
+2025-08-16 18:58:49,222 - modules.shopify_service - INFO - Successfully extracted insights for https://www.allbirds.com
+2025-08-16 19:07:25,318 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:07:25,556 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:07:29,372 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:07:29,372 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:07:30,641 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:07:30,641 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:07:30,641 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:07:30,641 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:07:30,641 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:07:30,644 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:07:30,664 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:07:30,742 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:07:30,743 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:07:30,783 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:07:30,783 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:07:30,786 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:07:30,786 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:07:31,917 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:07:31,917 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:07:31,917 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:07:31,928 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:07:31,928 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:07:31,928 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:11:12,776 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:11:13,014 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:11:15,582 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:11:15,582 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:11:16,825 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:11:16,826 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:11:16,826 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:11:16,826 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:11:16,826 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:11:16,828 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:11:16,844 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:11:16,908 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:11:16,909 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:11:16,940 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:11:16,940 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:11:16,943 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:11:16,943 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:11:18,081 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:11:18,082 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:11:18,082 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:11:18,090 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:11:18,090 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:11:18,091 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:14:07,648 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:14:07,877 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:14:11,857 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:14:11,857 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:14:12,995 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:14:12,995 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:14:12,995 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:14:12,995 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:14:12,996 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:14:12,997 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:14:13,014 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:14:13,084 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:14:13,084 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:14:13,118 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:14:13,119 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:14:13,121 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:14:13,121 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:14:14,241 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:14:14,242 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:14:14,242 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:14:14,245 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:14:14,246 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:14:14,246 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:15:30,994 - main - INFO - Starting comprehensive analysis for: https://gfuel.com
+2025-08-16 19:15:30,995 - main - INFO - Received insights request for: https://gfuel.com
+2025-08-16 19:15:31,219 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:15:34,042 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:15:34,042 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:15:35,261 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:15:35,261 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:15:35,262 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:15:35,262 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:15:35,262 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:15:35,263 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:15:35,279 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:15:35,346 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:15:35,346 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:15:35,378 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:15:35,378 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:15:35,380 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:15:35,380 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:15:36,499 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:15:36,499 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:15:36,499 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:15:36,507 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:15:36,508 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:15:36,508 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:15:36,513 - main - INFO - Including competitor analysis in response
+2025-08-16 19:15:36,515 - main - INFO - No stored competitor analysis found, running new analysis
+2025-08-16 19:15:36,515 - modules.competitor_analyzer - INFO - Starting competitor analysis for None
+2025-08-16 19:15:45,265 - modules.competitor_analyzer - INFO - Found 0 potential competitors
+2025-08-16 19:15:45,267 - database.models - ERROR - Failed to save competitor analysis: (pymysql.err.IntegrityError) (1048, "Column 'original_brand' cannot be null")
+[SQL: INSERT INTO competitor_analysis (original_brand, original_url, competitors_found, competitors_analyzed, competitor_insights, analysis_summary, created_at, updated_at) VALUES (%(original_brand)s, %(original_url)s, %(competitors_found)s, %(competitors_analyzed)s, %(competitor_insights)s, %(analysis_summary)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'original_brand': None, 'original_url': 'https://gfuel.com', 'competitors_found': 0, 'competitors_analyzed': 0, 'competitor_insights': '[]', 'analysis_summary': '{"message": "No competitor insights available"}', 'created_at': datetime.datetime(2025, 8, 16, 13, 45, 45, 267115), 'updated_at': datetime.datetime(2025, 8, 16, 13, 45, 45, 267118)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-16 19:15:45,268 - main - ERROR - Failed to save competitor analysis: (pymysql.err.IntegrityError) (1048, "Column 'original_brand' cannot be null")
+[SQL: INSERT INTO competitor_analysis (original_brand, original_url, competitors_found, competitors_analyzed, competitor_insights, analysis_summary, created_at, updated_at) VALUES (%(original_brand)s, %(original_url)s, %(competitors_found)s, %(competitors_analyzed)s, %(competitor_insights)s, %(analysis_summary)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'original_brand': None, 'original_url': 'https://gfuel.com', 'competitors_found': 0, 'competitors_analyzed': 0, 'competitor_insights': '[]', 'analysis_summary': '{"message": "No competitor insights available"}', 'created_at': datetime.datetime(2025, 8, 16, 13, 45, 45, 267115), 'updated_at': datetime.datetime(2025, 8, 16, 13, 45, 45, 267118)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-16 19:15:45,268 - main - ERROR - Error processing request for https://gfuel.com: Object of type datetime is not JSON serializable
+2025-08-16 19:15:45,270 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 145, in fetch_insights
+    return JSONResponse(
+        status_code=200,
+    ...<5 lines>...
+        }
+    )
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 190, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 47, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 193, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type datetime is not JSON serializable
+
+2025-08-16 19:15:45,270 - main - ERROR - Error during comprehensive analysis for https://gfuel.com: 500: {'error': 'Object of type datetime is not JSON serializable', 'status_code': 500, 'message': 'Internal server error occurred while processing the request', 'timestamp': '2025-08-16T19:15:45.270820'}
+2025-08-16 19:15:45,271 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 145, in fetch_insights
+    return JSONResponse(
+        status_code=200,
+    ...<5 lines>...
+        }
+    )
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 190, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 47, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 193, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type datetime is not JSON serializable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 599, in comprehensive_analysis
+    return await fetch_insights(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 174, in fetch_insights
+    raise HTTPException(
+    ...<7 lines>...
+    )
+fastapi.exceptions.HTTPException: 500: {'error': 'Object of type datetime is not JSON serializable', 'status_code': 500, 'message': 'Internal server error occurred while processing the request', 'timestamp': '2025-08-16T19:15:45.270820'}
+
+2025-08-16 19:15:45,273 - main - INFO - Received insights request for: https://gfuel.com
+2025-08-16 19:15:45,485 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:15:46,826 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:15:46,826 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:15:47,315 - main - INFO - Retrieving stored competitor analysis for: https://gfuel.com
+2025-08-16 19:15:48,082 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:15:48,082 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:15:48,082 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:15:48,082 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:15:48,082 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:15:48,083 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:15:48,099 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:15:48,164 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:15:48,165 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:15:48,196 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:15:48,196 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:15:48,198 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:15:48,198 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:15:49,330 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:15:49,330 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:15:49,331 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:15:49,334 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:15:49,335 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:15:49,335 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:15:49,340 - main - ERROR - Error processing request for https://gfuel.com: Object of type datetime is not JSON serializable
+2025-08-16 19:15:49,341 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 145, in fetch_insights
+    return JSONResponse(
+        status_code=200,
+    ...<5 lines>...
+        }
+    )
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 190, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 47, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 193, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type datetime is not JSON serializable
+
+2025-08-16 19:15:55,492 - main - INFO - Starting competitor analysis for: https://gfuel.com
+2025-08-16 19:15:55,720 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:15:59,652 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:15:59,653 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:16:00,833 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:16:00,833 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:16:00,833 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:16:00,834 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:16:00,834 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:16:00,835 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:16:00,852 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:16:00,916 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:16:00,916 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:16:00,948 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:16:00,948 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:16:00,950 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:16:00,950 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:16:02,061 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:16:02,062 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:16:02,062 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:16:02,070 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:16:02,070 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:16:02,070 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:16:02,075 - modules.competitor_analyzer - INFO - Starting competitor analysis for Unknown Brand
+2025-08-16 19:16:09,960 - modules.competitor_analyzer - INFO - Found 0 potential competitors
+2025-08-16 19:16:09,960 - main - INFO - Saving competitor analysis to database
+2025-08-16 19:16:09,964 - database.models - INFO - Successfully saved competitor analysis with ID: 1
+2025-08-16 19:16:09,964 - main - INFO - Successfully saved competitor analysis with ID: 1
+2025-08-16 19:16:12,010 - main - INFO - Starting comprehensive analysis for: https://gfuel.com
+2025-08-16 19:16:12,010 - main - INFO - Received insights request for: https://gfuel.com
+2025-08-16 19:16:12,229 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:16:13,498 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:16:13,498 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:16:14,618 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:16:14,619 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:16:14,619 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:16:14,619 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:16:14,619 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:16:14,621 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:16:14,637 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:16:14,701 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:16:14,701 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:16:14,732 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:16:14,732 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:16:14,734 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:16:14,735 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:16:15,860 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:16:15,860 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:16:15,860 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:16:15,864 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:16:15,864 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:16:15,864 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:16:15,869 - main - INFO - Including competitor analysis in response
+2025-08-16 19:16:15,870 - main - INFO - Found stored competitor analysis
+2025-08-16 19:16:15,871 - main - ERROR - Error processing request for https://gfuel.com: Object of type datetime is not JSON serializable
+2025-08-16 19:16:15,872 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 145, in fetch_insights
+    return JSONResponse(
+        status_code=200,
+    ...<5 lines>...
+        }
+    )
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 190, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 47, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 193, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type datetime is not JSON serializable
+
+2025-08-16 19:16:15,873 - main - ERROR - Error during comprehensive analysis for https://gfuel.com: 500: {'error': 'Object of type datetime is not JSON serializable', 'status_code': 500, 'message': 'Internal server error occurred while processing the request', 'timestamp': '2025-08-16T19:16:15.873152'}
+2025-08-16 19:16:15,874 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 145, in fetch_insights
+    return JSONResponse(
+        status_code=200,
+    ...<5 lines>...
+        }
+    )
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 190, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 47, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 193, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type datetime is not JSON serializable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 599, in comprehensive_analysis
+    return await fetch_insights(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 174, in fetch_insights
+    raise HTTPException(
+    ...<7 lines>...
+    )
+fastapi.exceptions.HTTPException: 500: {'error': 'Object of type datetime is not JSON serializable', 'status_code': 500, 'message': 'Internal server error occurred while processing the request', 'timestamp': '2025-08-16T19:16:15.873152'}
+
+2025-08-16 19:16:17,932 - main - INFO - Retrieving stored competitor analysis for: https://gfuel.com
+2025-08-16 19:16:28,052 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:16:28,278 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:16:30,006 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:16:30,006 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:16:31,201 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:16:31,202 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:16:31,202 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:16:31,202 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:16:31,202 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:16:31,203 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:16:31,219 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:16:31,284 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:16:31,284 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:16:31,314 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:16:31,315 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:16:31,317 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:16:31,317 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:16:32,433 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:16:32,434 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:16:32,434 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:16:32,437 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:16:32,438 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:16:32,438 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:16:32,443 - main - ERROR - Error processing request for https://gfuel.com/: Object of type datetime is not JSON serializable
+2025-08-16 19:16:32,444 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 145, in fetch_insights
+    return JSONResponse(
+        status_code=200,
+    ...<5 lines>...
+        }
+    )
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 190, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 47, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 193, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type datetime is not JSON serializable
+
+2025-08-16 19:18:56,403 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:18:56,632 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:19:00,969 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:19:00,969 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:19:02,187 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:19:02,187 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:19:02,187 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:19:02,187 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:19:02,187 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:19:02,189 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:19:02,205 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:19:02,270 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:19:02,271 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:19:02,303 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:19:02,303 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:19:02,305 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:19:02,305 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:19:03,433 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:19:03,433 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:19:03,433 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:19:03,441 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:19:03,442 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:19:03,442 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:19:49,327 - main - INFO - Received insights request for: https://gfuel.com
+2025-08-16 19:19:49,549 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:19:51,604 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:19:51,604 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:19:52,831 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:19:52,831 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:19:52,831 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:19:52,831 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:19:52,832 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:19:52,833 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:19:52,849 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:19:52,913 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:19:52,913 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:19:52,944 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:19:52,944 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:19:52,946 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:19:52,946 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:19:54,069 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:19:54,069 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:19:54,069 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:19:54,073 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:19:54,073 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:19:54,073 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:20:13,000 - main - INFO - Received insights request for: https://gfuel.com
+2025-08-16 19:20:13,215 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:20:14,475 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:20:14,475 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:20:15,611 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:20:15,611 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:20:15,611 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:20:15,612 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:20:15,612 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:20:15,613 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:20:15,629 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:20:15,693 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:20:15,694 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:20:15,725 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:20:15,725 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:20:15,727 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:20:15,727 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:20:16,863 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:20:16,863 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:20:16,863 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:20:16,867 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:20:16,867 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:20:16,867 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:20:55,201 - main - INFO - Received insights request for: https://gfuel.com
+2025-08-16 19:20:55,430 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:20:56,748 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:20:56,749 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:20:57,876 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:20:57,876 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:20:57,876 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:20:57,877 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:20:57,877 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:20:57,878 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:20:57,894 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:20:57,957 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:20:57,957 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:20:57,988 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:20:57,988 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:20:57,991 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:20:57,991 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:20:59,121 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:20:59,121 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:20:59,122 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:20:59,125 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:20:59,125 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:20:59,125 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:21:01,208 - main - INFO - Received insights request for: https://gfuel.com
+2025-08-16 19:21:01,424 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:21:02,683 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:21:02,683 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:21:03,825 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:21:03,825 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:21:03,825 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:21:03,825 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:21:03,825 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:21:03,827 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:21:03,842 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:21:03,907 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:21:03,907 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:21:03,937 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:21:03,937 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:21:03,940 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:21:03,940 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:21:05,071 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:21:05,071 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:21:05,071 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:21:05,074 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:21:05,075 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:21:05,075 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:21:05,079 - main - INFO - Including competitor analysis in response
+2025-08-16 19:21:05,081 - main - INFO - Found stored competitor analysis
+2025-08-16 19:21:07,122 - main - INFO - Starting competitor analysis for: https://gfuel.com
+2025-08-16 19:21:07,338 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:21:08,567 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:21:08,568 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:21:09,694 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:21:09,694 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:21:09,694 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:21:09,694 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:21:09,694 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:21:09,696 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:21:09,711 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:21:09,776 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:21:09,776 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:21:09,807 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:21:09,807 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:21:09,809 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:21:09,809 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:21:10,927 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:21:10,928 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:21:10,928 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:21:10,931 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:21:10,931 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:21:10,932 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:21:10,936 - modules.competitor_analyzer - INFO - Starting competitor analysis for Unknown Brand
+2025-08-16 19:21:20,286 - modules.competitor_analyzer - INFO - Found 0 potential competitors
+2025-08-16 19:21:20,286 - main - INFO - Saving competitor analysis to database
+2025-08-16 19:21:20,290 - database.models - INFO - Successfully saved competitor analysis with ID: 2
+2025-08-16 19:21:20,290 - main - INFO - Successfully saved competitor analysis with ID: 2
+2025-08-16 19:21:22,349 - main - INFO - Starting comprehensive analysis for: https://gfuel.com
+2025-08-16 19:21:22,349 - main - INFO - Received insights request for: https://gfuel.com
+2025-08-16 19:21:22,569 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:21:24,435 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:21:24,435 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:21:25,613 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:21:25,613 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:21:25,613 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:21:25,613 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:21:25,614 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:21:25,615 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:21:25,631 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:21:25,703 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:21:25,703 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:21:25,736 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:21:25,736 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:21:25,738 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:21:25,738 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:21:26,875 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:21:26,875 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:21:26,875 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:21:26,879 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:21:26,879 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:21:26,879 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:21:26,885 - main - INFO - Including competitor analysis in response
+2025-08-16 19:21:26,886 - main - INFO - Found stored competitor analysis
+2025-08-16 19:21:29,342 - main - INFO - Received insights request for: https://gfuel.com
+2025-08-16 19:21:29,580 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:21:30,845 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:21:30,846 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:21:31,972 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:21:31,973 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:21:31,973 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:21:31,973 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:21:31,973 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:21:31,974 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:21:31,991 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:21:32,058 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:21:32,058 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:21:32,091 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:21:32,091 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:21:32,094 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:21:32,094 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:21:33,382 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:21:33,383 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:21:33,383 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:21:33,387 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:21:33,387 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:21:33,388 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:21:35,444 - main - INFO - Received insights request for: https://gfuel.com
+2025-08-16 19:21:35,660 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:21:37,377 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:21:37,377 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:21:38,506 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:21:38,506 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:21:38,506 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:21:38,506 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:21:38,506 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:21:38,508 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:21:38,524 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:21:38,590 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:21:38,590 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:21:38,625 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:21:38,625 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:21:38,627 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:21:38,627 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:21:39,770 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:21:39,770 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:21:39,770 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:21:39,773 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:21:39,774 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:21:39,774 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:21:39,778 - main - INFO - Including competitor analysis in response
+2025-08-16 19:21:39,779 - main - INFO - Found stored competitor analysis
+2025-08-16 19:21:41,809 - main - INFO - Starting competitor analysis for: https://gfuel.com
+2025-08-16 19:21:42,034 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:21:43,451 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:21:43,452 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:21:44,578 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:21:44,579 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:21:44,579 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:21:44,579 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:21:44,579 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:21:44,580 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:21:44,596 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:21:44,661 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:21:44,661 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:21:44,692 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:21:44,692 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:21:44,694 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:21:44,694 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:21:45,846 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:21:45,847 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:21:45,847 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:21:45,850 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:21:45,850 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:21:45,851 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:21:45,855 - modules.competitor_analyzer - INFO - Starting competitor analysis for Unknown Brand
+2025-08-16 19:21:54,111 - modules.competitor_analyzer - INFO - Found 0 potential competitors
+2025-08-16 19:21:54,111 - main - INFO - Saving competitor analysis to database
+2025-08-16 19:21:54,113 - database.models - INFO - Successfully saved competitor analysis with ID: 3
+2025-08-16 19:21:54,114 - main - INFO - Successfully saved competitor analysis with ID: 3
+2025-08-16 19:21:56,153 - main - INFO - Starting comprehensive analysis for: https://gfuel.com
+2025-08-16 19:21:56,153 - main - INFO - Received insights request for: https://gfuel.com
+2025-08-16 19:21:56,382 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:21:57,648 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:21:57,648 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:21:58,780 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:21:58,780 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:21:58,780 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:21:58,780 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:21:58,780 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:21:58,782 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:21:58,798 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:21:58,866 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:21:58,866 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:21:58,898 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:21:58,898 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:21:58,901 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:21:58,901 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:22:00,050 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:22:00,050 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:22:00,051 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:22:00,054 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:22:00,054 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:22:00,054 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:22:00,059 - main - INFO - Including competitor analysis in response
+2025-08-16 19:22:00,060 - main - INFO - Found stored competitor analysis
+2025-08-16 19:22:15,864 - main - INFO - Received insights request for: https://www.allbirds.com
+2025-08-16 19:22:16,092 - modules.shopify_service - INFO - Fetching main page: https://www.allbirds.com
+2025-08-16 19:22:18,261 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:22:18,261 - modules.hero_product_extractor - INFO - Fetching products from https://www.allbirds.com/products.json
+2025-08-16 19:22:19,509 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:22:19,509 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 19:22:19,510 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 19:22:19,872 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 19:22:19,872 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:22:19,875 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:22:19,917 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:22:20,045 - modules.privacy_policy_extractor - INFO - Extracted 7 policy documents
+2025-08-16 19:22:20,046 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:22:20,108 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:22:20,109 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:22:20,113 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:22:20,113 - modules.shopify_service - INFO - Fetching products from JSON API: https://www.allbirds.com/products.json
+2025-08-16 19:22:21,224 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:22:21,224 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:22:21,224 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:22:21,233 - database.models - INFO - Successfully saved insights for store ID: 2
+2025-08-16 19:22:21,234 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 2
+2025-08-16 19:22:21,234 - modules.shopify_service - INFO - Successfully extracted insights for https://www.allbirds.com
+2025-08-16 19:24:26,797 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:24:27,032 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:24:28,448 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:24:28,448 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:24:29,182 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:24:29,409 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:24:29,772 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:24:29,772 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:24:29,772 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:24:29,772 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:24:29,772 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:24:29,774 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:24:29,790 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:24:29,855 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:24:29,855 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:24:29,886 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:24:29,886 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:24:29,888 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:24:29,888 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:24:30,696 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:24:30,697 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:24:30,989 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:24:30,989 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:24:30,990 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:24:30,993 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:24:30,994 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:24:30,994 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:24:31,826 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:24:31,826 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:24:31,826 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:24:31,826 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:24:31,826 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:24:31,828 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:24:31,843 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:24:31,909 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:24:31,909 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:24:31,941 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:24:31,941 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:24:31,943 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:24:31,943 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:24:33,071 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:24:33,072 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:24:33,072 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:24:33,075 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:24:33,076 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:24:33,076 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:27:02,687 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:27:02,933 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:27:07,178 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:27:07,178 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:27:08,406 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:27:08,406 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:27:08,406 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:27:08,406 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:27:08,407 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:27:08,408 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:27:08,428 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:27:08,504 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:27:08,505 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:27:08,541 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:27:08,541 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:27:08,543 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:27:08,543 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:27:09,665 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:27:09,666 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:27:09,666 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:27:09,675 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:27:09,676 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:27:09,676 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:27:09,681 - main - INFO - Including competitor analysis in response
+2025-08-16 19:27:09,683 - main - INFO - No stored competitor analysis found, running new analysis
+2025-08-16 19:27:09,683 - modules.competitor_analyzer - INFO - Starting competitor analysis for None
+2025-08-16 19:27:18,512 - modules.competitor_analyzer - INFO - Found 0 potential competitors
+2025-08-16 19:27:18,515 - database.models - ERROR - Failed to save competitor analysis: (pymysql.err.IntegrityError) (1048, "Column 'original_brand' cannot be null")
+[SQL: INSERT INTO competitor_analysis (original_brand, original_url, competitors_found, competitors_analyzed, competitor_insights, analysis_summary, created_at, updated_at) VALUES (%(original_brand)s, %(original_url)s, %(competitors_found)s, %(competitors_analyzed)s, %(competitor_insights)s, %(analysis_summary)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'original_brand': None, 'original_url': 'https://gfuel.com/', 'competitors_found': 0, 'competitors_analyzed': 0, 'competitor_insights': '[]', 'analysis_summary': '{"message": "No competitor insights available"}', 'created_at': datetime.datetime(2025, 8, 16, 13, 57, 18, 514309), 'updated_at': datetime.datetime(2025, 8, 16, 13, 57, 18, 514313)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-16 19:27:18,515 - main - ERROR - Failed to save competitor analysis: (pymysql.err.IntegrityError) (1048, "Column 'original_brand' cannot be null")
+[SQL: INSERT INTO competitor_analysis (original_brand, original_url, competitors_found, competitors_analyzed, competitor_insights, analysis_summary, created_at, updated_at) VALUES (%(original_brand)s, %(original_url)s, %(competitors_found)s, %(competitors_analyzed)s, %(competitor_insights)s, %(analysis_summary)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'original_brand': None, 'original_url': 'https://gfuel.com/', 'competitors_found': 0, 'competitors_analyzed': 0, 'competitor_insights': '[]', 'analysis_summary': '{"message": "No competitor insights available"}', 'created_at': datetime.datetime(2025, 8, 16, 13, 57, 18, 514309), 'updated_at': datetime.datetime(2025, 8, 16, 13, 57, 18, 514313)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-16 19:27:42,101 - main - INFO - Received insights request for: https://www.allbirds.com
+2025-08-16 19:27:42,372 - modules.shopify_service - INFO - Fetching main page: https://www.allbirds.com
+2025-08-16 19:27:46,430 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:27:46,431 - modules.hero_product_extractor - INFO - Fetching products from https://www.allbirds.com/products.json
+2025-08-16 19:27:47,619 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:27:47,619 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 19:27:47,619 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 19:27:47,994 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 19:27:47,994 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:27:47,997 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:27:48,034 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:27:48,161 - modules.privacy_policy_extractor - INFO - Extracted 7 policy documents
+2025-08-16 19:27:48,161 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:27:48,228 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:27:48,228 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:27:48,232 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:27:48,232 - modules.shopify_service - INFO - Fetching products from JSON API: https://www.allbirds.com/products.json
+2025-08-16 19:27:49,364 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:27:49,365 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:27:49,365 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:27:49,369 - database.models - INFO - Successfully saved insights for store ID: 2
+2025-08-16 19:27:49,369 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 2
+2025-08-16 19:27:49,369 - modules.shopify_service - INFO - Successfully extracted insights for https://www.allbirds.com
+2025-08-16 19:27:49,374 - main - INFO - Including competitor analysis in response
+2025-08-16 19:27:49,375 - main - INFO - No stored competitor analysis found, running new analysis
+2025-08-16 19:27:49,375 - modules.competitor_analyzer - INFO - Starting competitor analysis for Allbirds Comfortable, Sustainable Shoes  Apparel
+2025-08-16 19:27:57,465 - modules.competitor_analyzer - INFO - Found 0 potential competitors
+2025-08-16 19:27:57,469 - database.models - INFO - Successfully saved competitor analysis with ID: 4
+2025-08-16 19:27:57,469 - main - INFO - Saved new competitor analysis with ID: 4
+2025-08-16 19:33:52,297 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:33:52,524 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:33:55,330 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:33:55,330 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:33:56,577 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:33:56,578 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:33:56,578 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:33:56,578 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:33:56,578 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:33:56,579 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:33:56,599 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:33:56,668 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:33:56,668 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:33:56,702 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:33:56,702 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:33:56,705 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:33:56,705 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:33:57,849 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:33:57,850 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:33:57,850 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:33:57,858 - database.models - INFO - Successfully saved insights for store ID: 1
+2025-08-16 19:33:57,858 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 1
+2025-08-16 19:33:57,858 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:33:57,863 - main - INFO - Including competitor analysis in response
+2025-08-16 19:33:57,865 - main - INFO - No stored competitor analysis found, running new analysis
+2025-08-16 19:33:57,865 - modules.competitor_analyzer - INFO - Starting competitor analysis for None
+2025-08-16 19:33:57,865 - modules.competitor_analyzer - INFO - Finding competitors for None (https://gfuel.com/)
+2025-08-16 19:33:59,306 - modules.competitor_analyzer - INFO - Detected category: ecommerce
+2025-08-16 19:33:59,307 - modules.competitor_analyzer - INFO - Searching for: ecommerce brands like None
+2025-08-16 19:34:02,965 - modules.competitor_analyzer - INFO - Searching for: best ecommerce websites
+2025-08-16 19:34:05,782 - modules.competitor_analyzer - INFO - Searching for: ecommerce alternatives to None
+2025-08-16 19:34:08,829 - modules.competitor_analyzer - INFO - Searching for: top ecommerce stores online
+2025-08-16 19:34:12,482 - modules.competitor_analyzer - INFO - Searching for: None competitors
+2025-08-16 19:34:15,885 - modules.competitor_analyzer - INFO - Searching for: ecommerce ecommerce sites
+2025-08-16 19:34:18,575 - modules.competitor_analyzer - INFO - Searching for: similar to None
+2025-08-16 19:34:21,714 - modules.competitor_analyzer - INFO - Searching for: ecommerce online shopping
+2025-08-16 19:34:25,232 - modules.competitor_analyzer - INFO - Searching for: best ecommerce brands 2024
+2025-08-16 19:34:27,929 - modules.competitor_analyzer - INFO - Searching for: ecommerce marketplace stores
+2025-08-16 19:34:31,084 - modules.competitor_analyzer - INFO - Found 0 competitors from web search
+2025-08-16 19:34:43,031 - modules.competitor_analyzer - INFO - Found 0 competitors from similar sites search
+2025-08-16 19:34:54,865 - modules.competitor_analyzer - INFO - Found 0 competitors from industry search
+2025-08-16 19:34:54,866 - modules.competitor_analyzer - INFO - No competitors found through search, using fallback stores
+2025-08-16 19:34:54,866 - modules.competitor_analyzer - INFO - Total unique competitors found: 4
+2025-08-16 19:34:54,866 - modules.competitor_analyzer - INFO - Found 4 potential competitors
+2025-08-16 19:34:54,866 - modules.competitor_analyzer - INFO - Analyzing competitor: Allbirds (https://www.allbirds.com)
+2025-08-16 19:34:55,082 - modules.shopify_service - INFO - Fetching main page: https://www.allbirds.com
+2025-08-16 19:34:59,368 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:34:59,368 - modules.hero_product_extractor - INFO - Fetching products from https://www.allbirds.com/products.json
+2025-08-16 19:35:00,596 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:35:00,597 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 19:35:00,597 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 19:35:00,941 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 19:35:00,942 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:35:00,944 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:35:00,980 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:35:01,104 - modules.privacy_policy_extractor - INFO - Extracted 7 policy documents
+2025-08-16 19:35:01,104 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:35:01,164 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:35:01,164 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:35:01,169 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:35:01,169 - modules.shopify_service - INFO - Fetching products from JSON API: https://www.allbirds.com/products.json
+2025-08-16 19:35:02,314 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:35:02,315 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:35:02,315 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:35:02,319 - database.models - INFO - Successfully saved insights for store ID: 2
+2025-08-16 19:35:02,319 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 2
+2025-08-16 19:35:02,320 - modules.shopify_service - INFO - Successfully extracted insights for https://www.allbirds.com
+2025-08-16 19:35:04,324 - modules.competitor_analyzer - INFO - Analyzing competitor: ColourPop (https://colourpop.com)
+2025-08-16 19:35:04,542 - modules.shopify_service - INFO - Fetching main page: https://colourpop.com
+2025-08-16 19:35:06,711 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:35:06,711 - modules.hero_product_extractor - INFO - Fetching products from https://colourpop.com/products.json
+2025-08-16 19:35:07,906 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:35:07,906 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 19:35:07,906 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 19:35:08,518 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 19:35:08,518 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:35:08,522 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:35:08,581 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:35:08,789 - modules.privacy_policy_extractor - INFO - Extracted 8 policy documents
+2025-08-16 19:35:08,789 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:35:08,910 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:35:08,910 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:35:08,917 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:35:08,917 - modules.shopify_service - INFO - Fetching products from JSON API: https://colourpop.com/products.json
+2025-08-16 19:35:10,051 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:35:10,051 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:35:10,051 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:35:10,058 - database.models - INFO - Successfully saved insights for store ID: 3
+2025-08-16 19:35:10,058 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 3
+2025-08-16 19:35:10,058 - modules.shopify_service - INFO - Successfully extracted insights for https://colourpop.com
+2025-08-16 19:35:12,063 - modules.competitor_analyzer - INFO - Analyzing competitor: Gymshark (https://www.gymshark.com)
+2025-08-16 19:35:12,282 - modules.shopify_service - INFO - Fetching main page: https://www.gymshark.com
+2025-08-16 19:35:15,375 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:35:15,375 - modules.hero_product_extractor - INFO - Fetching products from https://www.gymshark.com/products.json
+2025-08-16 19:35:15,383 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 1
+2025-08-16 19:35:16,399 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 2
+2025-08-16 19:35:18,413 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 3
+2025-08-16 19:35:18,413 - core.utils - INFO - Async fetch failed for https://www.gymshark.com/products.json, trying synchronous fallback
+2025-08-16 19:35:18,523 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 19:35:18,570 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 19:35:18,571 - modules.hero_product_extractor - INFO - Loaded 0 products from JSON API
+2025-08-16 19:35:18,571 - modules.hero_product_extractor - INFO - JSON API failed, falling back to HTML scraping for hero products
+2025-08-16 19:35:18,643 - modules.product_extractor - INFO - Extracted 0 unique products
+2025-08-16 19:35:18,644 - modules.hero_product_extractor - INFO - Loaded 0 products from HTML scraping
+2025-08-16 19:35:18,644 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 19:35:18,644 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 19:35:18,954 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 19:35:18,954 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:35:18,956 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:35:18,992 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:35:19,082 - modules.privacy_policy_extractor - INFO - Extracted 8 policy documents
+2025-08-16 19:35:19,082 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:35:19,137 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:35:19,137 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:35:19,141 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:35:19,141 - modules.shopify_service - INFO - Fetching products from JSON API: https://www.gymshark.com/products.json
+2025-08-16 19:35:19,147 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 1
+2025-08-16 19:35:20,161 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 2
+2025-08-16 19:35:22,177 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 3
+2025-08-16 19:35:22,177 - core.utils - INFO - Async fetch failed for https://www.gymshark.com/products.json, trying synchronous fallback
+2025-08-16 19:35:22,227 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 19:35:22,276 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 19:35:22,277 - modules.shopify_service - INFO - Successfully fetched 0 products from JSON API
+2025-08-16 19:35:22,277 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:35:22,280 - database.models - INFO - Successfully saved insights for store ID: 4
+2025-08-16 19:35:22,280 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 4
+2025-08-16 19:35:22,281 - modules.shopify_service - INFO - Successfully extracted insights for https://www.gymshark.com
+2025-08-16 19:35:24,287 - modules.competitor_analyzer - INFO - Analyzing competitor: Bombas (https://bombas.com)
+2025-08-16 19:35:24,585 - modules.shopify_service - INFO - Fetching main page: https://bombas.com
+2025-08-16 19:35:31,767 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:35:31,768 - modules.hero_product_extractor - INFO - Fetching products from https://bombas.com/products.json
+2025-08-16 19:35:31,881 - core.utils - WARNING - Page not found: https://bombas.com/products.json
+2025-08-16 19:35:31,882 - core.utils - INFO - Async fetch failed for https://bombas.com/products.json, trying synchronous fallback
+2025-08-16 19:35:33,539 - core.utils - ERROR - Request error for https://bombas.com/products.json: 404 Client Error: Not Found for url: https://bombas.com/products.json
+2025-08-16 19:35:33,698 - core.utils - ERROR - Request error for https://bombas.com/products.json: 404 Client Error: Not Found for url: https://bombas.com/products.json
+2025-08-16 19:35:33,698 - modules.hero_product_extractor - INFO - Loaded 0 products from JSON API
+2025-08-16 19:35:33,699 - modules.hero_product_extractor - INFO - JSON API failed, falling back to HTML scraping for hero products
+2025-08-16 19:35:33,752 - modules.product_extractor - INFO - Extracted 0 unique products
+2025-08-16 19:35:33,752 - modules.hero_product_extractor - INFO - Loaded 0 products from HTML scraping
+2025-08-16 19:35:33,752 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 19:35:33,752 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 19:35:34,080 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 19:35:34,081 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:35:34,082 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:35:34,113 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:35:34,190 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:35:34,190 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:35:34,251 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:35:34,251 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:35:34,254 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:35:34,255 - modules.shopify_service - INFO - Fetching products from JSON API: https://bombas.com/products.json
+2025-08-16 19:35:34,316 - core.utils - WARNING - Page not found: https://bombas.com/products.json
+2025-08-16 19:35:34,317 - core.utils - INFO - Async fetch failed for https://bombas.com/products.json, trying synchronous fallback
+2025-08-16 19:35:34,460 - core.utils - ERROR - Request error for https://bombas.com/products.json: 404 Client Error: Not Found for url: https://bombas.com/products.json
+2025-08-16 19:35:34,683 - core.utils - ERROR - Request error for https://bombas.com/products.json: 404 Client Error: Not Found for url: https://bombas.com/products.json
+2025-08-16 19:35:34,684 - modules.shopify_service - INFO - Successfully fetched 0 products from JSON API
+2025-08-16 19:35:34,684 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:35:34,688 - database.models - INFO - Successfully saved insights for store ID: 5
+2025-08-16 19:35:34,689 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 5
+2025-08-16 19:35:34,689 - modules.shopify_service - INFO - Successfully extracted insights for https://bombas.com
+2025-08-16 19:35:36,694 - database.models - ERROR - Failed to save competitor analysis: Object of type datetime is not JSON serializable
+2025-08-16 19:35:36,694 - main - ERROR - Failed to save competitor analysis: Object of type datetime is not JSON serializable
+2025-08-16 19:38:43,783 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:38:44,021 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:38:47,966 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:38:47,967 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:38:49,126 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:38:49,126 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:38:49,126 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:38:49,126 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:38:49,126 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:38:49,127 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:38:49,144 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:38:49,208 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:38:49,208 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:38:49,241 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:38:49,241 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:38:49,243 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:38:49,243 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:38:50,362 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:38:50,363 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:38:50,363 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:38:50,373 - database.models - INFO - Successfully saved insights for store ID: 6
+2025-08-16 19:38:50,373 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 6
+2025-08-16 19:38:50,373 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:38:50,378 - main - INFO - Including competitor analysis in response
+2025-08-16 19:38:50,380 - main - INFO - No stored competitor analysis found, running new analysis
+2025-08-16 19:38:50,380 - modules.competitor_analyzer - INFO - Starting competitor analysis for None
+2025-08-16 19:38:50,380 - modules.competitor_analyzer - INFO - Finding competitors for None (https://gfuel.com/)
+2025-08-16 19:38:50,641 - modules.competitor_analyzer - INFO - Detected category: ecommerce
+2025-08-16 19:38:50,641 - modules.competitor_analyzer - INFO - Searching for: ecommerce brands like None
+2025-08-16 19:38:54,403 - modules.competitor_analyzer - INFO - Searching for: best ecommerce websites
+2025-08-16 19:38:57,080 - modules.competitor_analyzer - INFO - Searching for: ecommerce alternatives to None
+2025-08-16 19:39:00,071 - modules.competitor_analyzer - INFO - Searching for: top ecommerce stores online
+2025-08-16 19:39:03,118 - modules.competitor_analyzer - INFO - Searching for: None competitors
+2025-08-16 19:39:06,419 - modules.competitor_analyzer - INFO - Searching for: ecommerce ecommerce sites
+2025-08-16 19:39:08,720 - modules.competitor_analyzer - INFO - Searching for: similar to None
+2025-08-16 19:39:11,136 - modules.competitor_analyzer - INFO - Searching for: ecommerce online shopping
+2025-08-16 19:39:14,028 - modules.competitor_analyzer - INFO - Searching for: best ecommerce brands 2024
+2025-08-16 19:39:17,180 - modules.competitor_analyzer - INFO - Searching for: ecommerce marketplace stores
+2025-08-16 19:39:20,037 - modules.competitor_analyzer - INFO - Found 0 competitors from web search
+2025-08-16 19:39:32,160 - modules.competitor_analyzer - INFO - Found 0 competitors from similar sites search
+2025-08-16 19:39:44,006 - modules.competitor_analyzer - INFO - Found 0 competitors from industry search
+2025-08-16 19:39:44,007 - modules.competitor_analyzer - INFO - No competitors found through search, using fallback stores
+2025-08-16 19:39:44,007 - modules.competitor_analyzer - INFO - Total unique competitors found: 4
+2025-08-16 19:39:44,007 - modules.competitor_analyzer - INFO - Found 4 potential competitors
+2025-08-16 19:39:44,007 - modules.competitor_analyzer - INFO - Analyzing competitor: Allbirds (https://www.allbirds.com)
+2025-08-16 19:39:44,235 - modules.shopify_service - INFO - Fetching main page: https://www.allbirds.com
+2025-08-16 19:39:45,813 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:39:45,813 - modules.hero_product_extractor - INFO - Fetching products from https://www.allbirds.com/products.json
+2025-08-16 19:39:47,007 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:39:47,008 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 19:39:47,008 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 19:39:47,376 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 19:39:47,376 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:39:47,379 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:39:47,420 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:39:47,568 - modules.privacy_policy_extractor - INFO - Extracted 7 policy documents
+2025-08-16 19:39:47,569 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:39:47,637 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:39:47,637 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:39:47,642 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:39:47,642 - modules.shopify_service - INFO - Fetching products from JSON API: https://www.allbirds.com/products.json
+2025-08-16 19:39:48,907 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:39:48,908 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:39:48,908 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:39:48,922 - database.models - INFO - Successfully saved insights for store ID: 7
+2025-08-16 19:39:48,923 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 7
+2025-08-16 19:39:48,923 - modules.shopify_service - INFO - Successfully extracted insights for https://www.allbirds.com
+2025-08-16 19:39:50,928 - modules.competitor_analyzer - INFO - Analyzing competitor: ColourPop (https://colourpop.com)
+2025-08-16 19:39:51,163 - modules.shopify_service - INFO - Fetching main page: https://colourpop.com
+2025-08-16 19:39:53,536 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:39:53,536 - modules.hero_product_extractor - INFO - Fetching products from https://colourpop.com/products.json
+2025-08-16 19:39:54,725 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:39:54,725 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 19:39:54,725 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 19:39:55,354 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 19:39:55,354 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:39:55,357 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:39:55,420 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:39:55,641 - modules.privacy_policy_extractor - INFO - Extracted 8 policy documents
+2025-08-16 19:39:55,641 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:39:55,765 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:39:55,765 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:39:55,772 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:39:55,772 - modules.shopify_service - INFO - Fetching products from JSON API: https://colourpop.com/products.json
+2025-08-16 19:39:56,896 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:39:56,896 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:39:56,896 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:39:56,901 - database.models - INFO - Successfully saved insights for store ID: 8
+2025-08-16 19:39:56,901 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 8
+2025-08-16 19:39:56,901 - modules.shopify_service - INFO - Successfully extracted insights for https://colourpop.com
+2025-08-16 19:39:58,907 - modules.competitor_analyzer - INFO - Analyzing competitor: Gymshark (https://www.gymshark.com)
+2025-08-16 19:39:59,142 - modules.shopify_service - INFO - Fetching main page: https://www.gymshark.com
+2025-08-16 19:40:02,332 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:40:02,332 - modules.hero_product_extractor - INFO - Fetching products from https://www.gymshark.com/products.json
+2025-08-16 19:40:02,342 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 1
+2025-08-16 19:40:03,350 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 2
+2025-08-16 19:40:05,364 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 3
+2025-08-16 19:40:05,364 - core.utils - INFO - Async fetch failed for https://www.gymshark.com/products.json, trying synchronous fallback
+2025-08-16 19:40:05,633 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 19:40:05,697 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 19:40:05,698 - modules.hero_product_extractor - INFO - Loaded 0 products from JSON API
+2025-08-16 19:40:05,698 - modules.hero_product_extractor - INFO - JSON API failed, falling back to HTML scraping for hero products
+2025-08-16 19:40:05,776 - modules.product_extractor - INFO - Extracted 0 unique products
+2025-08-16 19:40:05,776 - modules.hero_product_extractor - INFO - Loaded 0 products from HTML scraping
+2025-08-16 19:40:05,776 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 19:40:05,776 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 19:40:06,096 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 19:40:06,096 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:40:06,098 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:40:06,133 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:40:06,219 - modules.privacy_policy_extractor - INFO - Extracted 8 policy documents
+2025-08-16 19:40:06,219 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:40:06,283 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:40:06,283 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:40:06,287 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:40:06,287 - modules.shopify_service - INFO - Fetching products from JSON API: https://www.gymshark.com/products.json
+2025-08-16 19:40:06,295 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 1
+2025-08-16 19:40:07,313 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 2
+2025-08-16 19:40:09,331 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 3
+2025-08-16 19:40:09,331 - core.utils - INFO - Async fetch failed for https://www.gymshark.com/products.json, trying synchronous fallback
+2025-08-16 19:40:09,389 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 19:40:09,444 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 19:40:09,445 - modules.shopify_service - INFO - Successfully fetched 0 products from JSON API
+2025-08-16 19:40:09,445 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:40:09,449 - database.models - INFO - Successfully saved insights for store ID: 9
+2025-08-16 19:40:09,450 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 9
+2025-08-16 19:40:09,450 - modules.shopify_service - INFO - Successfully extracted insights for https://www.gymshark.com
+2025-08-16 19:40:11,455 - modules.competitor_analyzer - INFO - Analyzing competitor: Bombas (https://bombas.com)
+2025-08-16 19:40:11,772 - modules.shopify_service - INFO - Fetching main page: https://bombas.com
+2025-08-16 19:40:17,644 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:40:17,644 - modules.hero_product_extractor - INFO - Fetching products from https://bombas.com/products.json
+2025-08-16 19:40:17,733 - core.utils - WARNING - Page not found: https://bombas.com/products.json
+2025-08-16 19:40:17,733 - core.utils - INFO - Async fetch failed for https://bombas.com/products.json, trying synchronous fallback
+2025-08-16 19:40:17,916 - core.utils - ERROR - Request error for https://bombas.com/products.json: 404 Client Error: Not Found for url: https://bombas.com/products.json
+2025-08-16 19:40:19,379 - core.utils - ERROR - Request error for https://bombas.com/products.json: 404 Client Error: Not Found for url: https://bombas.com/products.json
+2025-08-16 19:40:19,379 - modules.hero_product_extractor - INFO - Loaded 0 products from JSON API
+2025-08-16 19:40:19,379 - modules.hero_product_extractor - INFO - JSON API failed, falling back to HTML scraping for hero products
+2025-08-16 19:40:19,430 - modules.product_extractor - INFO - Extracted 0 unique products
+2025-08-16 19:40:19,430 - modules.hero_product_extractor - INFO - Loaded 0 products from HTML scraping
+2025-08-16 19:40:19,430 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 19:40:19,431 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 19:40:19,737 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 19:40:19,737 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:40:19,739 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:40:19,768 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:40:19,841 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:40:19,841 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:40:19,897 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:40:19,897 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:40:19,900 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:40:19,900 - modules.shopify_service - INFO - Fetching products from JSON API: https://bombas.com/products.json
+2025-08-16 19:40:19,998 - core.utils - WARNING - Page not found: https://bombas.com/products.json
+2025-08-16 19:40:19,998 - core.utils - INFO - Async fetch failed for https://bombas.com/products.json, trying synchronous fallback
+2025-08-16 19:40:20,139 - core.utils - ERROR - Request error for https://bombas.com/products.json: 404 Client Error: Not Found for url: https://bombas.com/products.json
+2025-08-16 19:40:20,272 - core.utils - ERROR - Request error for https://bombas.com/products.json: 404 Client Error: Not Found for url: https://bombas.com/products.json
+2025-08-16 19:40:20,272 - modules.shopify_service - INFO - Successfully fetched 0 products from JSON API
+2025-08-16 19:40:20,272 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:40:20,276 - database.models - INFO - Successfully saved insights for store ID: 5
+2025-08-16 19:40:20,276 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 5
+2025-08-16 19:40:20,276 - modules.shopify_service - INFO - Successfully extracted insights for https://bombas.com
+2025-08-16 19:40:22,281 - database.models - ERROR - Failed to save competitor analysis: Object of type datetime is not JSON serializable
+2025-08-16 19:40:22,281 - main - ERROR - Failed to save competitor analysis: Object of type datetime is not JSON serializable
+2025-08-16 19:43:04,728 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:43:04,952 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:43:07,142 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:43:07,143 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:43:08,362 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:43:08,362 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:43:08,362 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:43:08,362 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:43:08,363 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:43:08,364 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:43:08,380 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:43:08,446 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:43:08,446 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:43:08,478 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:43:08,478 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:43:08,481 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:43:08,481 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:43:09,599 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:43:09,600 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:43:09,600 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:43:09,604 - database.models - INFO - Successfully saved insights for store ID: 6
+2025-08-16 19:43:09,604 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 6
+2025-08-16 19:43:09,604 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:46:56,732 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:46:56,952 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:46:58,880 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:46:58,880 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:47:00,088 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:47:00,088 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:47:00,088 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:47:00,088 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:47:00,088 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:47:00,090 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:47:00,106 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:47:00,172 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:47:00,172 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:47:00,207 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:47:00,207 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:47:00,209 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:47:00,209 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:47:01,328 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:47:01,329 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:47:01,329 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:47:01,334 - database.models - INFO - Successfully saved insights for store ID: 10
+2025-08-16 19:47:01,334 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 10
+2025-08-16 19:47:01,335 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:48:26,193 - main - INFO - Received insights request for: https://www.allbirds.com
+2025-08-16 19:48:26,413 - modules.shopify_service - INFO - Fetching main page: https://www.allbirds.com
+2025-08-16 19:48:28,024 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:48:28,024 - modules.hero_product_extractor - INFO - Fetching products from https://www.allbirds.com/products.json
+2025-08-16 19:48:29,278 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:48:29,278 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 19:48:29,279 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 19:48:29,630 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 19:48:29,630 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:48:29,633 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:48:29,670 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:48:29,798 - modules.privacy_policy_extractor - INFO - Extracted 7 policy documents
+2025-08-16 19:48:29,798 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:48:29,862 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:48:29,862 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:48:29,867 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:48:29,867 - modules.shopify_service - INFO - Fetching products from JSON API: https://www.allbirds.com/products.json
+2025-08-16 19:48:30,978 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:48:30,978 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:48:30,979 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:48:30,986 - database.models - INFO - Successfully saved insights for store ID: 11
+2025-08-16 19:48:30,986 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 11
+2025-08-16 19:48:30,986 - modules.shopify_service - INFO - Successfully extracted insights for https://www.allbirds.com
+2025-08-16 19:50:10,949 - main - INFO - Received insights request for: https://colourpop.com/
+2025-08-16 19:50:11,175 - modules.shopify_service - INFO - Fetching main page: https://colourpop.com
+2025-08-16 19:50:13,454 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:50:13,454 - modules.hero_product_extractor - INFO - Fetching products from https://colourpop.com/products.json
+2025-08-16 19:50:14,628 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:50:14,629 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 19:50:14,629 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 19:50:15,263 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 19:50:15,263 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:50:15,267 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:50:15,331 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:50:15,545 - modules.privacy_policy_extractor - INFO - Extracted 8 policy documents
+2025-08-16 19:50:15,545 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:50:15,667 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:50:15,667 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:50:15,674 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:50:15,674 - modules.shopify_service - INFO - Fetching products from JSON API: https://colourpop.com/products.json
+2025-08-16 19:50:16,790 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:50:16,790 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:50:16,790 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:50:16,795 - database.models - INFO - Successfully saved insights for store ID: 12
+2025-08-16 19:50:16,795 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 12
+2025-08-16 19:50:16,795 - modules.shopify_service - INFO - Successfully extracted insights for https://colourpop.com
+2025-08-16 19:50:55,423 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:50:55,648 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:50:58,147 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:50:58,147 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:50:59,396 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:50:59,396 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:50:59,396 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:50:59,396 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:50:59,396 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:50:59,398 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:50:59,414 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:50:59,479 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:50:59,479 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:50:59,511 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:50:59,511 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:50:59,513 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:50:59,513 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:51:00,637 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:51:00,637 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:51:00,637 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:51:00,641 - database.models - INFO - Successfully saved insights for store ID: 10
+2025-08-16 19:51:00,641 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 10
+2025-08-16 19:51:00,641 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:51:00,646 - main - INFO - Including competitor analysis in response
+2025-08-16 19:51:00,647 - main - INFO - No stored competitor analysis found, running new analysis
+2025-08-16 19:51:00,647 - modules.competitor_analyzer - INFO - Starting competitor analysis for None
+2025-08-16 19:51:00,647 - modules.competitor_analyzer - INFO - Finding competitors for None (https://gfuel.com/)
+2025-08-16 19:51:01,974 - modules.competitor_analyzer - INFO - Detected category: ecommerce
+2025-08-16 19:51:01,974 - modules.competitor_analyzer - INFO - Searching for: ecommerce brands like None
+2025-08-16 19:51:05,609 - modules.competitor_analyzer - INFO - Searching for: best ecommerce websites
+2025-08-16 19:51:08,892 - modules.competitor_analyzer - INFO - Searching for: ecommerce alternatives to None
+2025-08-16 19:51:11,818 - modules.competitor_analyzer - INFO - Searching for: top ecommerce stores online
+2025-08-16 19:51:15,447 - modules.competitor_analyzer - INFO - Searching for: None competitors
+2025-08-16 19:51:18,137 - modules.competitor_analyzer - INFO - Searching for: ecommerce ecommerce sites
+2025-08-16 19:51:20,913 - modules.competitor_analyzer - INFO - Searching for: similar to None
+2025-08-16 19:51:23,493 - modules.competitor_analyzer - INFO - Searching for: ecommerce online shopping
+2025-08-16 19:51:26,166 - modules.competitor_analyzer - INFO - Searching for: best ecommerce brands 2024
+2025-08-16 19:51:26,273 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-08-16 19:51:28,716 - modules.competitor_analyzer - INFO - Searching for: ecommerce marketplace stores
+2025-08-16 19:51:49,812 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+marketplace+stores (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000234CDAEAE90>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
+2025-08-16 19:51:53,233 - modules.competitor_analyzer - INFO - Found 0 competitors from web search
+2025-08-16 19:52:14,302 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=sites+like+gfuel.com (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000234CDA7F750>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
+2025-08-16 19:52:38,194 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=websites+similar+to+gfuel.com (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000234CDA7DE50>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
+2025-08-16 19:53:01,882 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=alternatives+to+gfuel.com (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000234CDA7F610>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
+2025-08-16 19:53:25,452 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=None+similar+websites (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000234CDA7D950>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
+2025-08-16 19:53:28,877 - modules.competitor_analyzer - INFO - Found 0 competitors from similar sites search

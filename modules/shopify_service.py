@@ -116,7 +116,20 @@ class ShopifyInsightsService:
             # Extract FAQs
             logger.info("Extracting FAQs")
             faq_extractor = FAQExtractor(soup, normalized_url)
-            insights.faqs = faq_extractor.extract()
+            faq_data = faq_extractor.extract()
+            
+            # Convert FAQ dictionaries to FAQModel objects
+            from core.models import FAQModel
+            insights.faqs = [
+                FAQModel(
+                    question=faq_dict.get('question', ''),
+                    answer=faq_dict.get('answer', ''),
+                    category=faq_dict.get('category', 'General')
+                )
+                for faq_dict in faq_data
+                if isinstance(faq_dict, dict) and faq_dict.get('question') and faq_dict.get('answer')
+            ]
+            logger.info(f"Extracted {len(insights.faqs)} FAQs")
             
             # Extract important links
             logger.info("Extracting important links")

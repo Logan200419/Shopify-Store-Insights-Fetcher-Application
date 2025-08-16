@@ -241,6 +241,22 @@
                 >
             </div>
             
+            <div class="form-group">
+                <label>
+                    <input 
+                        type="checkbox" 
+                        id="includeCompetitor" 
+                        name="includeCompetitor" 
+                        checked
+                        style="margin-right: 8px; transform: scale(1.2);"
+                    >
+                    🏆 Include Competitor Analysis (recommended)
+                </label>
+                <p style="font-size: 0.9rem; color: #666; margin-top: 5px; margin-left: 25px;">
+                    Analyzes competitor Shopify stores to provide market insights and competitive data
+                </p>
+            </div>
+            
             <div class="button-group">
                 <button type="submit" class="btn-primary">
                     📊 Fetch Insights
@@ -263,7 +279,7 @@
         <div class="loading" id="loading">
             <div class="spinner"></div>
             <p>Fetching insights from the Shopify store...</p>
-            <p><small>This may take 10-30 seconds depending on the store size.</small></p>
+            <small>This may take 10-30 seconds depending on the store size.</small>
         </div>
         
         <div class="results" id="results">
@@ -279,6 +295,7 @@
             e.preventDefault();
             
             const websiteUrl = document.getElementById('websiteUrl').value;
+            const includeCompetitor = document.getElementById('includeCompetitor').checked;
             const loading = document.getElementById('loading');
             const results = document.getElementById('results');
             const resultsTitle = document.getElementById('resultsTitle');
@@ -288,6 +305,16 @@
             loading.style.display = 'block';
             results.style.display = 'none';
             
+            // Update loading message based on competitor analysis
+            const loadingMessage = loading.querySelector('p');
+            if (includeCompetitor) {
+                loadingMessage.textContent = 'Fetching insights and analyzing competitors...';
+                loading.querySelector('small').textContent = 'This may take 30-60 seconds for competitor analysis.';
+            } else {
+                loadingMessage.textContent = 'Fetching insights from the Shopify store...';
+                loading.querySelector('small').textContent = 'This may take 10-30 seconds depending on the store size.';
+            }
+            
             try {
                 const response = await fetch(`${API_BASE_URL}/insights`, {
                     method: 'POST',
@@ -295,7 +322,8 @@
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        website_url: websiteUrl
+                        website_url: websiteUrl,
+                        include_competitor_analysis: includeCompetitor
                     })
                 });
                 
@@ -305,7 +333,13 @@
                 loading.style.display = 'none';
                 
                 if (response.ok) {
-                    resultsTitle.textContent = '✅ Insights Successfully Fetched';
+                    const hasCompetitors = data.data && data.data.competitor_analysis;
+                    let titleText = '✅ Insights Successfully Fetched';
+                    if (hasCompetitors) {
+                        const competitorCount = data.data.competitor_analysis.competitors_found || 0;
+                        titleText += ` (+ ${competitorCount} Competitors Analyzed)`;
+                    }
+                    resultsTitle.textContent = titleText;
                     results.className = 'results success';
                     resultsContent.textContent = JSON.stringify(data, null, 2);
                 } else {

@@ -1,6 +1,7 @@
 from pydantic import BaseModel, HttpUrl, Field
 from typing import List, Optional, Dict, Any
 from datetime import datetime
+import json
 
 class ProductModel(BaseModel):
     name: str
@@ -37,6 +38,7 @@ class PolicyModel(BaseModel):
 class FAQModel(BaseModel):
     question: str
     answer: str
+    category: Optional[str] = "General"
 
 class ImportantLinks(BaseModel):
     order_tracking: Optional[str] = None
@@ -68,14 +70,40 @@ class BrandInsights(BaseModel):
     total_products: int = 0
     scraped_at: datetime = Field(default_factory=datetime.now)
     
+    class Config:
+        json_encoders = {
+            datetime: lambda v: v.isoformat()
+        }
+    
 class ErrorResponse(BaseModel):
     error: str
     status_code: int
     message: str
     timestamp: datetime = Field(default_factory=datetime.now)
+    
+    class Config:
+        json_encoders = {
+            datetime: lambda v: v.isoformat()
+        }
 
 class SuccessResponse(BaseModel):
     success: bool = True
     data: BrandInsights
     message: str = "Successfully fetched brand insights"
     timestamp: datetime = Field(default_factory=datetime.now)
+    
+    class Config:
+        json_encoders = {
+            datetime: lambda v: v.isoformat()
+        }
+
+class CompetitorAnalysisResponse(BaseModel):
+    success: bool = True
+    data: Dict[str, Any]
+    message: str = "Successfully completed competitor analysis"
+    timestamp: datetime = Field(default_factory=datetime.now)
+    
+    class Config:
+        json_encoders = {
+            datetime: lambda v: v.isoformat()
+        }

@@ -31,6 +31,19 @@ class Store(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
+class CompetitorAnalysis(Base):
+    __tablename__ = 'competitor_analysis'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    original_brand = Column(Text, nullable=False)
+    original_url = Column(Text, nullable=False)
+    competitors_found = Column(Integer, default=0)
+    competitors_analyzed = Column(Integer, default=0)
+    competitor_insights = Column(Text)  # JSON string
+    analysis_summary = Column(Text)  # JSON string
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
 class DatabaseManager:
     """Database manager for Shopify Insights Fetcher"""
     
@@ -216,6 +229,62 @@ class DatabaseManager:
             session.rollback()
             logger.error(f"Failed to delete store insights: {e}")
             return False
+        finally:
+            session.close()
+
+    def save_competitor_analysis(self, analysis_data: Dict[str, Any]) -> Optional[int]:
+        """Save competitor analysis results to database"""
+        session = self.get_session()
+        try:
+            analysis = CompetitorAnalysis(
+                original_brand=analysis_data.get('original_brand', ''),
+                original_url=analysis_data.get('original_url', ''),
+                competitors_found=analysis_data.get('competitors_found', 0),
+                competitors_analyzed=analysis_data.get('competitors_analyzed', 0),
+                competitor_insights=json.dumps(analysis_data.get('competitor_insights', [])),
+                analysis_summary=json.dumps(analysis_data.get('analysis_summary', {}))
+            )
+            
+            session.add(analysis)
+            session.commit()
+            session.refresh(analysis)
+            
+            analysis_id = analysis.id  # type: ignore
+            logger.info(f"Successfully saved competitor analysis with ID: {analysis_id}")
+            return analysis_id  # type: ignore
+            
+        except Exception as e:
+            session.rollback()
+            logger.error(f"Failed to save competitor analysis: {e}")
+            raise
+        finally:
+            session.close()
+
+    def get_competitor_analysis(self, original_url: str) -> Optional[Dict[str, Any]]:
+        """Retrieve competitor analysis from database"""
+        session = self.get_session()
+        try:
+            analysis = session.query(CompetitorAnalysis).filter_by(original_url=original_url).first()
+            if not analysis:
+                return None
+            
+            result = {
+                'id': analysis.id,  # type: ignore
+                'original_brand': analysis.original_brand,  # type: ignore
+                'original_url': analysis.original_url,  # type: ignore
+                'competitors_found': analysis.competitors_found,  # type: ignore
+                'competitors_analyzed': analysis.competitors_analyzed,  # type: ignore
+                'competitor_insights': json.loads(analysis.competitor_insights) if analysis.competitor_insights else [],  # type: ignore
+                'analysis_summary': json.loads(analysis.analysis_summary) if analysis.analysis_summary else {},  # type: ignore
+                'created_at': analysis.created_at.isoformat() if analysis.created_at else None,  # type: ignore
+                'updated_at': analysis.updated_at.isoformat() if analysis.updated_at else None  # type: ignore
+            }
+            
+            return result
+            
+        except Exception as e:
+            logger.error(f"Failed to retrieve competitor analysis: {e}")
+            return None
         finally:
             session.close()
 

@@ -13,18 +13,27 @@ class FAQExtractor(BaseExtractor):
         """Extract FAQ data from the store."""
         faq_data = []
         
+        print(f"[DEBUG] Starting FAQ extraction for: {self.base_url}")
+        
         # First try to extract from current page
         page_faqs = self._extract_from_current_page()
+        print(f"[DEBUG] Found {len(page_faqs)} FAQs from current page")
         if page_faqs:
             faq_data.extend(page_faqs)
         
         # Try to find dedicated FAQ pages
         dedicated_faqs = self._extract_from_dedicated_pages()
+        print(f"[DEBUG] Found {len(dedicated_faqs)} FAQs from dedicated pages")
         if dedicated_faqs:
             faq_data.extend(dedicated_faqs)
         
         # Remove duplicates
         unique_faqs = self._remove_duplicate_faqs(faq_data)
+        print(f"[DEBUG] Final FAQ count after deduplication: {len(unique_faqs)}")
+        
+        # Show sample FAQs for debugging
+        if unique_faqs:
+            print(f"[DEBUG] Sample FAQ: {unique_faqs[0]}")
         
         return unique_faqs
     
