@@ -1,0 +1,255 @@
+### Shopify Insights Fetcher API - HTTP Test File
+### This file contains HTTP requests for testing the API
+### Use with VS Code REST Client extension or similar tools
+
+### Variables
+@baseUrl = http://localhost:8000
+@contentType = application/json
+
+### ========================================
+### API Health Check
+### ========================================
+
+### Check if the API server is running and healthy
+GET {{baseUrl}}/health
+Accept: application/json
+
+### ========================================
+### API Information
+### ========================================
+
+### Get basic API information
+GET {{baseUrl}}/
+Accept: application/json
+
+### ========================================
+### Extract Insights - POST Method (Recommended)
+### ========================================
+
+### Extract insights from Gymshark (Popular fitness brand)
+POST {{baseUrl}}/insights
+Content-Type: {{contentType}}
+
+{
+    "website_url": "https://colourpop.com/"
+}
+
+###
+
+### Extract insights from Allbirds (Sustainable shoes)
+POST {{baseUrl}}/insights
+Content-Type: {{contentType}}
+
+{
+    "website_url": "https://allbirds.com"
+}
+
+###
+
+### Extract insights from Fashion Nova (Fashion brand)
+POST {{baseUrl}}/insights
+Content-Type: {{contentType}}
+
+{
+    "website_url": "https://www.fashionnova.com"
+}
+
+###
+
+### Extract insights from Bombas (Comfort socks)
+POST {{baseUrl}}/insights
+Content-Type: {{contentType}}
+
+{
+    "website_url": "https://bombas.com"
+}
+
+###
+
+### Extract insights from MVMT (Watches)
+POST {{baseUrl}}/insights
+Content-Type: {{contentType}}
+
+{
+    "website_url": "https://www.mvmt.com"
+}
+
+###
+
+### Extract insights from Hymns & Verses (Skincare)
+POST {{baseUrl}}/insights
+Content-Type: {{contentType}}
+
+{
+    "website_url": "https://hymnsandverses.com"
+}
+
+###
+
+### Extract insights from custom Shopify store (Replace with your target URL)
+POST {{baseUrl}}/insights
+Content-Type: {{contentType}}
+
+{
+    "website_url": "https://your-shopify-store.myshopify.com"
+}
+
+### ========================================
+### Extract Insights - GET Method (Alternative)
+### ========================================
+
+### Alternative GET method for testing (URL encoded)
+GET {{baseUrl}}/insights/https://shop.gymshark.com
+Accept: application/json
+
+###
+
+### Alternative GET method for Allbirds
+GET {{baseUrl}}/insights/https://allbirds.com
+Accept: application/json
+
+### ========================================
+### Async Processing (Background Jobs)
+### ========================================
+
+### Start async processing for large stores
+POST {{baseUrl}}/insights/async
+Content-Type: {{contentType}}
+
+{
+    "website_url": "https://shop.gymshark.com"
+}
+
+### ========================================
+### Error Testing
+### ========================================
+
+### Test with invalid URL format
+POST {{baseUrl}}/insights
+Content-Type: {{contentType}}
+
+{
+    "website_url": "invalid-url"
+}
+
+###
+
+### Test with non-existent domain
+POST {{baseUrl}}/insights
+Content-Type: {{contentType}}
+
+{
+    "website_url": "https://non-existent-store-12345.myshopify.com"
+}
+
+###
+
+### Test with non-Shopify store (should still work but with warning)
+POST {{baseUrl}}/insights
+Content-Type: {{contentType}}
+
+{
+    "website_url": "https://www.amazon.com"
+}
+
+### ========================================
+### Performance Testing
+### ========================================
+
+### Test multiple requests (uncomment to run)
+# POST {{baseUrl}}/insights
+# Content-Type: {{contentType}}
+# 
+# {
+#     "website_url": "https://shop.gymshark.com"
+# }
+# 
+# ###
+# 
+# POST {{baseUrl}}/insights
+# Content-Type: {{contentType}}
+# 
+# {
+#     "website_url": "https://allbirds.com"
+# }
+
+### ========================================
+### API Documentation Links
+### ========================================
+
+### Swagger UI Documentation
+# Open in browser: http://localhost:8000/docs
+
+### ReDoc Documentation  
+# Open in browser: http://localhost:8000/redoc
+
+### ========================================
+### Notes and Instructions
+### ========================================
+
+### 1. Start the API server first:
+###    .venv\Scripts\python.exe main.py
+
+### 2. The server should be running on http://localhost:8000
+
+### 3. Use VS Code with REST Client extension to run these requests
+###    - Install: "REST Client" by Huachao Mao
+###    - Click "Send Request" above each request
+
+### 4. Expected Response Format:
+### {
+###   "success": true,
+###   "data": {
+###     "website_url": "https://example.com",
+###     "brand_name": "Example Brand",
+###     "brand_description": "Brand description...",
+###     "hero_products": [...],
+###     "product_catalog": [...],
+###     "social_handles": {...},
+###     "contact_details": {...},
+###     "privacy_policy": {...},
+###     "return_policy": {...},
+###     "refund_policy": {...},
+###     "faqs": [...],
+###     "important_links": {...},
+###     "currencies_supported": [...],
+###     "payment_methods": [...],
+###     "total_products": 150,
+###     "scraped_at": "2025-08-16T12:00:00"
+###   },
+###   "message": "Successfully extracted insights",
+###   "timestamp": "2025-08-16T12:00:00"
+### }
+
+### 5. Error Response Format:
+### {
+###   "error": "Error description",
+###   "status_code": 404,
+###   "message": "Website not found or not accessible",
+###   "timestamp": "2025-08-16T12:00:00"
+### }
+
+### 6. Common HTTP Status Codes:
+###    - 200: Success
+###    - 400: Bad Request (Invalid URL format)
+###    - 404: Not Found (Website not accessible)
+###    - 500: Internal Server Error
+
+### ========================================
+### Curl Examples (Alternative)
+### ========================================
+
+### If you prefer using curl from command line:
+
+### Basic request:
+# curl -X POST "http://localhost:8000/insights" \
+#      -H "Content-Type: application/json" \
+#      -d '{"website_url": "https://shop.gymshark.com"}'
+
+### With pretty-printed output:
+# curl -X POST "http://localhost:8000/insights" \
+#      -H "Content-Type: application/json" \
+#      -d '{"website_url": "https://shop.gymshark.com"}' | python -m json.tool
+
+### Health check:
+# curl http://localhost:8000/health

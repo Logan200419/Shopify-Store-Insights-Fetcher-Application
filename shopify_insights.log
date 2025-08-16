@@ -1,0 +1,740 @@
+2025-08-16 15:42:07,221 - main - INFO - Received insights request for: https://shop.gymshark.com
+2025-08-16 15:42:07,252 - modules.shopify_service - INFO - Fetching main page: https://shop.gymshark.com
+2025-08-16 15:42:07,453 - core.utils - ERROR - Error fetching https://shop.gymshark.com: Cannot connect to host shop.gymshark.com:443 ssl:default [getaddrinfo failed], attempt 1
+2025-08-16 15:42:08,461 - core.utils - ERROR - Error fetching https://shop.gymshark.com: Cannot connect to host shop.gymshark.com:443 ssl:default [getaddrinfo failed], attempt 2
+2025-08-16 15:42:10,475 - core.utils - ERROR - Error fetching https://shop.gymshark.com: Cannot connect to host shop.gymshark.com:443 ssl:default [getaddrinfo failed], attempt 3
+2025-08-16 15:42:15,184 - core.utils - ERROR - Error fetching https://shop.gymshark.com: Cannot connect to host shop.gymshark.com:443 ssl:default [getaddrinfo failed], attempt 4
+2025-08-16 15:42:15,185 - main - ERROR - Error processing request for https://shop.gymshark.com: Failed to fetch website content
+2025-08-16 15:42:15,186 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 50, in fetch_insights
+    raise Exception("Failed to fetch website content")
+Exception: Failed to fetch website content
+
+2025-08-16 15:42:15,186 - main - ERROR - Unhandled exception: Object of type datetime is not JSON serializable
+2025-08-16 15:42:15,211 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 50, in fetch_insights
+    raise Exception("Failed to fetch website content")
+Exception: Failed to fetch website content
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\routing.py", line 75, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\fastapi\routing.py", line 302, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\fastapi\routing.py", line 213, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 123, in fetch_insights
+    raise HTTPException(
+    ...<7 lines>...
+    )
+fastapi.exceptions.HTTPException: 404: {'error': 'Failed to fetch website content', 'status_code': 404, 'message': 'Unable to fetch website content', 'timestamp': datetime.datetime(2025, 8, 16, 15, 42, 15, 186341)}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\_exception_handler.py", line 59, in wrapped_app
+    response = await handler(conn, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 191, in http_exception_handler
+    return JSONResponse(
+        status_code=exc.status_code,
+        content=exc.detail
+    )
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 190, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 47, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 193, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type datetime is not JSON serializable
+
+2025-08-16 15:42:23,444 - main - INFO - Received insights request for: https://allbirds.com
+2025-08-16 15:42:23,472 - modules.shopify_service - INFO - Fetching main page: https://allbirds.com
+2025-08-16 15:42:54,170 - core.utils - WARNING - Timeout for https://allbirds.com, attempt 1
+2025-08-16 15:43:16,452 - core.utils - ERROR - Error fetching https://allbirds.com: Cannot connect to host allbirds.com:443 ssl:default [The semaphore timeout period has expired], attempt 2
+2025-08-16 15:43:39,738 - core.utils - ERROR - Error fetching https://allbirds.com: Cannot connect to host allbirds.com:443 ssl:default [The semaphore timeout period has expired], attempt 3
+2025-08-16 15:44:04,832 - core.utils - ERROR - Error fetching https://allbirds.com: Cannot connect to host allbirds.com:443 ssl:default [The semaphore timeout period has expired], attempt 4
+2025-08-16 15:44:04,832 - main - ERROR - Error processing request for https://allbirds.com: Failed to fetch website content
+2025-08-16 15:44:04,833 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 50, in fetch_insights
+    raise Exception("Failed to fetch website content")
+Exception: Failed to fetch website content
+
+2025-08-16 15:44:04,833 - main - ERROR - Unhandled exception: Object of type datetime is not JSON serializable
+2025-08-16 15:44:04,835 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 50, in fetch_insights
+    raise Exception("Failed to fetch website content")
+Exception: Failed to fetch website content
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\routing.py", line 75, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\fastapi\routing.py", line 302, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\fastapi\routing.py", line 213, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 123, in fetch_insights
+    raise HTTPException(
+    ...<7 lines>...
+    )
+fastapi.exceptions.HTTPException: 404: {'error': 'Failed to fetch website content', 'status_code': 404, 'message': 'Unable to fetch website content', 'timestamp': datetime.datetime(2025, 8, 16, 15, 44, 4, 833531)}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\_exception_handler.py", line 59, in wrapped_app
+    response = await handler(conn, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 191, in http_exception_handler
+    return JSONResponse(
+        status_code=exc.status_code,
+        content=exc.detail
+    )
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 190, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 47, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\starlette\responses.py", line 193, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type datetime is not JSON serializable
+
+2025-08-16 15:50:17,391 - main - INFO - Received insights request for: https://shop.gymshark.com
+2025-08-16 15:50:17,609 - main - ERROR - Error processing request for https://shop.gymshark.com: Resolver requires aiodns library
+2025-08-16 15:50:17,611 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 44, in fetch_insights
+    async with WebScraper() as scraper:
+               ~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\core\utils.py", line 34, in __aenter__
+    resolver=aiohttp.AsyncResolver(),
+             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\aiohttp\resolver.py", line 95, in __init__
+    raise RuntimeError("Resolver requires aiodns library")
+RuntimeError: Resolver requires aiodns library
+
+2025-08-16 15:52:44,680 - main - INFO - Received insights request for: https://shop.gymshark.com
+2025-08-16 15:52:44,898 - main - ERROR - Error processing request for https://shop.gymshark.com: Resolver requires aiodns library
+2025-08-16 15:52:44,900 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 44, in fetch_insights
+    async with WebScraper() as scraper:
+               ~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\core\utils.py", line 34, in __aenter__
+    resolver=aiohttp.AsyncResolver(),
+             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\aiohttp\resolver.py", line 95, in __init__
+    raise RuntimeError("Resolver requires aiodns library")
+RuntimeError: Resolver requires aiodns library
+
+2025-08-16 15:52:52,153 - main - INFO - Received insights request for: https://shop.gymshark.com
+2025-08-16 15:52:52,366 - main - ERROR - Error processing request for https://shop.gymshark.com: Resolver requires aiodns library
+2025-08-16 15:52:52,367 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 44, in fetch_insights
+    async with WebScraper() as scraper:
+               ~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\core\utils.py", line 34, in __aenter__
+    resolver=aiohttp.AsyncResolver(),
+             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\aiohttp\resolver.py", line 95, in __init__
+    raise RuntimeError("Resolver requires aiodns library")
+RuntimeError: Resolver requires aiodns library
+
+2025-08-16 15:52:56,594 - main - INFO - Received insights request for: https://allbirds.com
+2025-08-16 15:52:56,808 - main - ERROR - Error processing request for https://allbirds.com: Resolver requires aiodns library
+2025-08-16 15:52:56,809 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 44, in fetch_insights
+    async with WebScraper() as scraper:
+               ~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\core\utils.py", line 34, in __aenter__
+    resolver=aiohttp.AsyncResolver(),
+             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\aiohttp\resolver.py", line 95, in __init__
+    raise RuntimeError("Resolver requires aiodns library")
+RuntimeError: Resolver requires aiodns library
+
+2025-08-16 15:52:59,094 - main - INFO - Received insights request for: https://www.fashionnova.com
+2025-08-16 15:52:59,307 - main - ERROR - Error processing request for https://www.fashionnova.com: Resolver requires aiodns library
+2025-08-16 15:52:59,308 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 44, in fetch_insights
+    async with WebScraper() as scraper:
+               ~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\core\utils.py", line 34, in __aenter__
+    resolver=aiohttp.AsyncResolver(),
+             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\aiohttp\resolver.py", line 95, in __init__
+    raise RuntimeError("Resolver requires aiodns library")
+RuntimeError: Resolver requires aiodns library
+
+2025-08-16 15:53:01,044 - main - INFO - Received insights request for: https://bombas.com
+2025-08-16 15:53:01,266 - main - ERROR - Error processing request for https://bombas.com: Resolver requires aiodns library
+2025-08-16 15:53:01,266 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 44, in fetch_insights
+    async with WebScraper() as scraper:
+               ~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\core\utils.py", line 34, in __aenter__
+    resolver=aiohttp.AsyncResolver(),
+             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\aiohttp\resolver.py", line 95, in __init__
+    raise RuntimeError("Resolver requires aiodns library")
+RuntimeError: Resolver requires aiodns library
+
+2025-08-16 16:01:07,689 - main - INFO - Received insights request for: https://shop.gymshark.com
+2025-08-16 16:01:07,905 - main - ERROR - Error processing request for https://shop.gymshark.com: Resolver requires aiodns library
+2025-08-16 16:01:07,929 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 44, in fetch_insights
+    async with WebScraper() as scraper:
+               ~~~~~~~~~~^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\core\utils.py", line 34, in __aenter__
+    resolver = None
+             ^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\.venv\Lib\site-packages\aiohttp\resolver.py", line 95, in __init__
+    raise RuntimeError("Resolver requires aiodns library")
+RuntimeError: Resolver requires aiodns library
+
+2025-08-16 16:09:13,922 - main - INFO - Received insights request for: https://shop.gymshark.com
+2025-08-16 16:09:14,148 - modules.shopify_service - INFO - Fetching main page: https://shop.gymshark.com
+2025-08-16 16:09:37,937 - core.utils - WARNING - Client error for https://shop.gymshark.com: Cannot connect to host shop.gymshark.com:443 ssl:default [The semaphore timeout period has expired], attempt 1
+2025-08-16 16:09:54,101 - main - INFO - Received insights request for: https://shop.gymshark.com
+2025-08-16 16:09:54,317 - modules.shopify_service - INFO - Fetching main page: https://shop.gymshark.com
+2025-08-16 16:10:00,724 - core.utils - WARNING - Client error for https://shop.gymshark.com: Cannot connect to host shop.gymshark.com:443 ssl:default [The semaphore timeout period has expired], attempt 2
+2025-08-16 16:10:15,369 - core.utils - WARNING - Client error for https://shop.gymshark.com: Cannot connect to host shop.gymshark.com:443 ssl:default [The semaphore timeout period has expired], attempt 1
+2025-08-16 16:10:23,783 - core.utils - WARNING - Client error for https://shop.gymshark.com: Cannot connect to host shop.gymshark.com:443 ssl:default [The semaphore timeout period has expired], attempt 3
+2025-08-16 16:10:38,160 - core.utils - WARNING - Client error for https://shop.gymshark.com: Cannot connect to host shop.gymshark.com:443 ssl:default [The semaphore timeout period has expired], attempt 2
+2025-08-16 16:10:48,832 - core.utils - WARNING - Client error for https://shop.gymshark.com: Cannot connect to host shop.gymshark.com:443 ssl:default [The semaphore timeout period has expired], attempt 4
+2025-08-16 16:10:48,833 - core.utils - INFO - Async fetch failed for https://shop.gymshark.com, trying synchronous fallback
+2025-08-16 16:10:48,880 - core.utils - ERROR - Request error for https://shop.gymshark.com: HTTPSConnectionPool(host='shop.gymshark.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FE3413D160>: Failed to resolve 'shop.gymshark.com' ([Errno 11001] getaddrinfo failed)"))
+2025-08-16 16:10:48,881 - core.utils - ERROR - Request error for https://shop.gymshark.com: HTTPSConnectionPool(host='shop.gymshark.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FE315A2E90>: Failed to resolve 'shop.gymshark.com' ([Errno 11001] getaddrinfo failed)"))
+2025-08-16 16:10:48,881 - main - ERROR - Error processing request for https://shop.gymshark.com: Failed to fetch website content
+2025-08-16 16:10:48,882 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 57, in fetch_insights
+    raise Exception("Failed to fetch website content")
+Exception: Failed to fetch website content
+
+2025-08-16 16:11:01,225 - core.utils - WARNING - Client error for https://shop.gymshark.com: Cannot connect to host shop.gymshark.com:443 ssl:default [The semaphore timeout period has expired], attempt 3
+2025-08-16 16:18:36,933 - main - INFO - Received insights request for: https://www.gymshark.com/
+2025-08-16 16:18:37,164 - modules.shopify_service - INFO - Fetching main page: https://www.gymshark.com
+2025-08-16 16:18:42,305 - modules.shopify_service - INFO - Extracting hero products from homepage
+2025-08-16 16:18:42,368 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 16:18:42,370 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 16:18:42,399 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 16:18:42,402 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 16:18:42,457 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 16:18:42,460 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 16:18:44,369 - core.utils - WARNING - Page not found: https://www.gymshark.com/collections/all
+2025-08-16 16:18:44,369 - core.utils - INFO - Async fetch failed for https://www.gymshark.com/collections/all, trying synchronous fallback
+2025-08-16 16:18:45,784 - core.utils - ERROR - Request error for https://www.gymshark.com/collections/all: 404 Client Error: Not Found for url: https://www.gymshark.com/collections/all
+2025-08-16 16:18:47,407 - core.utils - ERROR - Request error for https://www.gymshark.com/collections/all: 404 Client Error: Not Found for url: https://www.gymshark.com/collections/all
+2025-08-16 16:18:48,534 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/pages/commitment-to-accessibility
+2025-08-16 16:18:50,896 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com#MainContent
+2025-08-16 16:18:52,028 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/account
+2025-08-16 16:18:55,342 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/pages/commitment-to-accessibility
+2025-08-16 16:18:56,418 - modules.shopify_service - INFO - Fetching product page: https://support.gymshark.com/
+2025-08-16 16:19:01,122 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/pages/sign-up-to-our-newsletter
+2025-08-16 16:19:02,201 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/blog
+2025-08-16 16:19:03,317 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/
+2025-08-16 16:19:04,453 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/wishlist
+2025-08-16 16:19:06,741 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com#men
+2025-08-16 16:19:09,719 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/pages/commitment-to-accessibility
+2025-08-16 16:19:10,816 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com#MainContent
+2025-08-16 16:19:11,957 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/account
+2025-08-16 16:19:14,860 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/pages/commitment-to-accessibility
+2025-08-16 16:19:15,941 - modules.shopify_service - INFO - Fetching product page: https://support.gymshark.com/
+2025-08-16 16:19:17,662 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/pages/sign-up-to-our-newsletter
+2025-08-16 16:19:18,742 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/blog
+2025-08-16 16:19:19,909 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/
+2025-08-16 16:19:21,054 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com/wishlist
+2025-08-16 16:19:23,228 - modules.shopify_service - INFO - Fetching product page: https://www.gymshark.com#men
+2025-08-16 16:19:25,425 - modules.shopify_service - INFO - Fetching 21 product pages
+2025-08-16 16:19:36,518 - modules.shopify_service - INFO - Successfully extracted insights for https://www.gymshark.com
+2025-08-16 16:20:19,088 - main - INFO - Received insights request for: https://colourpop.com/
+2025-08-16 16:20:19,349 - modules.shopify_service - INFO - Fetching main page: https://colourpop.com
+2025-08-16 16:20:20,976 - modules.shopify_service - INFO - Extracting hero products from homepage
+2025-08-16 16:20:21,130 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 16:20:21,133 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 16:20:21,196 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 16:20:21,202 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 16:20:21,334 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 16:20:21,342 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 16:20:23,324 - modules.shopify_service - INFO - Fetching product page: https://colourpop.com#main
+2025-08-16 16:20:27,514 - modules.shopify_service - INFO - Fetching product page: https://colourpop.com#main
+2025-08-16 16:20:31,251 - modules.shopify_service - INFO - Fetching product page: https://colourpop.com#main
+2025-08-16 16:20:34,450 - modules.shopify_service - INFO - Fetching 62 product pages
+2025-08-16 16:20:40,774 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/light-sol-face-and-body-bronzing-balm, attempt 1
+2025-08-16 16:20:40,935 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/the-lil-box-of-lippie-pencils, attempt 1
+2025-08-16 16:20:40,961 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/bare-necessities-neutral-eyeshadow-palette, attempt 1
+2025-08-16 16:20:41,346 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/purple-prose, attempt 1
+2025-08-16 16:20:41,363 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/plum-smash-creme-gel-liner, attempt 1
+2025-08-16 16:20:41,839 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/light-sol-face-and-body-bronzing-balm, attempt 2
+2025-08-16 16:20:42,004 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/the-lil-box-of-lippie-pencils, attempt 2
+2025-08-16 16:20:42,008 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/bare-necessities-neutral-eyeshadow-palette, attempt 2
+2025-08-16 16:20:42,421 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/plum-smash-creme-gel-liner, attempt 2
+2025-08-16 16:20:42,425 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/purple-prose, attempt 2
+2025-08-16 16:20:43,876 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/light-sol-face-and-body-bronzing-balm, attempt 3
+2025-08-16 16:20:44,055 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/bare-necessities-neutral-eyeshadow-palette, attempt 3
+2025-08-16 16:20:44,058 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/the-lil-box-of-lippie-pencils, attempt 3
+2025-08-16 16:20:44,472 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/plum-smash-creme-gel-liner, attempt 3
+2025-08-16 16:20:44,477 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/purple-prose, attempt 3
+2025-08-16 16:20:47,950 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/light-sol-face-and-body-bronzing-balm, attempt 4
+2025-08-16 16:20:47,950 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/light-sol-face-and-body-bronzing-balm, trying synchronous fallback
+2025-08-16 16:20:48,994 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/the-lil-box-of-lippie-pencils, attempt 4
+2025-08-16 16:20:48,994 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/the-lil-box-of-lippie-pencils, trying synchronous fallback
+2025-08-16 16:20:49,712 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/bare-necessities-neutral-eyeshadow-palette, attempt 4
+2025-08-16 16:20:49,712 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/bare-necessities-neutral-eyeshadow-palette, trying synchronous fallback
+2025-08-16 16:20:51,087 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/beeper-lippie-pencil, attempt 1
+2025-08-16 16:20:51,088 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/plum-smash-creme-gel-liner, attempt 4
+2025-08-16 16:20:51,088 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/plum-smash-creme-gel-liner, trying synchronous fallback
+2025-08-16 16:20:51,995 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/purple-prose, attempt 4
+2025-08-16 16:20:51,996 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/purple-prose, trying synchronous fallback
+2025-08-16 16:20:52,900 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/city-walk-liquid-blush, attempt 1
+2025-08-16 16:20:52,913 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/blueberry-marg-lip-stain, attempt 1
+2025-08-16 16:20:52,921 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/ritz, attempt 1
+2025-08-16 16:20:52,922 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/beeper-lippie-pencil, attempt 2
+2025-08-16 16:20:52,932 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/smoke-n-roses-brush-roll, attempt 1
+2025-08-16 16:20:53,956 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/blueberry-marg-lip-stain, attempt 2
+2025-08-16 16:20:53,960 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/ritz, attempt 2
+2025-08-16 16:20:53,961 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/city-walk-liquid-blush, attempt 2
+2025-08-16 16:20:53,995 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/smoke-n-roses-brush-roll, attempt 2
+2025-08-16 16:20:54,980 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/beeper-lippie-pencil, attempt 3
+2025-08-16 16:20:56,021 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/ritz, attempt 3
+2025-08-16 16:20:56,032 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/city-walk-liquid-blush, attempt 3
+2025-08-16 16:20:56,043 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/blueberry-marg-lip-stain, attempt 3
+2025-08-16 16:20:56,063 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/smoke-n-roses-brush-roll, attempt 3
+2025-08-16 16:20:59,229 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/beeper-lippie-pencil, attempt 4
+2025-08-16 16:20:59,230 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/beeper-lippie-pencil, trying synchronous fallback
+2025-08-16 16:21:00,539 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/ritz, attempt 4
+2025-08-16 16:21:00,539 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/ritz, trying synchronous fallback
+2025-08-16 16:21:01,797 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/city-walk-liquid-blush, attempt 4
+2025-08-16 16:21:01,797 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/city-walk-liquid-blush, trying synchronous fallback
+2025-08-16 16:21:02,974 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/blueberry-marg-lip-stain, attempt 4
+2025-08-16 16:21:02,974 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/blueberry-marg-lip-stain, trying synchronous fallback
+2025-08-16 16:21:03,906 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/smoke-n-roses-brush-roll, attempt 4
+2025-08-16 16:21:03,907 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/smoke-n-roses-brush-roll, trying synchronous fallback
+2025-08-16 16:21:04,653 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/its-my-pleasure-eyeshadow-palette, attempt 1
+2025-08-16 16:21:04,689 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/strawberry-face-milk, attempt 1
+2025-08-16 16:21:04,693 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/tankini-eyeshadow, attempt 1
+2025-08-16 16:21:04,697 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/the-lil-box-of-lippie-stix, attempt 1
+2025-08-16 16:21:04,703 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/collections/face/products/fair-1-pretty-fresh-tinted-foundation-balm?variant=41330792202322, attempt 1
+2025-08-16 16:21:05,766 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/its-my-pleasure-eyeshadow-palette, attempt 2
+2025-08-16 16:21:05,774 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/strawberry-face-milk, attempt 2
+2025-08-16 16:21:05,781 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/the-lil-box-of-lippie-stix, attempt 2
+2025-08-16 16:21:05,786 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/tankini-eyeshadow, attempt 2
+2025-08-16 16:21:05,787 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/collections/face/products/fair-1-pretty-fresh-tinted-foundation-balm?variant=41330792202322, attempt 2
+2025-08-16 16:21:07,841 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/its-my-pleasure-eyeshadow-palette, attempt 3
+2025-08-16 16:21:07,860 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/strawberry-face-milk, attempt 3
+2025-08-16 16:21:07,861 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/the-lil-box-of-lippie-stix, attempt 3
+2025-08-16 16:21:07,888 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/collections/face/products/fair-1-pretty-fresh-tinted-foundation-balm?variant=41330792202322, attempt 3
+2025-08-16 16:21:07,889 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/tankini-eyeshadow, attempt 3
+2025-08-16 16:21:11,937 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/its-my-pleasure-eyeshadow-palette, attempt 4
+2025-08-16 16:21:11,938 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/its-my-pleasure-eyeshadow-palette, trying synchronous fallback
+2025-08-16 16:21:13,124 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/strawberry-face-milk, attempt 4
+2025-08-16 16:21:13,125 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/strawberry-face-milk, trying synchronous fallback
+2025-08-16 16:21:14,034 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/tankini-eyeshadow, attempt 4
+2025-08-16 16:21:14,034 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/tankini-eyeshadow, trying synchronous fallback
+2025-08-16 16:21:15,024 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/the-lil-box-of-lippie-stix, attempt 4
+2025-08-16 16:21:15,024 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/the-lil-box-of-lippie-stix, trying synchronous fallback
+2025-08-16 16:21:15,885 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/collections/face/products/fair-1-pretty-fresh-tinted-foundation-balm?variant=41330792202322, attempt 4
+2025-08-16 16:21:15,885 - core.utils - INFO - Async fetch failed for https://colourpop.com/collections/face/products/fair-1-pretty-fresh-tinted-foundation-balm?variant=41330792202322, trying synchronous fallback
+2025-08-16 16:21:16,922 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/strawberry-milk-lip-mask, attempt 1
+2025-08-16 16:21:16,928 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/bronze-glow-sol-liquid-sun-glow-drops, attempt 1
+2025-08-16 16:21:16,939 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/set-it-up-pretty-fresh-primer, attempt 1
+2025-08-16 16:21:16,946 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/thx-liquid-blush, attempt 1
+2025-08-16 16:21:16,951 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/new-moon-shadow-palette, attempt 1
+2025-08-16 16:21:18,019 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/strawberry-milk-lip-mask, attempt 2
+2025-08-16 16:21:18,029 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/new-moon-shadow-palette, attempt 2
+2025-08-16 16:21:18,037 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/set-it-up-pretty-fresh-primer, attempt 2
+2025-08-16 16:21:18,049 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/bronze-glow-sol-liquid-sun-glow-drops, attempt 2
+2025-08-16 16:21:18,049 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/thx-liquid-blush, attempt 2
+2025-08-16 16:21:20,067 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/new-moon-shadow-palette, attempt 3
+2025-08-16 16:21:20,086 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/strawberry-milk-lip-mask, attempt 3
+2025-08-16 16:21:20,107 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/set-it-up-pretty-fresh-primer, attempt 3
+2025-08-16 16:21:20,122 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/thx-liquid-blush, attempt 3
+2025-08-16 16:21:23,136 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/bronze-glow-sol-liquid-sun-glow-drops, attempt 3
+2025-08-16 16:21:24,170 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/new-moon-shadow-palette, attempt 4
+2025-08-16 16:21:24,170 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/new-moon-shadow-palette, trying synchronous fallback
+2025-08-16 16:21:25,059 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/strawberry-milk-lip-mask, attempt 4
+2025-08-16 16:21:25,059 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/strawberry-milk-lip-mask, trying synchronous fallback
+2025-08-16 16:21:26,067 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/set-it-up-pretty-fresh-primer, attempt 4
+2025-08-16 16:21:26,068 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/set-it-up-pretty-fresh-primer, trying synchronous fallback
+2025-08-16 16:21:26,843 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/thx-liquid-blush, attempt 4
+2025-08-16 16:21:26,843 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/thx-liquid-blush, trying synchronous fallback
+2025-08-16 16:21:27,687 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/angel-face-liquid-blush, attempt 1
+2025-08-16 16:21:27,690 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/watermelon-sugar-fresh-kiss-glossy-balm, attempt 1
+2025-08-16 16:21:27,691 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/jelly-donut-lip-mask, attempt 1
+2025-08-16 16:21:27,692 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/pinky-promise-lippie-pencil-trio, attempt 1
+2025-08-16 16:21:27,697 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/bronze-glow-sol-liquid-sun-glow-drops, attempt 4
+2025-08-16 16:21:27,697 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/bronze-glow-sol-liquid-sun-glow-drops, trying synchronous fallback
+2025-08-16 16:21:28,665 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/coconut-bb, attempt 1
+2025-08-16 16:21:28,732 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/angel-face-liquid-blush, attempt 2
+2025-08-16 16:21:28,763 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/pinky-promise-lippie-pencil-trio, attempt 2
+2025-08-16 16:21:28,764 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/jelly-donut-lip-mask, attempt 2
+2025-08-16 16:21:29,333 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/watermelon-sugar-fresh-kiss-glossy-balm, attempt 2
+2025-08-16 16:21:29,739 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/coconut-bb, attempt 2
+2025-08-16 16:21:30,816 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/angel-face-liquid-blush, attempt 3
+2025-08-16 16:21:30,876 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/jelly-donut-lip-mask, attempt 3
+2025-08-16 16:21:30,876 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/pinky-promise-lippie-pencil-trio, attempt 3
+2025-08-16 16:21:31,430 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/watermelon-sugar-fresh-kiss-glossy-balm, attempt 3
+2025-08-16 16:21:31,848 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/coconut-bb, attempt 3
+2025-08-16 16:21:34,915 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/angel-face-liquid-blush, attempt 4
+2025-08-16 16:21:34,915 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/angel-face-liquid-blush, trying synchronous fallback
+2025-08-16 16:21:35,813 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/jelly-donut-lip-mask, attempt 4
+2025-08-16 16:21:35,814 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/jelly-donut-lip-mask, trying synchronous fallback
+2025-08-16 16:21:36,850 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/pinky-promise-lippie-pencil-trio, attempt 4
+2025-08-16 16:21:36,850 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/pinky-promise-lippie-pencil-trio, trying synchronous fallback
+2025-08-16 16:21:37,686 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/vanilla-cake-lip-scrub, attempt 1
+2025-08-16 16:21:37,686 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/watermelon-sugar-fresh-kiss-glossy-balm, attempt 4
+2025-08-16 16:21:37,686 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/watermelon-sugar-fresh-kiss-glossy-balm, trying synchronous fallback
+2025-08-16 16:21:38,779 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/neapolitan-sundae, attempt 1
+2025-08-16 16:21:38,781 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/baby-panda-so-juicy-lip-oil, attempt 1
+2025-08-16 16:21:38,781 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/coconut-bb, attempt 4
+2025-08-16 16:21:38,781 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/coconut-bb, trying synchronous fallback
+2025-08-16 16:21:39,778 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/ripple-super-shock-shadow, attempt 1
+2025-08-16 16:21:39,796 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/rainfall, attempt 1
+2025-08-16 16:21:39,825 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/vanilla-cake-lip-scrub, attempt 2
+2025-08-16 16:21:39,929 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/neapolitan-sundae, attempt 2
+2025-08-16 16:21:39,936 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/baby-panda-so-juicy-lip-oil, attempt 2
+2025-08-16 16:21:40,834 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/ripple-super-shock-shadow, attempt 2
+2025-08-16 16:21:40,862 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/rainfall, attempt 2
+2025-08-16 16:21:41,925 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/vanilla-cake-lip-scrub, attempt 3
+2025-08-16 16:21:42,028 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/baby-panda-so-juicy-lip-oil, attempt 3
+2025-08-16 16:21:42,028 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/neapolitan-sundae, attempt 3
+2025-08-16 16:21:42,891 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/ripple-super-shock-shadow, attempt 3
+2025-08-16 16:21:42,909 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/rainfall, attempt 3
+2025-08-16 16:21:46,031 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/vanilla-cake-lip-scrub, attempt 4
+2025-08-16 16:21:46,031 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/vanilla-cake-lip-scrub, trying synchronous fallback
+2025-08-16 16:21:47,031 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/strawberry-milk-lip-scrub, attempt 1
+2025-08-16 16:21:47,032 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/ripple-super-shock-shadow, attempt 4
+2025-08-16 16:21:47,032 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/ripple-super-shock-shadow, trying synchronous fallback
+2025-08-16 16:21:48,155 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/baby-panda-so-juicy-lip-oil, attempt 4
+2025-08-16 16:21:48,155 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/baby-panda-so-juicy-lip-oil, trying synchronous fallback
+2025-08-16 16:21:49,136 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/neapolitan-sundae, attempt 4
+2025-08-16 16:21:49,136 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/neapolitan-sundae, trying synchronous fallback
+2025-08-16 16:21:49,980 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/rainfall, attempt 4
+2025-08-16 16:21:49,980 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/rainfall, trying synchronous fallback
+2025-08-16 16:21:51,060 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/amethyst-hour-creme-gel-liner, attempt 1
+2025-08-16 16:21:51,061 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/stone-cold-fox-cool-tone-eyeshadow-palette, attempt 1
+2025-08-16 16:21:51,061 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/so-into-u-shadow-stix, attempt 1
+2025-08-16 16:21:51,084 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/strawberry-milk-lip-scrub, attempt 2
+2025-08-16 16:21:51,084 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/left-on-red, attempt 1
+2025-08-16 16:21:52,178 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/amethyst-hour-creme-gel-liner, attempt 2
+2025-08-16 16:21:52,179 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/so-into-u-shadow-stix, attempt 2
+2025-08-16 16:21:52,179 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/left-on-red, attempt 2
+2025-08-16 16:21:52,179 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/stone-cold-fox-cool-tone-eyeshadow-palette, attempt 2
+2025-08-16 16:21:53,163 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/strawberry-milk-lip-scrub, attempt 3
+2025-08-16 16:21:54,265 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/left-on-red, attempt 3
+2025-08-16 16:21:54,272 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/so-into-u-shadow-stix, attempt 3
+2025-08-16 16:21:54,272 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/stone-cold-fox-cool-tone-eyeshadow-palette, attempt 3
+2025-08-16 16:21:54,272 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/amethyst-hour-creme-gel-liner, attempt 3
+2025-08-16 16:21:57,246 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/strawberry-milk-lip-scrub, attempt 4
+2025-08-16 16:21:57,246 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/strawberry-milk-lip-scrub, trying synchronous fallback
+2025-08-16 16:21:58,416 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/so-into-u-shadow-stix, attempt 4
+2025-08-16 16:21:58,417 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/so-into-u-shadow-stix, trying synchronous fallback
+2025-08-16 16:21:59,473 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/stone-cold-fox-cool-tone-eyeshadow-palette, attempt 4
+2025-08-16 16:21:59,473 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/stone-cold-fox-cool-tone-eyeshadow-palette, trying synchronous fallback
+2025-08-16 16:22:00,223 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/left-on-red, attempt 4
+2025-08-16 16:22:00,223 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/left-on-red, trying synchronous fallback
+2025-08-16 16:22:01,145 - core.utils - WARNING - Access denied or rate limited for https://colourpop.com/products/amethyst-hour-creme-gel-liner, attempt 4
+2025-08-16 16:22:01,145 - core.utils - INFO - Async fetch failed for https://colourpop.com/products/amethyst-hour-creme-gel-liner, trying synchronous fallback
+2025-08-16 16:22:02,156 - modules.shopify_service - INFO - Successfully extracted insights for https://colourpop.com
+2025-08-16 16:25:19,513 - main - INFO - Received insights request for: https://allbirds.com
+2025-08-16 16:25:19,737 - modules.shopify_service - INFO - Fetching main page: https://allbirds.com
+2025-08-16 16:25:21,669 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com, attempt 1
+2025-08-16 16:25:22,765 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com, attempt 2
+2025-08-16 16:25:24,858 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com, attempt 3
+2025-08-16 16:25:28,928 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com, attempt 4
+2025-08-16 16:25:28,928 - core.utils - INFO - Async fetch failed for https://allbirds.com, trying synchronous fallback
+2025-08-16 16:25:30,621 - modules.shopify_service - INFO - Extracting hero products from homepage
+2025-08-16 16:25:30,691 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 16:25:30,694 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 16:25:30,734 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 16:25:30,738 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 16:25:30,837 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 16:25:30,843 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 16:25:31,046 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections/all, attempt 1
+2025-08-16 16:25:32,411 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections/all, attempt 2
+2025-08-16 16:25:34,485 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections/all, attempt 3
+2025-08-16 16:25:38,645 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections/all, attempt 4
+2025-08-16 16:25:38,645 - core.utils - INFO - Async fetch failed for https://allbirds.com/collections/all, trying synchronous fallback
+2025-08-16 16:25:39,844 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/
+2025-08-16 16:25:40,024 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 1
+2025-08-16 16:25:41,816 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 2
+2025-08-16 16:25:43,896 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 3
+2025-08-16 16:25:47,978 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 4
+2025-08-16 16:25:47,978 - core.utils - INFO - Async fetch failed for https://allbirds.com/, trying synchronous fallback
+2025-08-16 16:25:49,246 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/search
+2025-08-16 16:25:49,297 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 1
+2025-08-16 16:25:50,353 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 2
+2025-08-16 16:25:52,401 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 3
+2025-08-16 16:25:56,441 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 4
+2025-08-16 16:25:56,442 - core.utils - INFO - Async fetch failed for https://allbirds.com/search, trying synchronous fallback
+2025-08-16 16:26:02,088 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/
+2025-08-16 16:26:02,190 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 1
+2025-08-16 16:26:03,226 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 2
+2025-08-16 16:26:05,271 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 3
+2025-08-16 16:26:09,325 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 4
+2025-08-16 16:26:09,325 - core.utils - INFO - Async fetch failed for https://allbirds.com/, trying synchronous fallback
+2025-08-16 16:26:10,574 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/pages/stores
+2025-08-16 16:26:10,674 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/stores, attempt 1
+2025-08-16 16:26:11,721 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/stores, attempt 2
+2025-08-16 16:26:13,956 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/stores, attempt 3
+2025-08-16 16:26:18,028 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/stores, attempt 4
+2025-08-16 16:26:18,029 - core.utils - INFO - Async fetch failed for https://allbirds.com/pages/stores, trying synchronous fallback
+2025-08-16 16:26:19,097 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/pages/our-story
+2025-08-16 16:26:19,182 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/our-story, attempt 1
+2025-08-16 16:26:20,236 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/our-story, attempt 2
+2025-08-16 16:26:22,296 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/our-story, attempt 3
+2025-08-16 16:26:26,351 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/our-story, attempt 4
+2025-08-16 16:26:26,351 - core.utils - INFO - Async fetch failed for https://allbirds.com/pages/our-story, trying synchronous fallback
+2025-08-16 16:26:27,238 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/pages/rerun
+2025-08-16 16:26:27,352 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/rerun, attempt 1
+2025-08-16 16:26:28,404 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/rerun, attempt 2
+2025-08-16 16:26:30,512 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/rerun, attempt 3
+2025-08-16 16:26:34,583 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/rerun, attempt 4
+2025-08-16 16:26:34,584 - core.utils - INFO - Async fetch failed for https://allbirds.com/pages/rerun, trying synchronous fallback
+2025-08-16 16:26:35,227 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/search
+2025-08-16 16:26:35,317 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 1
+2025-08-16 16:26:36,395 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 2
+2025-08-16 16:26:38,435 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 3
+2025-08-16 16:26:42,490 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 4
+2025-08-16 16:26:42,490 - core.utils - INFO - Async fetch failed for https://allbirds.com/search, trying synchronous fallback
+2025-08-16 16:26:43,060 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/account
+2025-08-16 16:26:43,100 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/account, attempt 1
+2025-08-16 16:26:44,143 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/account, attempt 2
+2025-08-16 16:26:46,205 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/account, attempt 3
+2025-08-16 16:26:50,271 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/account, attempt 4
+2025-08-16 16:26:50,271 - core.utils - INFO - Async fetch failed for https://allbirds.com/account, trying synchronous fallback
+2025-08-16 16:26:51,287 - core.utils - ERROR - Request error for https://allbirds.com/account: 403 Client Error: Forbidden for url: https://accounts.allbirds.com/authentication/oauth/authorize?client_id=5a1f8862-a609-4491-860e-4d61f9fb4117&locale=en-US&nonce=6c837bf8-ea32-49f8-990a-b5f4c52d61cc&redirect_uri=https%3A%2F%2Faccounts.allbirds.com%2Fcallback%3Fsource%3Dcore&response_type=code&scope=openid+email+customer-account-api%3Afull&state=01K2S8C6CZWXS4MWBGKB2VWSNB
+2025-08-16 16:26:52,730 - core.utils - ERROR - Request error for https://allbirds.com/account: 403 Client Error: Forbidden for url: https://accounts.allbirds.com/authentication/oauth/authorize?client_id=5a1f8862-a609-4491-860e-4d61f9fb4117&locale=en-US&nonce=590ae82c-e6d5-469b-b68e-1ea5f4072f38&redirect_uri=https%3A%2F%2Faccounts.allbirds.com%2Fcallback%3Fsource%3Dcore&response_type=code&scope=openid+email+customer-account-api%3Afull&state=01K2S8C7T6DCP77N8QE8DX79ZD
+2025-08-16 16:26:52,731 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/pages/help
+2025-08-16 16:26:52,769 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/help, attempt 1
+2025-08-16 16:26:53,813 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/help, attempt 2
+2025-08-16 16:26:55,877 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/help, attempt 3
+2025-08-16 16:26:59,944 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/help, attempt 4
+2025-08-16 16:26:59,944 - core.utils - INFO - Async fetch failed for https://allbirds.com/pages/help, trying synchronous fallback
+2025-08-16 16:27:00,954 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/collections/mens-new-arrivals
+2025-08-16 16:27:00,991 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections/mens-new-arrivals, attempt 1
+2025-08-16 16:27:02,056 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections/mens-new-arrivals, attempt 2
+2025-08-16 16:27:04,112 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections/mens-new-arrivals, attempt 3
+2025-08-16 16:27:08,155 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections/mens-new-arrivals, attempt 4
+2025-08-16 16:27:08,156 - core.utils - INFO - Async fetch failed for https://allbirds.com/collections/mens-new-arrivals, trying synchronous fallback
+2025-08-16 16:27:11,489 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections, attempt 1
+2025-08-16 16:27:12,565 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections, attempt 2
+2025-08-16 16:27:14,624 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections, attempt 3
+2025-08-16 16:27:18,666 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections, attempt 4
+2025-08-16 16:27:18,666 - core.utils - INFO - Async fetch failed for https://allbirds.com/collections, trying synchronous fallback
+2025-08-16 16:27:19,388 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/
+2025-08-16 16:27:19,431 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 1
+2025-08-16 16:27:20,493 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 2
+2025-08-16 16:27:22,552 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 3
+2025-08-16 16:27:26,596 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 4
+2025-08-16 16:27:26,596 - core.utils - INFO - Async fetch failed for https://allbirds.com/, trying synchronous fallback
+2025-08-16 16:27:27,041 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/search
+2025-08-16 16:27:27,091 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 1
+2025-08-16 16:27:28,138 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 2
+2025-08-16 16:27:30,200 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 3
+2025-08-16 16:27:34,267 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 4
+2025-08-16 16:27:34,267 - core.utils - INFO - Async fetch failed for https://allbirds.com/search, trying synchronous fallback
+2025-08-16 16:27:37,299 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/
+2025-08-16 16:27:37,337 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 1
+2025-08-16 16:27:38,400 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 2
+2025-08-16 16:27:40,456 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 3
+2025-08-16 16:27:44,515 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 4
+2025-08-16 16:27:44,515 - core.utils - INFO - Async fetch failed for https://allbirds.com/, trying synchronous fallback
+2025-08-16 16:27:45,105 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/pages/stores
+2025-08-16 16:27:45,170 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/stores, attempt 1
+2025-08-16 16:27:46,228 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/stores, attempt 2
+2025-08-16 16:27:48,284 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/stores, attempt 3
+2025-08-16 16:27:52,341 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/stores, attempt 4
+2025-08-16 16:27:52,342 - core.utils - INFO - Async fetch failed for https://allbirds.com/pages/stores, trying synchronous fallback
+2025-08-16 16:27:53,052 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/pages/our-story
+2025-08-16 16:27:53,108 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/our-story, attempt 1
+2025-08-16 16:27:54,154 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/our-story, attempt 2
+2025-08-16 16:27:56,204 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/our-story, attempt 3
+2025-08-16 16:28:00,258 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/our-story, attempt 4
+2025-08-16 16:28:00,258 - core.utils - INFO - Async fetch failed for https://allbirds.com/pages/our-story, trying synchronous fallback
+2025-08-16 16:28:01,036 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/pages/rerun
+2025-08-16 16:28:01,068 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/rerun, attempt 1
+2025-08-16 16:28:02,118 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/rerun, attempt 2
+2025-08-16 16:28:04,171 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/rerun, attempt 3
+2025-08-16 16:28:08,217 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/rerun, attempt 4
+2025-08-16 16:28:08,217 - core.utils - INFO - Async fetch failed for https://allbirds.com/pages/rerun, trying synchronous fallback
+2025-08-16 16:28:08,925 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/search
+2025-08-16 16:28:08,963 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 1
+2025-08-16 16:28:10,018 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 2
+2025-08-16 16:28:12,110 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 3
+2025-08-16 16:28:16,158 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 4
+2025-08-16 16:28:16,159 - core.utils - INFO - Async fetch failed for https://allbirds.com/search, trying synchronous fallback
+2025-08-16 16:28:18,627 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/account
+2025-08-16 16:28:18,672 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/account, attempt 1
+2025-08-16 16:28:19,733 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/account, attempt 2
+2025-08-16 16:28:21,854 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/account, attempt 3
+2025-08-16 16:28:27,756 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/account, attempt 4
+2025-08-16 16:28:27,756 - core.utils - INFO - Async fetch failed for https://allbirds.com/account, trying synchronous fallback
+2025-08-16 16:28:29,225 - core.utils - ERROR - Request error for https://allbirds.com/account: 403 Client Error: Forbidden for url: https://accounts.allbirds.com/authentication/oauth/authorize?client_id=5a1f8862-a609-4491-860e-4d61f9fb4117&locale=en-US&nonce=415efea9-67b8-4a7f-9f31-0214181310ee&redirect_uri=https%3A%2F%2Faccounts.allbirds.com%2Fcallback%3Fsource%3Dcore&response_type=code&scope=openid+email+customer-account-api%3Afull&state=01K2S8F60EWJHG4F611WSZPPGX
+2025-08-16 16:28:30,651 - core.utils - ERROR - Request error for https://allbirds.com/account: 403 Client Error: Forbidden for url: https://accounts.allbirds.com/authentication/oauth/authorize?client_id=5a1f8862-a609-4491-860e-4d61f9fb4117&locale=en-US&nonce=96506bea-b2a6-47f5-b8f5-34e80289a8ff&redirect_uri=https%3A%2F%2Faccounts.allbirds.com%2Fcallback%3Fsource%3Dcore&response_type=code&scope=openid+email+customer-account-api%3Afull&state=01K2S8F7DSHF5X7V0Y5FGBF8GG
+2025-08-16 16:28:30,651 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/pages/help
+2025-08-16 16:28:30,688 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/help, attempt 1
+2025-08-16 16:28:31,753 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/help, attempt 2
+2025-08-16 16:28:33,837 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/help, attempt 3
+2025-08-16 16:28:37,946 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/help, attempt 4
+2025-08-16 16:28:37,946 - core.utils - INFO - Async fetch failed for https://allbirds.com/pages/help, trying synchronous fallback
+2025-08-16 16:28:38,820 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/collections/mens-new-arrivals
+2025-08-16 16:28:38,889 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections/mens-new-arrivals, attempt 1
+2025-08-16 16:28:39,930 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections/mens-new-arrivals, attempt 2
+2025-08-16 16:28:41,979 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections/mens-new-arrivals, attempt 3
+2025-08-16 16:28:46,029 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/collections/mens-new-arrivals, attempt 4
+2025-08-16 16:28:46,029 - core.utils - INFO - Async fetch failed for https://allbirds.com/collections/mens-new-arrivals, trying synchronous fallback
+2025-08-16 16:28:47,754 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/products, attempt 1
+2025-08-16 16:28:48,833 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/products, attempt 2
+2025-08-16 16:28:50,931 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/products, attempt 3
+2025-08-16 16:28:54,983 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/products, attempt 4
+2025-08-16 16:28:54,984 - core.utils - INFO - Async fetch failed for https://allbirds.com/products, trying synchronous fallback
+2025-08-16 16:28:55,948 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/
+2025-08-16 16:28:56,016 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 1
+2025-08-16 16:28:57,112 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 2
+2025-08-16 16:28:59,164 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 3
+2025-08-16 16:29:03,325 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 4
+2025-08-16 16:29:03,325 - core.utils - INFO - Async fetch failed for https://allbirds.com/, trying synchronous fallback
+2025-08-16 16:29:04,706 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/search
+2025-08-16 16:29:04,971 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 1
+2025-08-16 16:29:06,075 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 2
+2025-08-16 16:29:09,646 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 3
+2025-08-16 16:29:13,689 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/search, attempt 4
+2025-08-16 16:29:13,689 - core.utils - INFO - Async fetch failed for https://allbirds.com/search, trying synchronous fallback
+2025-08-16 16:29:15,935 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/
+2025-08-16 16:29:15,972 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 1
+2025-08-16 16:29:17,010 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 2
+2025-08-16 16:29:19,101 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 3
+2025-08-16 16:29:23,242 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/, attempt 4
+2025-08-16 16:29:23,242 - core.utils - INFO - Async fetch failed for https://allbirds.com/, trying synchronous fallback
+2025-08-16 16:29:23,810 - modules.shopify_service - INFO - Fetching product page: https://allbirds.com/pages/stores
+2025-08-16 16:29:23,847 - core.utils - WARNING - Access denied or rate limited for https://allbirds.com/pages/stores, attempt 1
