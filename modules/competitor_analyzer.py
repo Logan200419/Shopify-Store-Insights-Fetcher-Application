@@ -68,7 +68,7 @@ class CompetitorAnalyzer:
     def _extract_brand_category(self, website_url: str) -> str:
         """Extract brand category/industry from website content."""
         try:
-            response = requests.get(website_url, timeout=30)
+            response = requests.get(website_url, timeout=1)
             soup = BeautifulSoup(response.content, 'html.parser')
             
             # Look for category indicators in meta tags, title, or content
@@ -145,7 +145,7 @@ class CompetitorAnalyzer:
                 logger.info(f"Searching for: {query}")
                 found_competitors = self._perform_web_search(query, website_url)
                 competitors.extend(found_competitors)
-                time.sleep(random.uniform(1, 2))  # Random delay to avoid rate limiting
+                time.sleep(random.uniform(0.5, 1))  # Random delay to avoid rate limiting
                 
                 if len(competitors) >= 20:  # Collect enough candidates
                     break
@@ -175,7 +175,7 @@ class CompetitorAnalyzer:
             for query in similar_queries:
                 found_competitors = self._perform_web_search(query, website_url)
                 competitors.extend(found_competitors)
-                time.sleep(random.uniform(1, 2))
+                time.sleep(random.uniform(0.5, 1))
                 
         except Exception as e:
             logger.warning(f"Similar sites search failed: {e}")
@@ -226,7 +226,7 @@ class CompetitorAnalyzer:
             try:
                 found_competitors = self._perform_web_search(query, website_url)
                 competitors.extend(found_competitors)
-                time.sleep(random.uniform(1, 2))
+                time.sleep(random.uniform(0.5, 1))
                 
             except Exception as e:
                 logger.warning(f"Industry search failed for '{query}': {e}")
@@ -326,7 +326,7 @@ class CompetitorAnalyzer:
         urls = []
         try:
             search_url = f"https://duckduckgo.com/html/?q={quote_plus(query)}"
-            response = self.session.get(search_url, timeout=30)
+            response = self.session.get(search_url, timeout=1)
             soup = BeautifulSoup(response.content, 'html.parser')
             
             # Extract search result links
@@ -348,7 +348,7 @@ class CompetitorAnalyzer:
             headers = {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
             }
-            response = requests.get(search_url, headers=headers, timeout=30)
+            response = requests.get(search_url, headers=headers, timeout=1)
             soup = BeautifulSoup(response.content, 'html.parser')
             
             # Extract Bing search results
@@ -367,7 +367,7 @@ class CompetitorAnalyzer:
         urls = []
         try:
             search_url = f"https://www.startpage.com/sp/search?query={quote_plus(query)}"
-            response = self.session.get(search_url, timeout=30)
+            response = self.session.get(search_url, timeout=1)
             soup = BeautifulSoup(response.content, 'html.parser')
             
             # Extract Startpage search results
@@ -438,7 +438,7 @@ class CompetitorAnalyzer:
     def _is_shopify_store(self, url: str) -> bool:
         """Check if a website is powered by Shopify."""
         try:
-            response = requests.get(url, timeout=20)
+            response = requests.get(url, timeout=1)
             content = response.text.lower()
             
             # Check for Shopify indicators
@@ -528,7 +528,7 @@ class CompetitorAnalyzer:
                 competitor_insights.append(competitor_data)
                 
                 # Rate limiting between competitor analysis
-                time.sleep(2)
+                time.sleep(1)
                 
             except Exception as e:
                 logger.error(f"Failed to analyze competitor {competitor['name']}: {e}")

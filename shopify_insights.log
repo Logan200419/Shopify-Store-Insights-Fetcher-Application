@@ -2828,3 +2828,349 @@ TypeError: Object of type datetime is not JSON serializable
 2025-08-16 19:53:01,882 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=alternatives+to+gfuel.com (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000234CDA7F610>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
 2025-08-16 19:53:25,452 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=None+similar+websites (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000234CDA7D950>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
 2025-08-16 19:53:28,877 - modules.competitor_analyzer - INFO - Found 0 competitors from similar sites search
+2025-08-16 19:54:02,558 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:54:02,796 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:54:06,852 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:54:06,852 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:54:08,112 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:54:08,113 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:54:08,113 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:54:08,113 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:54:08,113 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:54:08,114 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:54:08,131 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:54:08,196 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:54:08,196 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:54:08,229 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:54:08,229 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:54:08,231 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:54:08,231 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:54:09,382 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:54:09,382 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:54:09,383 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:54:09,391 - database.models - INFO - Successfully saved insights for store ID: 10
+2025-08-16 19:54:09,391 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 10
+2025-08-16 19:54:09,391 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:54:09,396 - main - INFO - Including competitor analysis in response
+2025-08-16 19:54:09,398 - main - INFO - No stored competitor analysis found, running new analysis
+2025-08-16 19:54:09,398 - modules.competitor_analyzer - INFO - Starting competitor analysis for None
+2025-08-16 19:54:09,398 - modules.competitor_analyzer - INFO - Finding competitors for None (https://gfuel.com/)
+2025-08-16 19:54:10,586 - modules.competitor_analyzer - INFO - Detected category: ecommerce
+2025-08-16 19:54:10,586 - modules.competitor_analyzer - INFO - Searching for: ecommerce brands like None
+2025-08-16 19:54:31,672 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+brands+like+None (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192C740AAD0>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
+2025-08-16 19:54:34,856 - modules.competitor_analyzer - INFO - Searching for: best ecommerce websites
+2025-08-16 19:54:55,944 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=best+ecommerce+websites (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192C8811950>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
+2025-08-16 19:54:59,186 - modules.competitor_analyzer - INFO - Searching for: ecommerce alternatives to None
+2025-08-16 19:55:20,266 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+alternatives+to+None (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192C8811950>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
+2025-08-16 19:55:23,254 - modules.competitor_analyzer - INFO - Searching for: top ecommerce stores online
+2025-08-16 19:56:36,066 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:56:36,300 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:56:40,319 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:56:40,319 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:56:41,551 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:56:41,551 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:56:41,551 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:56:41,552 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:56:41,552 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:56:41,553 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:56:41,569 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:56:41,634 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:56:41,634 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:56:41,665 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:56:41,666 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:56:41,668 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:56:41,668 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:56:42,798 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:56:42,799 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:56:42,799 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:56:42,807 - database.models - INFO - Successfully saved insights for store ID: 10
+2025-08-16 19:56:42,807 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 10
+2025-08-16 19:56:42,808 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:56:42,812 - main - INFO - Including competitor analysis in response
+2025-08-16 19:56:42,814 - main - INFO - No stored competitor analysis found, running new analysis
+2025-08-16 19:56:42,814 - modules.competitor_analyzer - INFO - Starting competitor analysis for None
+2025-08-16 19:56:42,815 - modules.competitor_analyzer - INFO - Finding competitors for None (https://gfuel.com/)
+2025-08-16 19:56:43,819 - modules.competitor_analyzer - INFO - Detected category: ecommerce
+2025-08-16 19:56:43,819 - modules.competitor_analyzer - INFO - Searching for: ecommerce brands like None
+2025-08-16 19:57:04,898 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+brands+like+None (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001C04F18AC10>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
+2025-08-16 19:57:08,757 - modules.competitor_analyzer - INFO - Searching for: best ecommerce websites
+2025-08-16 19:57:29,833 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=best+ecommerce+websites (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001C04F129590>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
+2025-08-16 19:57:32,406 - modules.competitor_analyzer - INFO - Searching for: ecommerce alternatives to None
+2025-08-16 19:57:53,512 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+alternatives+to+None (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001C04F12AC10>, 'Connection to duckduckgo.com timed out. (connect timeout=30)'))
+2025-08-16 19:57:57,050 - modules.competitor_analyzer - INFO - Searching for: top ecommerce stores online
+2025-08-16 19:59:41,842 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 19:59:42,072 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 19:59:44,128 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 19:59:44,128 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 19:59:45,360 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 19:59:45,360 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 19:59:45,360 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 19:59:45,360 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 19:59:45,361 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 19:59:45,362 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 19:59:45,380 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 19:59:45,452 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 19:59:45,452 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 19:59:45,486 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 19:59:45,486 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 19:59:45,489 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 19:59:45,489 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 19:59:46,620 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 19:59:46,621 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 19:59:46,621 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 19:59:46,629 - database.models - INFO - Successfully saved insights for store ID: 10
+2025-08-16 19:59:46,629 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 10
+2025-08-16 19:59:46,629 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 19:59:46,635 - main - INFO - Including competitor analysis in response
+2025-08-16 19:59:46,637 - main - INFO - No stored competitor analysis found, running new analysis
+2025-08-16 19:59:46,637 - modules.competitor_analyzer - INFO - Starting competitor analysis for None
+2025-08-16 19:59:46,637 - modules.competitor_analyzer - INFO - Finding competitors for None (https://gfuel.com/)
+2025-08-16 19:59:47,745 - modules.competitor_analyzer - INFO - Detected category: ecommerce
+2025-08-16 19:59:47,745 - modules.competitor_analyzer - INFO - Searching for: ecommerce brands like None
+2025-08-16 19:59:52,839 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+brands+like+None (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A5117D5F90>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 19:59:55,064 - modules.competitor_analyzer - INFO - Searching for: best ecommerce websites
+2025-08-16 20:00:00,110 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=best+ecommerce+websites (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A5117D5D10>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:00:02,259 - modules.competitor_analyzer - INFO - Searching for: ecommerce alternatives to None
+2025-08-16 20:00:07,290 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+alternatives+to+None (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A5117D7750>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:00:09,962 - modules.competitor_analyzer - INFO - Searching for: top ecommerce stores online
+2025-08-16 20:00:15,058 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=top+ecommerce+stores+online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A513474410>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:00:17,333 - modules.competitor_analyzer - INFO - Searching for: None competitors
+2025-08-16 20:00:22,378 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=None+competitors (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A51244B750>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:00:24,372 - modules.competitor_analyzer - INFO - Searching for: ecommerce ecommerce sites
+2025-08-16 20:00:29,414 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+ecommerce+sites (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A5117D7C50>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:00:31,557 - modules.competitor_analyzer - INFO - Searching for: similar to None
+2025-08-16 20:00:36,609 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=similar+to+None (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A5117D6210>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:00:38,651 - modules.competitor_analyzer - INFO - Searching for: ecommerce online shopping
+2025-08-16 20:00:43,736 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+online+shopping (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A5117D7250>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:00:46,315 - modules.competitor_analyzer - INFO - Searching for: best ecommerce brands 2024
+2025-08-16 20:00:51,374 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=best+ecommerce+brands+2024 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A5117D7390>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:00:53,764 - modules.competitor_analyzer - INFO - Searching for: ecommerce marketplace stores
+2025-08-16 20:00:58,782 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+marketplace+stores (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A513474E10>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:01:00,773 - modules.competitor_analyzer - INFO - Found 0 competitors from web search
+2025-08-16 20:01:05,822 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=sites+like+gfuel.com (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A513475310>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:01:13,018 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=websites+similar+to+gfuel.com (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A51244BC50>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:01:20,121 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=alternatives+to+gfuel.com (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A51244BB10>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:01:27,385 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=None+similar+websites (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A5117D56D0>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:01:29,897 - modules.competitor_analyzer - INFO - Found 0 competitors from similar sites search
+2025-08-16 20:01:34,941 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+online+brands (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A5117D65D0>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:01:42,040 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+ecommerce+companies (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A5117D6490>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:01:49,412 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+retail+stores (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A5117D79D0>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:01:56,884 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+direct+to+consumer+brands (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A51244BB10>, 'Connection to duckduckgo.com timed out. (connect timeout=5)'))
+2025-08-16 20:01:59,258 - modules.competitor_analyzer - INFO - Found 0 competitors from industry search
+2025-08-16 20:01:59,258 - modules.competitor_analyzer - INFO - No competitors found through search, using fallback stores
+2025-08-16 20:01:59,259 - modules.competitor_analyzer - INFO - Total unique competitors found: 4
+2025-08-16 20:01:59,259 - modules.competitor_analyzer - INFO - Found 4 potential competitors
+2025-08-16 20:01:59,259 - modules.competitor_analyzer - INFO - Analyzing competitor: Allbirds (https://www.allbirds.com)
+2025-08-16 20:01:59,475 - modules.shopify_service - INFO - Fetching main page: https://www.allbirds.com
+2025-08-16 20:02:03,569 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 20:02:03,570 - modules.hero_product_extractor - INFO - Fetching products from https://www.allbirds.com/products.json
+2025-08-16 20:02:04,833 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 20:02:04,833 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 20:02:04,833 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 20:02:05,176 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 20:02:05,177 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 20:02:05,179 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 20:02:05,214 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 20:02:05,341 - modules.privacy_policy_extractor - INFO - Extracted 7 policy documents
+2025-08-16 20:02:05,341 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 20:02:05,402 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 20:02:05,402 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 20:02:05,407 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 20:02:05,407 - modules.shopify_service - INFO - Fetching products from JSON API: https://www.allbirds.com/products.json
+2025-08-16 20:02:06,571 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 20:02:06,571 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 20:02:06,572 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 20:02:06,579 - database.models - INFO - Successfully saved insights for store ID: 13
+2025-08-16 20:02:06,579 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 13
+2025-08-16 20:02:06,579 - modules.shopify_service - INFO - Successfully extracted insights for https://www.allbirds.com
+2025-08-16 20:02:07,584 - modules.competitor_analyzer - INFO - Analyzing competitor: ColourPop (https://colourpop.com)
+2025-08-16 20:02:07,801 - modules.shopify_service - INFO - Fetching main page: https://colourpop.com
+2025-08-16 20:02:09,936 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 20:02:09,936 - modules.hero_product_extractor - INFO - Fetching products from https://colourpop.com/products.json
+2025-08-16 20:02:11,123 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 20:02:11,123 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 20:02:11,123 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 20:02:11,790 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 20:02:11,791 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 20:02:11,794 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 20:02:11,856 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 20:02:12,063 - modules.privacy_policy_extractor - INFO - Extracted 8 policy documents
+2025-08-16 20:02:12,063 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 20:02:12,185 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 20:02:12,185 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 20:02:12,192 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 20:02:12,192 - modules.shopify_service - INFO - Fetching products from JSON API: https://colourpop.com/products.json
+2025-08-16 20:02:13,527 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 20:02:13,528 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 20:02:13,528 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 20:02:13,533 - database.models - INFO - Successfully saved insights for store ID: 14
+2025-08-16 20:02:13,533 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 14
+2025-08-16 20:02:13,533 - modules.shopify_service - INFO - Successfully extracted insights for https://colourpop.com
+2025-08-16 20:02:14,538 - modules.competitor_analyzer - INFO - Analyzing competitor: Gymshark (https://www.gymshark.com)
+2025-08-16 20:02:14,764 - modules.shopify_service - INFO - Fetching main page: https://www.gymshark.com
+2025-08-16 20:02:18,039 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 20:02:18,039 - modules.hero_product_extractor - INFO - Fetching products from https://www.gymshark.com/products.json
+2025-08-16 20:02:18,047 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 1
+2025-08-16 20:02:19,065 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 2
+2025-08-16 20:02:21,076 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 3
+2025-08-16 20:02:21,076 - core.utils - INFO - Async fetch failed for https://www.gymshark.com/products.json, trying synchronous fallback
+2025-08-16 20:02:21,336 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 20:02:21,448 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 20:02:21,449 - modules.hero_product_extractor - INFO - Loaded 0 products from JSON API
+2025-08-16 20:02:21,449 - modules.hero_product_extractor - INFO - JSON API failed, falling back to HTML scraping for hero products
+2025-08-16 20:02:21,527 - modules.product_extractor - INFO - Extracted 0 unique products
+2025-08-16 20:02:21,527 - modules.hero_product_extractor - INFO - Loaded 0 products from HTML scraping
+2025-08-16 20:02:21,528 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 20:02:21,528 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 20:02:21,839 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 20:02:21,839 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 20:02:21,841 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 20:02:21,869 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 20:02:21,957 - modules.privacy_policy_extractor - INFO - Extracted 8 policy documents
+2025-08-16 20:02:21,957 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 20:02:22,011 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 20:02:22,011 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 20:02:22,015 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 20:02:22,015 - modules.shopify_service - INFO - Fetching products from JSON API: https://www.gymshark.com/products.json
+2025-08-16 20:02:22,022 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 1
+2025-08-16 20:02:23,033 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 2
+2025-08-16 20:02:25,059 - core.utils - WARNING - Access denied or rate limited for https://www.gymshark.com/products.json, attempt 3
+2025-08-16 20:02:25,059 - core.utils - INFO - Async fetch failed for https://www.gymshark.com/products.json, trying synchronous fallback
+2025-08-16 20:02:25,113 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 20:02:25,215 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
+2025-08-16 20:02:25,216 - modules.shopify_service - INFO - Successfully fetched 0 products from JSON API
+2025-08-16 20:02:25,216 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 20:02:25,219 - database.models - INFO - Successfully saved insights for store ID: 15
+2025-08-16 20:02:25,220 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 15
+2025-08-16 20:02:25,220 - modules.shopify_service - INFO - Successfully extracted insights for https://www.gymshark.com
+2025-08-16 20:02:26,225 - modules.competitor_analyzer - INFO - Analyzing competitor: Bombas (https://bombas.com)
+2025-08-16 20:02:26,500 - modules.shopify_service - INFO - Fetching main page: https://bombas.com
+2025-08-16 20:02:29,868 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 20:02:29,868 - modules.hero_product_extractor - INFO - Fetching products from https://bombas.com/products.json
+2025-08-16 20:02:29,978 - core.utils - WARNING - Page not found: https://bombas.com/products.json
+2025-08-16 20:02:29,978 - core.utils - INFO - Async fetch failed for https://bombas.com/products.json, trying synchronous fallback
+2025-08-16 20:02:30,541 - core.utils - ERROR - Request error for https://bombas.com/products.json: 404 Client Error: Not Found for url: https://bombas.com/products.json
+2025-08-16 20:02:30,746 - core.utils - ERROR - Request error for https://bombas.com/products.json: 404 Client Error: Not Found for url: https://bombas.com/products.json
+2025-08-16 20:02:30,747 - modules.hero_product_extractor - INFO - Loaded 0 products from JSON API
+2025-08-16 20:02:30,747 - modules.hero_product_extractor - INFO - JSON API failed, falling back to HTML scraping for hero products
+2025-08-16 20:02:30,803 - modules.product_extractor - INFO - Extracted 0 unique products
+2025-08-16 20:02:30,804 - modules.hero_product_extractor - INFO - Loaded 0 products from HTML scraping
+2025-08-16 20:02:30,804 - modules.hero_product_extractor - INFO - No hero or homepage tagged products found
+2025-08-16 20:02:30,804 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 20:02:31,151 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 20:02:31,152 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 20:02:31,153 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 20:02:31,186 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 20:02:31,271 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 20:02:31,271 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 20:02:31,333 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 20:02:31,333 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 20:02:31,336 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 20:02:31,336 - modules.shopify_service - INFO - Fetching products from JSON API: https://bombas.com/products.json
+2025-08-16 20:02:31,411 - core.utils - WARNING - Page not found: https://bombas.com/products.json
+2025-08-16 20:02:31,412 - core.utils - INFO - Async fetch failed for https://bombas.com/products.json, trying synchronous fallback
+2025-08-16 20:02:31,667 - core.utils - ERROR - Request error for https://bombas.com/products.json: 404 Client Error: Not Found for url: https://bombas.com/products.json
+2025-08-16 20:02:31,855 - core.utils - ERROR - Request error for https://bombas.com/products.json: 404 Client Error: Not Found for url: https://bombas.com/products.json
+2025-08-16 20:02:31,855 - modules.shopify_service - INFO - Successfully fetched 0 products from JSON API
+2025-08-16 20:02:31,856 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 20:02:31,859 - database.models - INFO - Successfully saved insights for store ID: 16
+2025-08-16 20:02:31,859 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 16
+2025-08-16 20:02:31,859 - modules.shopify_service - INFO - Successfully extracted insights for https://bombas.com
+2025-08-16 20:02:32,865 - database.models - ERROR - Failed to save competitor analysis: Object of type datetime is not JSON serializable
+2025-08-16 20:02:32,865 - main - ERROR - Failed to save competitor analysis: Object of type datetime is not JSON serializable
+2025-08-16 20:02:55,039 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 20:02:55,282 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 20:02:58,811 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 20:02:58,812 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 20:02:59,962 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 20:02:59,962 - modules.hero_product_extractor - INFO - Found homepage tagged product: The Hornets Jr. Starter Kit (tags: ['20 off', 'disable quick add', 'display generic label', 'energy', 'homepage', 'influencer collection', 'max:11', 'notify', 'shaker cup', 'starter kit'])
+2025-08-16 20:02:59,963 - modules.hero_product_extractor - INFO - Found 1 products with 'homepage' tag, 0 other hero products
+2025-08-16 20:02:59,963 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 20:02:59,963 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 20:02:59,964 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 20:02:59,982 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 20:03:00,054 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 20:03:00,054 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 20:03:00,088 - modules.shopify_service - INFO - Extracted 0 FAQs
+2025-08-16 20:03:00,088 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 20:03:00,091 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 20:03:00,091 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 20:03:01,199 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 20:03:01,200 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 20:03:01,200 - modules.shopify_service - INFO - Saving insights to database
+2025-08-16 20:03:01,214 - database.models - INFO - Successfully saved insights for store ID: 17
+2025-08-16 20:03:01,214 - modules.shopify_service - INFO - Successfully saved insights to database with store ID: 17
+2025-08-16 20:03:01,214 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 20:03:01,222 - main - INFO - Including competitor analysis in response
+2025-08-16 20:03:01,225 - main - INFO - No stored competitor analysis found, running new analysis
+2025-08-16 20:03:01,225 - modules.competitor_analyzer - INFO - Starting competitor analysis for None
+2025-08-16 20:03:01,226 - modules.competitor_analyzer - INFO - Finding competitors for None (https://gfuel.com/)
+2025-08-16 20:03:01,580 - modules.competitor_analyzer - INFO - Detected category: ecommerce
+2025-08-16 20:03:01,581 - modules.competitor_analyzer - INFO - Searching for: ecommerce brands like None
+2025-08-16 20:03:03,634 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+brands+like+None (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000230139CAC10>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:05,796 - modules.competitor_analyzer - INFO - Searching for: best ecommerce websites
+2025-08-16 20:03:07,806 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=best+ecommerce+websites (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023013965A90>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:09,754 - modules.competitor_analyzer - INFO - Searching for: ecommerce alternatives to None
+2025-08-16 20:03:11,814 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+alternatives+to+None (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023013966E90>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:13,834 - modules.competitor_analyzer - INFO - Searching for: top ecommerce stores online
+2025-08-16 20:03:15,848 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=top+ecommerce+stores+online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023013967C50>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:18,087 - modules.competitor_analyzer - INFO - Searching for: None competitors
+2025-08-16 20:03:20,107 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=None+competitors (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023013967C50>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:22,218 - modules.competitor_analyzer - INFO - Searching for: ecommerce ecommerce sites
+2025-08-16 20:03:24,252 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+ecommerce+sites (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023013967890>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:25,997 - modules.competitor_analyzer - INFO - Searching for: similar to None
+2025-08-16 20:03:28,007 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=similar+to+None (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000230139665D0>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:30,182 - modules.competitor_analyzer - INFO - Searching for: ecommerce online shopping
+2025-08-16 20:03:32,212 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+online+shopping (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023013965A90>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:34,203 - modules.competitor_analyzer - INFO - Searching for: best ecommerce brands 2024
+2025-08-16 20:03:36,212 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=best+ecommerce+brands+2024 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023013966710>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:38,257 - modules.competitor_analyzer - INFO - Searching for: ecommerce marketplace stores
+2025-08-16 20:03:40,313 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+marketplace+stores (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023013966710>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:42,381 - modules.competitor_analyzer - INFO - Found 0 competitors from web search
+2025-08-16 20:03:44,394 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=sites+like+gfuel.com (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000230139CB4D0>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:48,750 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=websites+similar+to+gfuel.com (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000230139CB4D0>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:52,771 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=alternatives+to+gfuel.com (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000230139CB110>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:56,950 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=None+similar+websites (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023013966710>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:03:59,128 - modules.competitor_analyzer - INFO - Found 0 competitors from similar sites search
+2025-08-16 20:04:01,132 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+online+brands (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023013966990>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:04:05,886 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+ecommerce+companies (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023013966D50>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:04:10,289 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+retail+stores (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023012CEC190>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:04:14,517 - modules.competitor_analyzer - WARNING - DuckDuckGo search failed: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=ecommerce+direct+to+consumer+brands (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023013967750>, 'Connection to duckduckgo.com timed out. (connect timeout=2)'))
+2025-08-16 20:04:16,646 - modules.competitor_analyzer - INFO - Found 0 competitors from industry search
+2025-08-16 20:04:16,646 - modules.competitor_analyzer - INFO - No competitors found through search, using fallback stores
+2025-08-16 20:04:16,646 - modules.competitor_analyzer - INFO - Total unique competitors found: 4
+2025-08-16 20:04:16,646 - modules.competitor_analyzer - INFO - Found 4 potential competitors
+2025-08-16 20:04:16,646 - modules.competitor_analyzer - INFO - Analyzing competitor: Allbirds (https://www.allbirds.com)
+2025-08-16 20:04:16,863 - modules.shopify_service - INFO - Fetching main page: https://www.allbirds.com
+2025-08-16 20:04:16,865 - asyncio - ERROR - Exception in callback BaseProactorEventLoop._start_serving.<locals>.loop() at C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py:840
+handle: <Handle BaseProactorEventLoop._start_serving.<locals>.loop() at C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py:840>
+Traceback (most recent call last):
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 855, in loop
+    self._make_socket_transport(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        conn, protocol,
+        ^^^^^^^^^^^^^^^
+        extra={'peername': addr}, server=server)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 644, in _make_socket_transport
+    return _ProactorSocketTransport(self, sock, protocol, waiter,
+                                    extra, server)
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 610, in __init__
+    super().__init__(loop, sock, protocol, waiter, extra, server)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 189, in __init__
+    super().__init__(loop, sock, protocol, waiter, extra, server)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 335, in __init__
+    super().__init__(*args, **kw)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 66, in __init__
+    self._server._attach(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Mani2\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 297, in _attach
+    assert self._sockets is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
