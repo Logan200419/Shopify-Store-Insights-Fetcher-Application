@@ -5,6 +5,7 @@ A comprehensive Python FastAPI application that extracts detailed insights from 
 ## Features
 
 ### Mandatory Features ✅
+
 - **Complete Product Catalog**: Extracts all products from the store
 - **Hero Products**: Products displayed on the homepage
 - **Privacy Policy**: Extracts privacy policy information
@@ -16,6 +17,7 @@ A comprehensive Python FastAPI application that extracts detailed insights from 
 - **Important Links**: Order tracking, contact us, blogs, about us, shipping info, size guides, careers
 
 ### Additional Features 🚀
+
 - **Brand Logo**: Automatic logo detection and extraction
 - **Payment Methods**: Supported payment options (Visa, PayPal, etc.)
 - **Currencies**: Multi-currency support detection
@@ -60,12 +62,14 @@ shopify_insights_fetcher/
 ## Installation & Setup
 
 ### 1. Clone the Repository
+
 ```bash
 git clone <repository-url>
 cd shopify_insights_fetcher
 ```
 
 ### 2. Create Virtual Environment
+
 ```bash
 python -m venv .venv
 # Windows
@@ -75,11 +79,13 @@ source .venv/bin/activate
 ```
 
 ### 3. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 4. Environment Configuration
+
 ```bash
 # Copy the example environment file
 cp .env.example .env
@@ -87,6 +93,7 @@ cp .env.example .env
 ```
 
 ### 5. Run the Application
+
 ```bash
 # Development mode
 python main.py
@@ -98,6 +105,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ## API Documentation
 
 ### Base URL
+
 ```
 http://localhost:8000
 ```
@@ -105,18 +113,23 @@ http://localhost:8000
 ### Endpoints
 
 #### 1. Root Endpoint
+
 ```http
 GET /
 ```
+
 Returns API information and available endpoints.
 
 #### 2. Health Check
+
 ```http
 GET /health
 ```
+
 Returns the health status of the application.
 
 #### 3. Fetch Insights (POST)
+
 ```http
 POST /insights
 Content-Type: application/json
@@ -127,12 +140,15 @@ Content-Type: application/json
 ```
 
 #### 4. Fetch Insights (GET)
+
 ```http
 GET /insights/{website_url}
 ```
+
 Alternative GET endpoint for easy testing in browsers.
 
 #### 5. Async Processing
+
 ```http
 POST /insights/async
 Content-Type: application/json
@@ -141,11 +157,13 @@ Content-Type: application/json
     "website_url": "https://example.myshopify.com"
 }
 ```
+
 Returns a task ID for background processing.
 
 ### Response Format
 
 #### Success Response
+
 ```json
 {
     "success": true,
@@ -180,12 +198,13 @@ Returns a task ID for background processing.
 ```
 
 #### Error Response
+
 ```json
 {
-    "error": "Error description",
-    "status_code": 404,
-    "message": "Website not found or not accessible",
-    "timestamp": "2024-01-01T12:00:00"
+  "error": "Error description",
+  "status_code": 404,
+  "message": "Website not found or not accessible",
+  "timestamp": "2024-01-01T12:00:00"
 }
 ```
 
@@ -201,7 +220,7 @@ Returns a task ID for background processing.
 ### Using Postman
 
 1. **Import Collection**: Create a new collection in Postman
-2. **Add Request**: 
+2. **Add Request**:
    - Method: POST
    - URL: `http://localhost:8000/insights`
    - Headers: `Content-Type: application/json`
@@ -245,20 +264,21 @@ These provide interactive documentation where you can test the API directly from
 
 ### Environment Variables
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `APP_NAME` | Shopify Insights Fetcher | Application name |
-| `DEBUG` | False | Enable debug mode |
-| `HOST` | 0.0.0.0 | Server host |
-| `PORT` | 8000 | Server port |
-| `REQUEST_TIMEOUT` | 30 | HTTP request timeout (seconds) |
-| `MAX_RETRIES` | 3 | Maximum retry attempts |
-| `RATE_LIMIT_DELAY` | 1.0 | Delay between requests (seconds) |
-| `LOG_LEVEL` | INFO | Logging level |
+| Variable           | Default                  | Description                      |
+| ------------------ | ------------------------ | -------------------------------- |
+| `APP_NAME`         | Shopify Insights Fetcher | Application name                 |
+| `DEBUG`            | False                    | Enable debug mode                |
+| `HOST`             | 0.0.0.0                  | Server host                      |
+| `PORT`             | 8000                     | Server port                      |
+| `REQUEST_TIMEOUT`  | 30                       | HTTP request timeout (seconds)   |
+| `MAX_RETRIES`      | 2                        | Maximum retry attempts           |
+| `RATE_LIMIT_DELAY` | 1.0                      | Delay between requests (seconds) |
+| `LOG_LEVEL`        | INFO                     | Logging level                    |
 
 ## Architecture & Design Patterns
 
 ### SOLID Principles
+
 - **Single Responsibility**: Each extractor handles one type of data
 - **Open/Closed**: Easy to extend with new extractors
 - **Liskov Substitution**: Base extractor interface
@@ -266,6 +286,7 @@ These provide interactive documentation where you can test the API directly from
 - **Dependency Inversion**: Service depends on abstractions
 
 ### Design Patterns
+
 - **Strategy Pattern**: Different extraction strategies
 - **Factory Pattern**: Extractor creation
 - **Observer Pattern**: Logging and monitoring
@@ -309,17 +330,20 @@ The application provides comprehensive logging:
 ## Future Enhancements
 
 ### Database Integration
+
 - MySQL database for caching results
 - Redis for session management
 - PostgreSQL for analytics
 
 ### Advanced Features
+
 - Machine learning for better data extraction
 - Image analysis for product categorization
 - Sentiment analysis for reviews
 - Competitive analysis features
 
 ### Scalability
+
 - Docker containerization
 - Kubernetes deployment
 - Load balancing
@@ -353,6 +377,7 @@ This project is licensed under the MIT License.
 ## Support
 
 For issues and questions:
+
 1. Check the documentation
 2. Review the logs
 3. Create an issue in the repository

@@ -985,3 +985,73 @@ Exception: Failed to fetch website content
 2025-08-16 17:28:24,827 - core.utils - ERROR - Request error for https://www.gymshark.com/products.json: 403 Client Error: Forbidden for url: https://www.gymshark.com/products.json
 2025-08-16 17:28:24,827 - modules.shopify_service - INFO - Successfully fetched 0 products from JSON API
 2025-08-16 17:28:24,827 - modules.shopify_service - INFO - Successfully extracted insights for https://www.gymshark.com
+2025-08-16 17:33:57,671 - main - INFO - Received insights request for: https://www.allbirds.com
+2025-08-16 17:33:57,890 - modules.shopify_service - INFO - Fetching main page: https://www.allbirds.com
+2025-08-16 17:34:00,031 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 17:34:00,031 - modules.hero_product_extractor - INFO - Fetching products from https://www.allbirds.com/products.json
+2025-08-16 17:34:01,313 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 17:34:01,314 - modules.hero_product_extractor - INFO - No tagged hero products found, using position-based detection
+2025-08-16 17:34:01,663 - modules.hero_product_extractor - INFO - Extracted 0 hero products
+2025-08-16 17:34:01,663 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 17:34:01,665 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 17:34:01,706 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 17:34:01,868 - modules.privacy_policy_extractor - INFO - Extracted 7 policy documents
+2025-08-16 17:34:01,868 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 17:34:01,930 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 17:34:01,935 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 17:34:01,935 - modules.shopify_service - INFO - Fetching products from JSON API: https://www.allbirds.com/products.json
+2025-08-16 17:34:03,072 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 17:34:03,073 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 17:34:03,073 - modules.shopify_service - INFO - Successfully extracted insights for https://www.allbirds.com
+2025-08-16 17:36:28,215 - main - INFO - Received insights request for: https://gfue1l.com/
+2025-08-16 17:36:28,431 - modules.shopify_service - INFO - Fetching main page: https://gfue1l.com
+2025-08-16 17:36:50,082 - core.utils - WARNING - Client error for https://gfue1l.com: Cannot connect to host gfue1l.com:443 ssl:default [The semaphore timeout period has expired], attempt 1
+2025-08-16 17:37:12,707 - core.utils - WARNING - Client error for https://gfue1l.com: Cannot connect to host gfue1l.com:443 ssl:default [The semaphore timeout period has expired], attempt 2
+2025-08-16 17:37:36,226 - core.utils - WARNING - Client error for https://gfue1l.com: Cannot connect to host gfue1l.com:443 ssl:default [The semaphore timeout period has expired], attempt 3
+2025-08-16 17:38:01,290 - core.utils - WARNING - Client error for https://gfue1l.com: Cannot connect to host gfue1l.com:443 ssl:default [The semaphore timeout period has expired], attempt 4
+2025-08-16 17:38:01,290 - core.utils - INFO - Async fetch failed for https://gfue1l.com, trying synchronous fallback
+2025-08-16 17:38:01,450 - core.utils - ERROR - Request error for https://gfue1l.com: HTTPSConnectionPool(host='gfue1l.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D3FEC8A990>: Failed to resolve 'gfue1l.com' ([Errno 11001] getaddrinfo failed)"))
+2025-08-16 17:38:01,451 - core.utils - ERROR - Request error for https://gfue1l.com: HTTPSConnectionPool(host='gfue1l.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D3FEC8BD90>: Failed to resolve 'gfue1l.com' ([Errno 11001] getaddrinfo failed)"))
+2025-08-16 17:38:01,451 - main - ERROR - Error processing request for https://gfue1l.com/: Failed to fetch website content
+2025-08-16 17:38:01,452 - main - ERROR - Traceback: Traceback (most recent call last):
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\main.py", line 97, in fetch_insights
+    insights = await insights_service.fetch_insights(request.website_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\DeepSolv_Manikandan_Vinayakan\shopify_insights_fetcher\modules\shopify_service.py", line 60, in fetch_insights
+    raise Exception("Failed to fetch website content")
+Exception: Failed to fetch website content
+
+2025-08-16 17:38:12,965 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 17:38:13,190 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 17:38:15,305 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 17:38:15,305 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 17:38:16,493 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 17:38:16,493 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 17:38:16,494 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 17:38:16,495 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 17:38:16,510 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 17:38:16,579 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 17:38:16,579 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 17:38:16,611 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 17:38:16,613 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 17:38:16,613 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 17:38:17,722 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 17:38:17,723 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 17:38:17,723 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com
+2025-08-16 17:38:18,508 - main - INFO - Received insights request for: https://gfuel.com/
+2025-08-16 17:38:18,727 - modules.shopify_service - INFO - Fetching main page: https://gfuel.com
+2025-08-16 17:38:19,975 - modules.shopify_service - INFO - Extracting hero products by loading all products and filtering by homepage tags
+2025-08-16 17:38:19,975 - modules.hero_product_extractor - INFO - Fetching products from https://gfuel.com/products.json
+2025-08-16 17:38:21,098 - modules.hero_product_extractor - INFO - Loaded 30 products from JSON API
+2025-08-16 17:38:21,098 - modules.hero_product_extractor - INFO - Extracted 1 hero products
+2025-08-16 17:38:21,098 - modules.shopify_service - INFO - Extracting social media handles
+2025-08-16 17:38:21,100 - modules.shopify_service - INFO - Extracting contact details
+2025-08-16 17:38:21,116 - modules.shopify_service - INFO - Extracting policies
+2025-08-16 17:38:21,186 - modules.privacy_policy_extractor - INFO - Extracted 9 policy documents
+2025-08-16 17:38:21,186 - modules.shopify_service - INFO - Extracting FAQs
+2025-08-16 17:38:21,218 - modules.shopify_service - INFO - Extracting important links
+2025-08-16 17:38:21,220 - modules.shopify_service - INFO - Fetching complete product catalog
+2025-08-16 17:38:21,221 - modules.shopify_service - INFO - Fetching products from JSON API: https://gfuel.com/products.json
+2025-08-16 17:38:22,476 - modules.shopify_service - INFO - Found 30 products in JSON API
+2025-08-16 17:38:22,477 - modules.shopify_service - INFO - Successfully fetched 30 products from JSON API
+2025-08-16 17:38:22,477 - modules.shopify_service - INFO - Successfully extracted insights for https://gfuel.com

@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     
     # Scraping Configuration
     request_timeout: int = 30
-    max_retries: int = 3
+    max_retries: int = 2
     rate_limit_delay: float = 1.0
     user_agents: List[str] = [
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
